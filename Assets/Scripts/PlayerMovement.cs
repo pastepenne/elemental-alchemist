@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _rotationSpeed = 720f;
     
     private CharacterController _characterController;
     private InputAction _moveAction;
@@ -56,6 +57,14 @@ public class PlayerMovement : MonoBehaviour
         movement.y = _verticalVelocity;
 
         _characterController.Move(movement * Time.deltaTime);
+        
+        // Rotate character to face movement direction
+        if (_moveInput != Vector2.zero)
+        {
+            var targetDirection = new Vector3(_moveInput.x, 0f, _moveInput.y);
+            var targetRotation = Quaternion.LookRotation(targetDirection);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
+        }
     }
 
     private void OnMove(InputAction.CallbackContext context)
