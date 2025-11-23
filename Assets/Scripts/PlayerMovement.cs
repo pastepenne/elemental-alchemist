@@ -4,18 +4,27 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _baseSpeed = 5f;
+    [SerializeField] private float _sprintMultiplier = 2f;
     [SerializeField] private float _rotationSpeed = 720f;
     
     private CharacterController _characterController;
     private InputAction _moveAction;
+    private InputAction _sprintAction;
     private Vector2 _moveInput;
     private float _verticalVelocity;
+    private bool _isSprinting;
+    
+    // Current player speed
+    public float CurrentSpeed => _moveInput.magnitude * GetSpeedMultiplier();
+    // Maximum possible speed
+    public float MaxSpeed => _baseSpeed * _sprintMultiplier;
     
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
         _moveAction = InputSystem.actions.FindAction(InputActions.Move);
+        _sprintAction = InputSystem.actions.FindAction(InputActions.Sprint);
     }
 
     private void OnEnable()
@@ -23,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
         // Subscribe to input action events (when movement starts and stops)
         _moveAction.performed += OnMove;
         _moveAction.canceled += OnMove;
+        
+        // Subscribe to sprint action events (when sprint starts and stops)
+        _sprintAction.performed += OnSprint;
+        _sprintAction.canceled += OnSprint;
     }
 
     private void OnDisable()
@@ -31,8 +44,13 @@ public class PlayerMovement : MonoBehaviour
         _moveAction.performed -= OnMove;
         _moveAction.canceled -= OnMove;
         
+        // Unsubscribe from sprint action events
+        _sprintAction.performed -= OnSprint;
+        _sprintAction.canceled -= OnSprint;
+        
         // Reset cached input to prevent movement after disabling
         _moveInput = Vector2.zero;
+        _isSprinting = false;
     }
 
     private void Update()
@@ -48,10 +66,9 @@ public class PlayerMovement : MonoBehaviour
             // Push character down to keep it stuck to the ground
             _verticalVelocity = -2f;
         }
-
-        // Calculate movement
+        
         var movement = _moveInput != Vector2.zero 
-            ? new Vector3(_moveInput.x, 0f, _moveInput.y) * _moveSpeed 
+            ? new Vector3(_moveInput.x, 0f, _moveInput.y) * GetSpeedMultiplier()
             : Vector3.zero;
         
         movement.y = _verticalVelocity;
@@ -72,4 +89,12 @@ public class PlayerMovement : MonoBehaviour
         // Cache the movement input
         _moveInput = context.ReadValue<Vector2>();
     }
+    
+    private void OnSprint(InputAction.CallbackContext context)
+    {
+        // Check if sprint button is held down
+        _isSprinting = context.ReadValueAsButton();
+    }
+    
+    private float GetSpeedMultiplier() => _isSprinting ? _baseSpeed * _sprintMultiplier : _baseSpeed;
 }

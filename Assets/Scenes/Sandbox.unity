@@ -8523,6 +8523,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 243926603113532292, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b90b34c28ee492b4782efef1c3a9d10f, type: 2}
     - target: {fileID: 6161686391465202174, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.25
@@ -8575,6 +8579,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6830101962358524740, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2044466858}
     - targetCorrespondingSourceObject: {fileID: 6830101962358524740, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2044466854}
@@ -9848,13 +9855,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd34ac2d2e5b03f409776598fa4fb6a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  _moveSpeed: 5
+  _baseSpeed: 5
+  _sprintMultiplier: 2
   _rotationSpeed: 720
 --- !u!4 &2044466856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6161686391465202174, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
   m_PrefabInstance: {fileID: 1782894662}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2044466858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044466850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa20a39bf29cacb45afed7171ddefcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
 --- !u!1001 &2063379597
 PrefabInstance:
   m_ObjectHideFlags: 0
