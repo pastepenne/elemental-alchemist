@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b515efcce0186a43a8231138a703e44, type: 3}
-  m_Name: RockElement
-  m_EditorClassIdentifier: Assembly-CSharp::Element
-  id: rock
-  displayName: Rock
-  sprite: {fileID: -2413806693520163455, guid: 4b7e6e27f84b50b47b28f514a2aca0c4, type: 3}
+  m_Name: Fire
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Data.Element
+  id: fire
+  displayName: Fire
+  description: 
+  icon: {fileID: 21300000, guid: cc30a9e384526a94b83ea4075afdf3a8, type: 3}
+  tier: 0

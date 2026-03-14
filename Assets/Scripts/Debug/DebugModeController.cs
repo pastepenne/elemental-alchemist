@@ -1,4 +1,4 @@
-using Constants;
+using ElementalAlchemist.GameInput;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,7 +11,7 @@ public class DebugModeController : MonoBehaviour
 
     private void Awake()
     {
-        _debugAction = InputSystem.actions.FindAction(InputActions.Debug);
+        _debugAction = InputSystem.actions.FindAction(InputActions.Global.Debug);
 
         // Hide debug panel on start
         if (_debugPanel != null)

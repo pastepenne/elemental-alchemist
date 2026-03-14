@@ -1,18 +1,26 @@
-﻿using System;
+using ElementalAlchemist.Data;
+using ElementalAlchemist.Player;
 using UnityEngine;
 
-public class InventoryDebugAdder : MonoBehaviour
+namespace ElementalAlchemist.Debug
 {
-    [SerializeField] private Element _rockElement;
-    [SerializeField] private Element _woodElement;
-
-    public void AddRock()
+    public class InventoryDebugAdder : MonoBehaviour
     {
-        Inventory.Instance.AddElement(_rockElement);
-    }
+        [SerializeField] private Element _airElement;
+        [SerializeField] private Element _earthElement;
+        [SerializeField] private Element _fireElement;
+        [SerializeField] private Element _waterElement;
 
-    public void AddWood()
-    {
-        Inventory.Instance.AddElement(_woodElement);
+        public void AddAir() => AddElement(_airElement);
+        public void AddEarth() => AddElement(_earthElement); 
+        public void AddFire() => AddElement(_fireElement);
+        public void AddWater() => AddElement(_waterElement);
+
+        private static void AddElement(Element element)
+        {
+            PlayerManager.Instance.PlayerInventory.AddElement(element, 1);
+            
+            UnityEngine.Debug.Log(PlayerManager.Instance.PlayerInventory.GetStacks().Count);
+        }
     }
 }
