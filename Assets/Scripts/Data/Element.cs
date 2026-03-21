@@ -2,14 +2,6 @@ using UnityEngine;
 
 namespace ElementalAlchemist.Data
 {
-    public enum ElementTier
-    {
-        Basic,
-        Compound,
-        Advanced,
-        Exotic
-    }
-    
     [CreateAssetMenu(fileName = "New Element", menuName = "Elemental Alchemist/Element")]
     public class Element : ScriptableObject
     {

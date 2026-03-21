@@ -63,7 +63,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.UI.ElementSlot
   _icon: {fileID: 3293986815155957717}
+  _background: {fileID: 8288827432733415773}
   _quantity: {fileID: 2151055594313064467}
+  _tierColors: {fileID: 11400000, guid: b5f28999c695ce747a04bd8a8965cc1e, type: 2}
 --- !u!114 &1001608869204625457
 MonoBehaviour:
   m_ObjectHideFlags: 0

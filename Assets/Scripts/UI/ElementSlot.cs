@@ -11,7 +11,9 @@ namespace ElementalAlchemist.UI
     public class ElementSlot : MonoBehaviour
     {
         [SerializeField] private Image _icon;
+        [SerializeField] private Image _background;
         [SerializeField] private TMP_Text _quantity;
+        [SerializeField] private TierColorPalette _tierColors;
 
         /// <summary>
         /// Populates the slot with data from an element stack.
@@ -20,6 +22,7 @@ namespace ElementalAlchemist.UI
         {
             _icon.sprite = stack.element.icon;
             _quantity.text = stack.quantity.ToString();
+            _background.color = _tierColors.GetColor(stack.element.tier);
         }
     }
 }
