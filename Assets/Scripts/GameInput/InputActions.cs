@@ -12,7 +12,7 @@ namespace ElementalAlchemist.GameInput
         public static class Global
         {
             public const string Debug = "Debug";
-            public const string ToggleInventory = "ToggleInventory";
+            public const string TogglePlayerMenu = "TogglePlayerMenu";
         }
     }
 }

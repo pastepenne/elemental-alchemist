@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53fde366ed06924683f3a8198d33cac, type: 3}
+  m_Name: Mud_Earth-Water
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Data.Recipe
+  inputA: {fileID: 11400000, guid: c151a7ec27f57fe4881407218504a881, type: 2}
+  inputB: {fileID: 11400000, guid: e018a698998c17148a53289846dd2cca, type: 2}
+  output: {fileID: 11400000, guid: 066ea723751047947bc8a43c110bcefc, type: 2}

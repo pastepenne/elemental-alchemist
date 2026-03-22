@@ -1050,7 +1050,7 @@
             "id": "689bff5a-9290-45fc-9b35-5e80f8d75d3d",
             "actions": [
                 {
-                    "name": "ToggleInventory",
+                    "name": "TogglePlayerMenu",
                     "type": "Button",
                     "id": "004f40f6-bdfd-43da-93fc-9e7c36163bd8",
                     "expectedControlType": "",
@@ -1067,7 +1067,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "ToggleInventory",
+                    "action": "TogglePlayerMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
