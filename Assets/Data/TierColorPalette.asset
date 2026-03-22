@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dd563c8cdd848f698331d64ca42367a, type: 3}
-  m_Name: TierColors
+  m_Name: TierColorPalette
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Data.TierColorPalette
-  _basic: {r: 0.804, g: 0.498, b: 0.196, a: 1}
-  _compound: {r: 0.753, g: 0.753, b: 0.753, a: 1}
+  _core: {r: 0.9, g: 0.9, b: 0.85, a: 1}
+  _natural: {r: 0.804, g: 0.498, b: 0.196, a: 1}
+  _refined: {r: 0.7, g: 0.75, b: 0.85, a: 1}
   _advanced: {r: 1, g: 0.843, b: 0, a: 1}
   _exotic: {r: 0.18, g: 0.8, b: 0.44, a: 1}

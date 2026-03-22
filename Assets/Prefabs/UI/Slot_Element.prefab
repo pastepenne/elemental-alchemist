@@ -65,7 +65,7 @@ MonoBehaviour:
   _icon: {fileID: 3293986815155957717}
   _background: {fileID: 8288827432733415773}
   _quantity: {fileID: 2151055594313064467}
-  _tierColors: {fileID: 11400000, guid: b5f28999c695ce747a04bd8a8965cc1e, type: 2}
+  _tierColors: {fileID: 11400000, guid: 9e28732977fac8b40bf520c56399b2a8, type: 2}
 --- !u!114 &1001608869204625457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +318,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
