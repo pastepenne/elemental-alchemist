@@ -18,9 +18,9 @@ namespace ElementalAlchemist.Debug
 
         private static void AddElement(Element element)
         {
-            PlayerManager.Instance.PlayerInventory.AddElement(element, 1);
+            PlayerManager.Instance.Inventory.AddElement(element, 1);
             
-            UnityEngine.Debug.Log(PlayerManager.Instance.PlayerInventory.GetStacks().Count);
+            UnityEngine.Debug.Log(PlayerManager.Instance.Inventory.GetStacks().Count);
         }
     }
 }

@@ -45,13 +45,13 @@ namespace ElementalAlchemist.UI
             if (opening)
             {
                 ActionMapController.SetActionMap(ActionMaps.UI);
-                PlayerManager.Instance.PlayerInventory.OnInventoryChanged += RefreshGrid;
+                PlayerManager.Instance.Inventory.OnInventoryChanged += RefreshGrid;
                 RefreshGrid();
             }
             else
             {
                 ActionMapController.SetActionMap(ActionMaps.Player);
-                PlayerManager.Instance.PlayerInventory.OnInventoryChanged -= RefreshGrid;
+                PlayerManager.Instance.Inventory.OnInventoryChanged -= RefreshGrid;
             }
         }
 
@@ -64,7 +64,7 @@ namespace ElementalAlchemist.UI
             
             _slots.Clear();
 
-            foreach (var stack in PlayerManager.Instance.PlayerInventory.GetStacks())
+            foreach (var stack in PlayerManager.Instance.Inventory.GetStacks())
             {
                 var slotObject = Instantiate(_slotPrefab, _gridParent);
                 slotObject.GetComponent<ElementSlot>().Setup(stack);
