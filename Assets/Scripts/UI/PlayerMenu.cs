@@ -10,22 +10,19 @@ namespace ElementalAlchemist.UI
     /// </summary>
     public class PlayerMenu : MonoBehaviour
     {
-        [Header("Panels")]
         [SerializeField] private GameObject _backdropPanel;
         [SerializeField] private GameObject _windowPanel;
-
-        [Header("Tabs")]
-        [SerializeField] private Button _inventoryTabButton;
-        [SerializeField] private Button _discoveryTabButton;
-        [SerializeField] private GameObject _inventoryPanel;
-        [SerializeField] private GameObject _discoveryPanel;
+        [SerializeField] private Button _pouchTabButton;
+        [SerializeField] private Button _tomeTabButton;
+        [SerializeField] private GameObject _pouchView;
+        [SerializeField] private GameObject _tomeView;
 
         private InputAction _toggleAction;
         private bool _isOpen;
 
         private void Awake()
         {
-            _toggleAction = InputSystem.actions.FindAction(InputActions.Global.ToggleInventory);
+            _toggleAction = InputSystem.actions.FindAction(InputActions.Global.TogglePlayerMenu);
             _backdropPanel.SetActive(false);
             _windowPanel.SetActive(false);
         }
@@ -33,11 +30,15 @@ namespace ElementalAlchemist.UI
         private void OnEnable()
         {
             _toggleAction.performed += OnToggle;
+            _pouchTabButton.onClick.AddListener(ShowPouchTab);
+            _tomeTabButton.onClick.AddListener(ShowTomeTab);
         }
 
         private void OnDisable()
         {
             _toggleAction.performed -= OnToggle;
+            _pouchTabButton.onClick.RemoveListener(ShowPouchTab);
+            _tomeTabButton.onClick.RemoveListener(ShowTomeTab);
         }
 
         private void OnToggle(InputAction.CallbackContext context)
@@ -58,7 +59,7 @@ namespace ElementalAlchemist.UI
             _backdropPanel.SetActive(true);
             _windowPanel.SetActive(true);
             ActionMapController.SetActionMap(ActionMaps.UI);
-            ShowInventoryTab();
+            ShowPouchTab();
         }
 
         private void Close()
@@ -69,16 +70,26 @@ namespace ElementalAlchemist.UI
             ActionMapController.SetActionMap(ActionMaps.Player);
         }
 
-        private void ShowInventoryTab()
+        private void ShowPouchTab()
         {
-            _inventoryPanel.SetActive(true);
-            _discoveryPanel.SetActive(false);
+            // Toggle Views
+            _pouchView.SetActive(true);
+            _tomeView.SetActive(false);
+            
+            // Toggle Button States
+            _pouchTabButton.interactable = false;
+            _tomeTabButton.interactable = true;
         }
 
-        private void ShowDiscoveryTab()
+        private void ShowTomeTab()
         {
-            _inventoryPanel.SetActive(false);
-            _discoveryPanel.SetActive(true);
+            // Toggle Views
+            _pouchView.SetActive(false);
+            _tomeView.SetActive(true);
+            
+            // Toggle Button States
+            _pouchTabButton.interactable = true;
+            _tomeTabButton.interactable = false;
         }
     }
 }
