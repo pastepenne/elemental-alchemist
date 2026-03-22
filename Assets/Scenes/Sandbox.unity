@@ -11140,7 +11140,6 @@ GameObject:
   - component: {fileID: 1887393560}
   - component: {fileID: 1887393559}
   - component: {fileID: 1887393558}
-  - component: {fileID: 1887393562}
   m_Layer: 5
   m_Name: Canvas_Inventory
   m_TagString: Untagged
@@ -11233,22 +11232,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1887393562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887393557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a6dc3ac18935b42896977371b8f07f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.UI.InventoryUI
-  _backdropPanel: {fileID: 1208388572}
-  _windowPanel: {fileID: 1312482350}
-  _slotPrefab: {fileID: 1090632474249547130, guid: 130ff981fc7f0e148b548ef7bb4cf497, type: 3}
-  _gridParent: {fileID: 1633177255}
 --- !u!1001 &1894272409
 PrefabInstance:
   m_ObjectHideFlags: 0

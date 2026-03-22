@@ -10,5 +10,7 @@ namespace ElementalAlchemist.Data
         [TextArea] public string description;
         public Sprite icon;
         public ElementTier tier;
+
+        public bool IsCore => tier == ElementTier.Core;
     }
 }
