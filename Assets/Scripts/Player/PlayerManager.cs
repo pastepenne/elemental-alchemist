@@ -1,3 +1,4 @@
+using ElementalAlchemist.Data;
 using UnityEngine;
 
 namespace ElementalAlchemist.Player
@@ -7,10 +8,13 @@ namespace ElementalAlchemist.Player
     /// </summary>
     public class PlayerManager : MonoBehaviour
     {
+        [SerializeField] private Element[] _coreElements;
+        
         public static PlayerManager Instance { get; private set; }
         public PlayerAnimation Animation { get; private set; }
+        public Discovery Discovery { get; private set; }
         public PlayerInteraction Interaction { get; private set; }
-        public PlayerInventory Inventory { get; private set; }
+        public Inventory Inventory { get; private set; }
         public PlayerMovement Movement { get; private set; }
 
         private void Awake()
@@ -21,14 +25,26 @@ namespace ElementalAlchemist.Player
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
 
+                Discovery = new Discovery();
+                Inventory = new Inventory();
+                Inventory.ElementAdded += Discovery.DiscoverElement;
+
                 Animation = GetComponent<PlayerAnimation>();
                 Interaction = GetComponent<PlayerInteraction>();
-                Inventory = new PlayerInventory();
                 Movement = GetComponent<PlayerMovement>();
             }
             else
             {
                 Destroy(gameObject);
+            }
+        }
+
+        private void Start()
+        {
+            // Add core elements as discovered at game start
+            foreach (var element in _coreElements)
+            {
+                Discovery.DiscoverElement(element);
             }
         }
     }
