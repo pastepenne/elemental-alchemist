@@ -41,18 +41,6 @@ namespace ElementalAlchemist.UI
             _tomeTabButton.onClick.RemoveListener(ShowTomeTab);
         }
 
-        private void OnToggle(InputAction.CallbackContext context)
-        {
-            if (_isOpen)
-            {
-                Close();
-            }
-            else
-            {
-                Open();
-            }
-        }
-
         private void Open()
         {
             _isOpen = true;
@@ -90,6 +78,18 @@ namespace ElementalAlchemist.UI
             // Toggle Button States
             _pouchTabButton.interactable = true;
             _tomeTabButton.interactable = false;
+        }
+        
+        private void OnToggle(InputAction.CallbackContext context)
+        {
+            if (_isOpen)
+            {
+                Close();
+            }
+            else
+            {
+                Open();
+            }
         }
     }
 }

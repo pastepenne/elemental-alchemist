@@ -1,4 +1,4 @@
-﻿using ElementalAlchemist.GameInput;
+using ElementalAlchemist.GameInput;
 using ElementalAlchemist.Interaction;
 using ElementalAlchemist.UI;
 using UnityEngine;
@@ -46,7 +46,8 @@ namespace ElementalAlchemist.Player
                     maxDistance: _interactDistance,
                     layerMask: _interactableLayers))
             {
-                if (hit.collider.TryGetComponent<IInteractable>(out var source))
+                var source = hit.collider.GetComponentInParent<IInteractable>();
+                if (source != null)
                 {
                     _interactPrompt.Show(hit.transform, source.Prompt);
                     foundSource = source;

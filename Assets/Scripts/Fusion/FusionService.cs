@@ -5,13 +5,11 @@ namespace ElementalAlchemist.Fusion
 {
     public static class FusionService
     {
-        public static FusionResult TryFuse(
-            RecipeCatalog catalog,
-            Element inputA,
-            Element inputB,
-            Inventory inventory,
-            Discovery discovery)
+        public static FusionResult TryFuse(RecipeCatalog catalog, Element inputA, Element inputB)
         {
+            var inventory = PlayerManager.Instance.Inventory;
+            var discovery = PlayerManager.Instance.Discovery;
+            
             var recipe = catalog.FindRecipe(inputA, inputB);
             if (!recipe || !HasRequiredElements(inputA, inputB, inventory))
             {
