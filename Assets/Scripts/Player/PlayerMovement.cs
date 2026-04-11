@@ -16,7 +16,8 @@ namespace ElementalAlchemist.Player
         private Vector2 _moveInput;
         private float _verticalVelocity;
         private bool _isSprinting;
-    
+        private Camera _camera;
+        
         // Current player speed
         public float CurrentSpeed => _moveInput.magnitude * GetSpeedMultiplier();
         // Maximum possible speed
@@ -27,6 +28,7 @@ namespace ElementalAlchemist.Player
             _characterController = GetComponent<CharacterController>();
             _moveAction = InputSystem.actions.FindAction(InputActions.Player.Move);
             _sprintAction = InputSystem.actions.FindAction(InputActions.Player.Sprint);
+            _camera = Camera.main;
         }
 
         private void OnEnable()
@@ -69,21 +71,33 @@ namespace ElementalAlchemist.Player
                 _verticalVelocity = -2f;
             }
         
-            var movement = _moveInput != Vector2.zero 
-                ? new Vector3(_moveInput.x, 0f, _moveInput.y) * GetSpeedMultiplier()
-                : Vector3.zero;
-        
-            movement.y = _verticalVelocity;
-
-            _characterController.Move(movement * Time.deltaTime);
-        
-            // Rotate character to face movement direction
+            var movement = Vector3.zero;
             if (_moveInput != Vector2.zero)
             {
-                var targetDirection = new Vector3(_moveInput.x, 0f, _moveInput.y);
-                var targetRotation = Quaternion.LookRotation(targetDirection);
+                var direction = GetCameraRelativeDirection(_moveInput);
+                movement = direction * (_moveInput.magnitude * GetSpeedMultiplier());
+
+                // Rotate character to face movement direction
+                var targetRotation = Quaternion.LookRotation(direction);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
             }
+
+            movement.y = _verticalVelocity;
+            _characterController.Move(movement * Time.deltaTime);
+        }
+
+        private Vector3 GetCameraRelativeDirection(Vector2 input)
+        {
+            if (!_camera)
+            {
+                return new Vector3(input.x, 0f, input.y).normalized;
+            }
+
+            // Project camera forward onto the XZ plane and normalize
+            var camForward = Vector3.ProjectOnPlane(_camera.transform.forward, Vector3.up).normalized;
+            var camRight = Vector3.ProjectOnPlane(_camera.transform.right, Vector3.up).normalized;
+
+            return (camForward * input.y + camRight * input.x).normalized;
         }
 
         private void OnMove(InputAction.CallbackContext context)
