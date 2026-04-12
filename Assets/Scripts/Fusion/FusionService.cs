@@ -1,5 +1,6 @@
 using ElementalAlchemist.Data;
 using ElementalAlchemist.Player;
+using ElementalAlchemist.Progression;
 
 namespace ElementalAlchemist.Fusion
 {
@@ -11,7 +12,7 @@ namespace ElementalAlchemist.Fusion
             var discovery = PlayerManager.Instance.Discovery;
             
             var recipe = catalog.FindRecipe(inputA, inputB);
-            if (!recipe || !HasRequiredElements(inputA, inputB, inventory))
+            if (!recipe || !IsTierAllowed(recipe) || !HasRequiredElements(inputA, inputB, inventory))
             {
                 return new FusionResult { Success = false };
             }
@@ -34,6 +35,11 @@ namespace ElementalAlchemist.Fusion
             };
         }
 
+        private static bool IsTierAllowed(Recipe recipe)
+        {
+            return recipe.output.tier <= GameStateManager.Instance.CurrentAllowedFusionTier;
+        }
+        
         private static bool HasRequiredElements(Element inputA, Element inputB, Inventory inventory)
         {
             if (inputA.IsCore && inputB.IsCore)

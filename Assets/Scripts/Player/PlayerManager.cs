@@ -1,4 +1,5 @@
 using ElementalAlchemist.Data;
+using ElementalAlchemist.Progression;
 using UnityEngine;
 
 namespace ElementalAlchemist.Player
@@ -8,8 +9,6 @@ namespace ElementalAlchemist.Player
     /// </summary>
     public class PlayerManager : MonoBehaviour
     {
-        [SerializeField] private Element[] _coreElements;
-        
         public static PlayerManager Instance { get; private set; }
         public PlayerAnimation Animation { get; private set; }
         public Discovery Discovery { get; private set; }
@@ -42,7 +41,7 @@ namespace ElementalAlchemist.Player
         private void Start()
         {
             // Add core elements as discovered at game start
-            foreach (var element in _coreElements)
+            foreach (var element in GameStateManager.Instance.UnlockedCoreElements)
             {
                 Discovery.DiscoverElement(element);
             }

@@ -1,4 +1,4 @@
-﻿namespace Constants
+﻿namespace ElementalAlchemist.Constants
 {
     public static class AnimatorParameters
     {
