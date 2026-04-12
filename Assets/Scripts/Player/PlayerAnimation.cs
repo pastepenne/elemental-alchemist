@@ -1,4 +1,4 @@
-using Constants;
+using ElementalAlchemist.Constants;
 using UnityEngine;
 
 namespace ElementalAlchemist.Player
