@@ -1,4 +1,4 @@
-﻿using ElementalAlchemist.Data;
+﻿using ElementalAlchemist.Element;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,9 +13,9 @@ namespace ElementalAlchemist.UI.Pouch
         
         public void Display(ElementStack stack)
         {
-            _icon.sprite = stack.element.icon;
-            _name.text = stack.element.displayName;
-            _description.text = stack.element.description;
+            _icon.sprite = stack.Element.Icon;
+            _name.text = stack.Element.DisplayName;
+            _description.text = stack.Element.Description;
         }
     }
 }

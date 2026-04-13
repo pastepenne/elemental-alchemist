@@ -1,20 +1,20 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using ElementalAlchemist.Element;
 using UnityEngine;
 
-namespace ElementalAlchemist.Data
+namespace ElementalAlchemist.Fusion
 {
     [CreateAssetMenu(fileName = "New Recipe Catalog", menuName = "Elemental Alchemist/Recipe Catalog")]
     public class RecipeCatalog : ScriptableObject
     {
-        [SerializeField] private Recipe[] _recipes;
+        [SerializeField] private RecipeData[] _recipes;
 
-        private Dictionary<RecipeKey, Recipe> _lookup;
+        private Dictionary<RecipeKey, RecipeData> _lookup;
 
         private void OnEnable()
         {
-            _lookup = new Dictionary<RecipeKey, Recipe>();
+            _lookup = new Dictionary<RecipeKey, RecipeData>();
 
             if (_recipes == null)
             {
@@ -28,12 +28,12 @@ namespace ElementalAlchemist.Data
                     continue;
                 }
 
-                var key = new RecipeKey(recipe.inputA.id, recipe.inputB.id);
+                var key = new RecipeKey(recipe.inputA.Id, recipe.inputB.Id);
                 _lookup.TryAdd(key, recipe);
             }
         }
 
-        public Recipe FindRecipe(Element a, Element b)
+        public RecipeData FindRecipe(ElementData a, ElementData b)
         {
             if (_lookup == null)
             {   
@@ -45,17 +45,16 @@ namespace ElementalAlchemist.Data
                 return null;
             }
             
-            var key = new RecipeKey(a.id, b.id);
+            var key = new RecipeKey(a.Id, b.Id);
             _lookup.TryGetValue(key, out var recipe);
             return recipe;
         }
         
-        public List<Recipe> GetRecipesForOutput(Element element)
+        public List<RecipeData> GetRecipesForOutput(ElementData element)
         {
             return _recipes != null 
                 ? _recipes.Where(r => r && r.output == element).ToList()
-                : new List<Recipe>();
+                : new List<RecipeData>();
         }
-
     }
 }

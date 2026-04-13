@@ -1,13 +1,12 @@
-﻿using ElementalAlchemist.Data;
-using ElementalAlchemist.Player;
+﻿using ElementalAlchemist.Player;
 using UnityEngine;
 
-namespace ElementalAlchemist.Interaction
+namespace ElementalAlchemist.Element
 {
     public class ElementSource : MonoBehaviour, IInteractable
     {
         [SerializeField] private int _yield = 1;
-        [SerializeField] private Element _element;
+        [SerializeField] private ElementData _element;
 
         public string Prompt => "Collect";
         

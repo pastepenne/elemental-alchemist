@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ElementalAlchemist.Data
+namespace ElementalAlchemist.Element
 {
     public enum ElementTier
     {

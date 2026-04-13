@@ -1,4 +1,4 @@
-﻿namespace ElementalAlchemist.Interaction
+﻿namespace ElementalAlchemist
 {
     public interface IInteractable
     {

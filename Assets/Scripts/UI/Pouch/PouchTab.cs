@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
 using ElementalAlchemist.Player;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,7 +30,7 @@ namespace ElementalAlchemist.UI.Pouch
             PlayerManager.Instance.Inventory.ElementRemoved -= OnInventoryChanged;
         }
 
-        private void OnInventoryChanged(Element _)
+        private void OnInventoryChanged(ElementData _)
         {
             RefreshGrid();
         }

@@ -1,11 +1,11 @@
-﻿using ElementalAlchemist.Data;
+﻿using ElementalAlchemist.Element;
 
 namespace ElementalAlchemist.Fusion
 {
     public struct FusionResult
     {
         public bool Success;
-        public Element Output;
+        public ElementData Output;
         public bool NewDiscovery;
     }
 }

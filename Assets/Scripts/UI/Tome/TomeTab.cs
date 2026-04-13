@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
 using ElementalAlchemist.Player;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,8 +40,8 @@ namespace ElementalAlchemist.UI.Tome
 
             var discoveredElements = PlayerManager.Instance.Discovery
                 .GetDiscoveredElements()
-                .OrderBy(e => e.tier)
-                .ThenBy(e => e.displayName)
+                .OrderBy(e => e.Tier)
+                .ThenBy(e => e.DisplayName)
                 .ToList();
 
             foreach (var element in discoveredElements)
@@ -54,7 +54,7 @@ namespace ElementalAlchemist.UI.Tome
             }
         }
 
-        private void OnEntrySelected(Element element)
+        private void OnEntrySelected(ElementData element)
         {
             _details.Display(element);
         }

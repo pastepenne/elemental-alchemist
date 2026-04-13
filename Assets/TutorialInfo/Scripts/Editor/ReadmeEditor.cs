@@ -5,6 +5,7 @@ using UnityEditor;
 using System;
 using System.IO;
 using System.Reflection;
+using ElementalAlchemist.TutorialInfo.Scripts;
 
 [CustomEditor(typeof(Readme))]
 [InitializeOnLoad]

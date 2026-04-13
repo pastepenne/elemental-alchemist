@@ -1,4 +1,3 @@
-using ElementalAlchemist.Data;
 using ElementalAlchemist.Progression;
 using UnityEngine;
 
@@ -41,7 +40,7 @@ namespace ElementalAlchemist.Player
         private void Start()
         {
             // Add core elements as discovered at game start
-            foreach (var element in GameStateManager.Instance.UnlockedCoreElements)
+            foreach (var element in ProgressionManager.Instance.UnlockedCoreElements)
             {
                 Discovery.DiscoverElement(element);
             }

@@ -1,5 +1,5 @@
 using System;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,15 +12,15 @@ namespace ElementalAlchemist.UI.Fusion
         [SerializeField] private TMP_Text _name;
 
         private Button _button;
-        private Element _element;
+        private ElementData _element;
 
-        public event Action<Element> ElementSelected;
+        public event Action<ElementData> ElementSelected;
 
-        public void Setup(Element element)
+        public void Setup(ElementData element)
         {
             _element = element;
-            _icon.sprite = element.icon;
-            _name.text = element.displayName;
+            _icon.sprite = element.Icon;
+            _name.text = element.DisplayName;
         }
 
         private void Awake()

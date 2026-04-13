@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
 using ElementalAlchemist.Fusion;
 using ElementalAlchemist.GameInput;
-using ElementalAlchemist.Interaction;
 using ElementalAlchemist.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -21,7 +20,7 @@ namespace ElementalAlchemist.UI.Fusion
         [SerializeField] private RecipeCatalog _recipeCatalog;
         
         [SerializeField] private TierColorPalette _tierColors;
-        [SerializeField] private Element[] _coreElements;
+        [SerializeField] private ElementData[] _coreElements;
 
         [SerializeField] private GameObject _coreSlotPrefab;
         [SerializeField] private GameObject _pouchEntryPrefab;
@@ -134,9 +133,9 @@ namespace ElementalAlchemist.UI.Fusion
 
             var elements = PlayerManager.Instance.Inventory
                 .GetStacks()
-                .Select(s => s.element)
-                .OrderBy(e => e.tier)
-                .ThenBy(e => e.displayName)
+                .Select(s => s.Element)
+                .OrderBy(e => e.Tier)
+                .ThenBy(e => e.DisplayName)
                 .ToList();
             
             foreach (var element in elements)
@@ -160,19 +159,19 @@ namespace ElementalAlchemist.UI.Fusion
 
             if (result.Success)
             {
-                UnityEngine.Debug.Log(result.Output.displayName);
+                UnityEngine.Debug.Log(result.Output.DisplayName);
             }
             
             _ingredientSlotA.Clear();
             _ingredientSlotB.Clear();
         }
         
-        private void OnInventoryChanged(Element _)
+        private void OnInventoryChanged(ElementData _)
         {
             RefreshPouchElements();
         }
         
-        private void OnElementSelected(Element element)
+        private void OnElementSelected(ElementData element)
         {
             if (_ingredientSlotA.Current == element || _ingredientSlotB.Current == element)
             {

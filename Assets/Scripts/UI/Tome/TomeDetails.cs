@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
+using ElementalAlchemist.Fusion;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,12 +19,12 @@ namespace ElementalAlchemist.UI.Tome
         
         private readonly List<GameObject> _recipeEntries = new();
         
-        public void Display(Element element)
+        public void Display(ElementData element)
         {
-            _icon.sprite =  element.icon;
-            _name.text = element.displayName;
-            _tier.text = element.tier.ToString();
-            _description.text = element.description;
+            _icon.sprite =  element.Icon;
+            _name.text = element.DisplayName;
+            _tier.text = element.Tier.ToString();
+            _description.text = element.Description;
             
             foreach (var slot in _recipeEntries)
             {

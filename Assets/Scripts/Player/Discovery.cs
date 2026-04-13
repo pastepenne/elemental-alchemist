@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
+using ElementalAlchemist.Fusion;
 
 namespace ElementalAlchemist.Player
 {
@@ -9,27 +10,27 @@ namespace ElementalAlchemist.Player
     /// </summary>
     public class Discovery
     {
-        private readonly HashSet<Element> _discoveredElements = new();
+        private readonly HashSet<ElementData> _discoveredElements = new();
         private readonly HashSet<RecipeKey> _discoveredRecipes = new();
 
-        public IReadOnlyCollection<Element> GetDiscoveredElements() => _discoveredElements;
+        public IReadOnlyCollection<ElementData> GetDiscoveredElements() => _discoveredElements;
         
-        public bool IsElementDiscovered(Element element)
+        public bool IsElementDiscovered(ElementData element)
         {
             return _discoveredElements.Contains(element);
         }
         
-        public bool IsRecipeDiscovered(Recipe recipe)
+        public bool IsRecipeDiscovered(RecipeData recipe)
         {
             return _discoveredRecipes.Contains(new RecipeKey(recipe));
         }
 
-        public void DiscoverElement(Element element)
+        public void DiscoverElement(ElementData element)
         {
             _discoveredElements.Add(element);
         }
         
-        public void DiscoverRecipe(Recipe recipe)
+        public void DiscoverRecipe(RecipeData recipe)
         {
             _discoveredRecipes.Add(new RecipeKey(recipe));
         }

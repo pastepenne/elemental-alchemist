@@ -1,5 +1,5 @@
 using System;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,15 +15,15 @@ namespace ElementalAlchemist.UI.Tome
         [SerializeField] private TMP_Text _name;
 
         private Toggle _toggle;
-        private Element _element;
+        private ElementData _element;
 
-        public event Action<Element> EntrySelected;
+        public event Action<ElementData> EntrySelected;
 
-        public void Setup(Element element, ToggleGroup toggleGroup)
+        public void Setup(ElementData element, ToggleGroup toggleGroup)
         {
             _element = element;
-            _icon.sprite = element.icon;
-            _name.text = element.displayName;
+            _icon.sprite = element.Icon;
+            _name.text = element.DisplayName;
             _toggle.group = toggleGroup;
         }
 

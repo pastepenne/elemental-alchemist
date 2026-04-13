@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
 
 namespace ElementalAlchemist.Player
 {
@@ -15,12 +15,12 @@ namespace ElementalAlchemist.Player
         /// <summary>
         /// Fired whenever an element is added to the inventory.
         /// </summary>
-        public event Action<Element> ElementAdded;
+        public event Action<ElementData> ElementAdded;
 
         /// <summary>
         /// Fired whenever an element is removed from the inventory.
         /// </summary>
-        public event Action<Element> ElementRemoved;
+        public event Action<ElementData> ElementRemoved;
 
         /// <summary>
         /// Returns a read-only view of all element stacks.
@@ -30,17 +30,17 @@ namespace ElementalAlchemist.Player
         /// <summary>
         /// Adds an element to the inventory. Stacks with existing elements of the same type.
         /// </summary>
-        public void AddElement(Element element, int quantity = 1)
+        public void AddElement(ElementData element, int quantity = 1)
         {
             if (!element || quantity <= 0)
             {
                 return;
             }
 
-            var existingStack = _stacks.FirstOrDefault(stack => stack.element == element);
+            var existingStack = _stacks.FirstOrDefault(stack => stack.Element == element);
             if (existingStack != null)
             {
-                existingStack.quantity += quantity;
+                existingStack.Quantity += quantity;
             }
             else
             {
@@ -53,21 +53,21 @@ namespace ElementalAlchemist.Player
         /// <summary>
         /// Removes a quantity of an element from the inventory. Returns true if successful.
         /// </summary>
-        public bool RemoveElement(Element element, int quantity = 1)
+        public bool RemoveElement(ElementData element, int quantity = 1)
         {
             if (!element || quantity <= 0)
             {
                 return false;
             }
 
-            var stack = _stacks.FirstOrDefault(s => s.element == element);
-            if (stack == null || stack.quantity < quantity)
+            var stack = _stacks.FirstOrDefault(s => s.Element == element);
+            if (stack == null || stack.Quantity < quantity)
             {
                 return false;
             }
 
-            stack.quantity -= quantity;
-            if (stack.quantity <= 0)
+            stack.Quantity -= quantity;
+            if (stack.Quantity <= 0)
             {
                 _stacks.Remove(stack);
             }
@@ -79,10 +79,10 @@ namespace ElementalAlchemist.Player
         /// <summary>
         /// Returns whether the inventory contains at least the given quantity of an element.
         /// </summary>
-        public bool HasElement(Element element, int quantity = 1)
+        public bool HasElement(ElementData element, int quantity = 1)
         {
-            var stack = _stacks.FirstOrDefault(s => s.element == element);
-            return stack != null && stack.quantity >= quantity;
+            var stack = _stacks.FirstOrDefault(s => s.Element == element);
+            return stack != null && stack.Quantity >= quantity;
         }
     }
 }
