@@ -1,6 +1,6 @@
 using System;
 
-namespace ElementalAlchemist.Data
+namespace ElementalAlchemist.Fusion
 {
     /// <summary>
     /// Order-independent key for a pair of element IDs, used for recipe lookup and discovery tracking.
@@ -25,7 +25,7 @@ namespace ElementalAlchemist.Data
             }
         }
 
-        public RecipeKey(Recipe recipe) : this(recipe.inputA.id, recipe.inputB.id) { }
+        public RecipeKey(RecipeData recipe) : this(recipe.inputA.Id, recipe.inputB.Id) { }
 
         public bool Equals(RecipeKey other) => _idA == other._idA && _idB == other._idB;
         public override bool Equals(object obj) => obj is RecipeKey other && Equals(other);

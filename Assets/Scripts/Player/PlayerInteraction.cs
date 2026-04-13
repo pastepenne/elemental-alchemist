@@ -1,5 +1,4 @@
-using ElementalAlchemist.GameInput;
-using ElementalAlchemist.Interaction;
+﻿using ElementalAlchemist.GameInput;
 using ElementalAlchemist.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;

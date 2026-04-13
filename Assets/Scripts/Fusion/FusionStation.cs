@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace ElementalAlchemist.Interaction
+namespace ElementalAlchemist.Fusion
 {
     public class FusionStation : MonoBehaviour, IInteractable
     {

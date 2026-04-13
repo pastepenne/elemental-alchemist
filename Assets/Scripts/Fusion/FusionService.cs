@@ -1,4 +1,4 @@
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
 using ElementalAlchemist.Player;
 using ElementalAlchemist.Progression;
 
@@ -6,7 +6,7 @@ namespace ElementalAlchemist.Fusion
 {
     public static class FusionService
     {
-        public static FusionResult TryFuse(RecipeCatalog catalog, Element inputA, Element inputB)
+        public static FusionResult TryFuse(RecipeCatalog catalog, ElementData inputA, ElementData inputB)
         {
             var inventory = PlayerManager.Instance.Inventory;
             var discovery = PlayerManager.Instance.Discovery;
@@ -35,12 +35,12 @@ namespace ElementalAlchemist.Fusion
             };
         }
 
-        private static bool IsTierAllowed(Recipe recipe)
+        private static bool IsTierAllowed(RecipeData recipe)
         {
-            return recipe.output.tier <= GameStateManager.Instance.CurrentAllowedFusionTier;
+            return recipe.output.Tier <= ProgressionManager.Instance.CurrentAllowedFusionTier;
         }
         
-        private static bool HasRequiredElements(Element inputA, Element inputB, Inventory inventory)
+        private static bool HasRequiredElements(ElementData inputA, ElementData inputB, Inventory inventory)
         {
             if (inputA.IsCore && inputB.IsCore)
             {
@@ -65,7 +65,7 @@ namespace ElementalAlchemist.Fusion
             return true;
         }
 
-        private static void ConsumeElements(Element inputA, Element inputB, Inventory inventory)
+        private static void ConsumeElements(ElementData inputA, ElementData inputB, Inventory inventory)
         {
             if (inputA.IsCore && inputB.IsCore)
             {

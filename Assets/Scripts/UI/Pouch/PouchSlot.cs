@@ -1,5 +1,5 @@
 using System;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,9 +27,9 @@ namespace ElementalAlchemist.UI.Pouch
         public void Setup(ElementStack stack, ToggleGroup toggleGroup)
         {
             _stack = stack;
-            _icon.sprite = stack.element.icon;
-            _quantity.text = stack.quantity.ToString();
-            _background.color = _tierColors.GetColor(stack.element.tier);
+            _icon.sprite = stack.Element.Icon;
+            _quantity.text = stack.Quantity.ToString();
+            _background.color = _tierColors.GetColor(stack.Element.Tier);
             _toggle.group = toggleGroup;
         }
         
@@ -49,7 +49,7 @@ namespace ElementalAlchemist.UI.Pouch
 
         private void OnToggleValueChanged(bool isOn)
         {
-            if (isOn && _stack != null && _stack.element)
+            if (isOn && _stack != null && _stack.Element)
             {
                 StackSelected?.Invoke(_stack);
             }

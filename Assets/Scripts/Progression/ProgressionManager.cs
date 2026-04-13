@@ -1,26 +1,26 @@
 using System.Collections.Generic;
 using System.Linq;
-using ElementalAlchemist.Data;
+using ElementalAlchemist.Element;
 using UnityEngine;
 
 namespace ElementalAlchemist.Progression
 {
     /// <summary>Singleton owning game progression. Persists across scenes.</summary>
-    public class GameStateManager : MonoBehaviour
+    public class ProgressionManager : MonoBehaviour
     {
-        public static GameStateManager Instance { get; private set; }
+        public static ProgressionManager Instance { get; private set; }
 
         [SerializeField] private ProgressionStage _initialStage = ProgressionStage.Tutorial;
-        [SerializeField] private Element[] _initialUnlockedCoreElements;
+        [SerializeField] private ElementData[] _initialUnlockedCoreElements;
         
-        private readonly HashSet<Element> _unlockedCoreElements = new();
+        private readonly HashSet<ElementData> _unlockedCoreElements = new();
         private ProgressionStage _currentStage;
         
         public bool IsFreeplayActive { get; private set; }
         public bool HasBreathFragment { get; private set; }
         public bool HasFleshFragment { get; private set; }
         public bool HasSoulFragment { get; private set; }
-        public IReadOnlyCollection<Element> UnlockedCoreElements => _unlockedCoreElements;
+        public IReadOnlyCollection<ElementData> UnlockedCoreElements => _unlockedCoreElements;
         public ElementTier CurrentAllowedFusionTier => _currentStage switch
         {
             ProgressionStage.Tutorial => ElementTier.Core,
@@ -71,7 +71,7 @@ namespace ElementalAlchemist.Progression
         
         private void Awake()
         {
-            // Ensure only one instance of GameStateManager exists
+            // Ensure only one instance of ProgressionManager exists
             if (!Instance)
             {
                 Instance = this;
@@ -95,7 +95,7 @@ namespace ElementalAlchemist.Progression
             Debug.Log(
                 $"[GameStateManager] Stage={_currentStage} " +
                 $"AllowedTier={CurrentAllowedFusionTier} " +
-                $"Cores=[{string.Join(" ", _unlockedCoreElements.Select(e => e.id))}] " +
+                $"Cores=[{string.Join(" ", _unlockedCoreElements.Select(e => e.Id))}] " +
                 $"Fragments=[Breath:{HasBreathFragment} Flesh:{HasFleshFragment} Soul:{HasSoulFragment}] " +
                 $"Freeplay={IsFreeplayActive}");
         }

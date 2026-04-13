@@ -13,17 +13,17 @@ namespace ElementalAlchemist.Dialogue
         public static event Action DialogueEnded;
         public static event Action<string> LineAdvanced;
 
-        private Dialogue _currentDialogue;
+        private DialogueData _currentDialogue;
         private int _lineIndex;
         private InputAction _advanceAction;
 
-        public void StartDialogue(Dialogue dialogue)
+        public void StartDialogue(DialogueData dialogue)
         {
-            if (!_currentDialogue)
+            if (_currentDialogue)
             {
                 return;
             }
-
+            
             _currentDialogue = dialogue;
             _lineIndex = 0;
 

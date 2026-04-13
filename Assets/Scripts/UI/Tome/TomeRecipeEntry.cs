@@ -1,4 +1,4 @@
-﻿using ElementalAlchemist.Data;
+﻿using ElementalAlchemist.Fusion;
 using TMPro;
 using UnityEngine;
 
@@ -8,9 +8,9 @@ namespace ElementalAlchemist.UI.Tome
     {
         [SerializeField] private TMP_Text _recipe;
         
-        public void Setup(Recipe recipe)
+        public void Setup(RecipeData recipe)
         {
-            _recipe.text = $"{recipe.inputA.displayName} + {recipe.inputB.displayName}";
+            _recipe.text = $"{recipe.inputA.DisplayName} + {recipe.inputB.DisplayName}";
         }
     }
 }
