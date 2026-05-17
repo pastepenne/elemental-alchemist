@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 82ee79896e95a2a45b75e0838166bdd1
+AssemblyDefinitionReferenceImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Polaris Extension - URP Support/Scripts/Pinwheel.Polaris.URP.asmref
+  uploadId: 913908

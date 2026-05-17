@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 9fb91ed894068014babda45e4bd0b920
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Editor/Scripts/Extensions/BuiltinRP
+    Support/GGriffinBrpResources.cs
+  uploadId: 913908

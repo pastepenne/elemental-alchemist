@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 03c0c326e24019241b64f42be5f34122
+timeCreated: 1513188961
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Torches/Torch02.prefab
+  uploadId: 907228

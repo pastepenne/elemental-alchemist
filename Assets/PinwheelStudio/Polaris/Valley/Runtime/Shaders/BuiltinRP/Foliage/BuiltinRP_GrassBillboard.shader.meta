@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1b6888c352808044a92674a4c7503e6f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/BuiltinRP/Foliage/BuiltinRP_GrassBillboard.shader
+  uploadId: 913908

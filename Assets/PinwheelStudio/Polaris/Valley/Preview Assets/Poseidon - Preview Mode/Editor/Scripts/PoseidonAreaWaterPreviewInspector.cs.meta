@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 08912885c83b1fc4c825d5815ccac04d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - poseidonBackground: {fileID: 2800000, guid: d6cef039bb0f326408a02f770a265d26,
+      type: 3}
+  - defaultWaterMaterial: {fileID: 2100000, guid: f8d1449b417c6e848b768c728276ca77,
+      type: 2}
+  - toolIcon: {fileID: 2800000, guid: a6647ef7839fc5641bd81c212cc2b59e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Poseidon - Preview
+    Mode/Editor/Scripts/PoseidonAreaWaterPreviewInspector.cs
+  uploadId: 913908

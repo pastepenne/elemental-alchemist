@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 09444822d81fc16418d0e347310de385
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Materials/Terrain/Builtin_PBR_8Splats.mat
+  uploadId: 913908

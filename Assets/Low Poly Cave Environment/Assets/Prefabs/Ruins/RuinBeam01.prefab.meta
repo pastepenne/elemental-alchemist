@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d79e1ed4c869529438c301a4a3773f44
+timeCreated: 1514549751
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Ruins/RuinBeam01.prefab
+  uploadId: 907228

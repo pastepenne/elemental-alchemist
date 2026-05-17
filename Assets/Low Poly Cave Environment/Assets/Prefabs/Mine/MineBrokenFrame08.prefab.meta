@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 66547e84c1162704b8e22a1a2f3b6515
+timeCreated: 1514386283
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Mine/MineBrokenFrame08.prefab
+  uploadId: 907228

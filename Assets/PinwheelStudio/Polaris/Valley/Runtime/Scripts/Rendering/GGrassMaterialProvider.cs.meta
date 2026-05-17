@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9f2be55c77b2e0947a2096f0d2369ef7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Scripts/Rendering/GGrassMaterialProvider.cs
+  uploadId: 913908

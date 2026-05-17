@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 47eb800a41ee8a04596439982f5099c9
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Polaris Extension - URP Support/Shaders/ShaderGraph/CustomFunctions/GrassCommonURP.hlsl
+  uploadId: 913908

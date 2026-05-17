@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: dfce9c1356732e2428cb20872625520b
+timeCreated: 1513102617
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Pillars/Pillar-C09.prefab
+  uploadId: 907228

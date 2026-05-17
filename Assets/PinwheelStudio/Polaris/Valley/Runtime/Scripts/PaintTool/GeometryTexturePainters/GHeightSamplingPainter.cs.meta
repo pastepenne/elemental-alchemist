@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 125721534eb906d4e9f1b2b41318e35c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Scripts/PaintTool/GeometryTexturePainters/GHeightSamplingPainter.cs
+  uploadId: 913908

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e54fea8fa6ddd6e4b9fe05157666af5b
+AssemblyDefinitionReferenceImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Poseidon - Preview
+    Mode/Editor/Scripts/Pinwheel.Polaris.PoseidonPreview.Editor.asmref
+  uploadId: 913908

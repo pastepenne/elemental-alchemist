@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ea1b79518676b2c45a77a9c86cc0cd18
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Editor/Resources/PolarisSkin.asset
+  uploadId: 913908

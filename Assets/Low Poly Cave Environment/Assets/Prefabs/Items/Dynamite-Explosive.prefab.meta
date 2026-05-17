@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 970c7014e9aacae44b13fe608cbb0bb8
+timeCreated: 1513184300
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Items/Dynamite-Explosive.prefab
+  uploadId: 907228

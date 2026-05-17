@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b1afa3f8cb30f2b438d0e67394fe4d77
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _NoiseTex: {fileID: 2800000, guid: af54a55098c9e334c86a1ac080d3ee15, type: 3}
+  - unity_Lightmaps: {instanceID: 0}
+  - unity_LightmapsInd: {instanceID: 0}
+  - unity_ShadowMasks: {instanceID: 0}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Poseidon - Preview
+    Mode/Runtime/Shaders/PoseidonWaterPreview.shader
+  uploadId: 913908

@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8838f9e3fa4281f48a9a64c787c84798, type: 3}
+  m_Name: SharedSplats0_639144921496857145
+  m_EditorClassIdentifier: Pinwheel.Polaris.Runtime::Pinwheel.Griffin.GSplatPrototypeGroup
+  prototypes:
+  - texture: {fileID: 2800000, guid: c32cd40dcb254854597d9598255e9c8b, type: 3}
+    normalMap: {fileID: 2800000, guid: 57f965cd288c97e42b37fa5305ec1118, type: 3}
+    tileSize: {x: 3, y: 3}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  - texture: {fileID: 2800000, guid: 62c711fefabb87547b1abdc31423bd82, type: 3}
+    normalMap: {fileID: 2800000, guid: 57f965cd288c97e42b37fa5305ec1118, type: 3}
+    tileSize: {x: 3, y: 3}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  - texture: {fileID: 2800000, guid: c04985cef181f7344873d19be2f65aa7, type: 3}
+    normalMap: {fileID: 2800000, guid: 57f965cd288c97e42b37fa5305ec1118, type: 3}
+    tileSize: {x: 3, y: 3}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  - texture: {fileID: 2800000, guid: 9e716ab47787efb448d7f9e4e0e94a23, type: 3}
+    normalMap: {fileID: 2800000, guid: b21d569173027a2419a4c1ee204e8095, type: 3}
+    tileSize: {x: 3, y: 3}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  - texture: {fileID: 2800000, guid: d9f09ddc110185f4399b649cd685fb6c, type: 3}
+    normalMap: {fileID: 2800000, guid: b21d569173027a2419a4c1ee204e8095, type: 3}
+    tileSize: {x: 5, y: 5}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  - texture: {fileID: 2800000, guid: ec17404f5eb4a49499f8eb193584c083, type: 3}
+    normalMap: {fileID: 2800000, guid: 57f965cd288c97e42b37fa5305ec1118, type: 3}
+    tileSize: {x: 3, y: 3}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  - texture: {fileID: 2800000, guid: 7d30d8653bc2dfb41bbe9668738a3cef, type: 3}
+    normalMap: {fileID: 2800000, guid: de583d50f4424df4eb77053c6ec99bd4, type: 3}
+    tileSize: {x: 3, y: 3}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  - texture: {fileID: 2800000, guid: e9230f36841b3bf41afe18312561b03d, type: 3}
+    normalMap: {fileID: 2800000, guid: de583d50f4424df4eb77053c6ec99bd4, type: 3}
+    tileSize: {x: 3, y: 3}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  - texture: {fileID: 2800000, guid: 2eff19f7192072a4393aebd5f9d837fe, type: 3}
+    normalMap: {fileID: 2800000, guid: de583d50f4424df4eb77053c6ec99bd4, type: 3}
+    tileSize: {x: 2, y: 2}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  - texture: {fileID: 2800000, guid: dc51d23bfd6e3eb44b6fb4b496b906f9, type: 3}
+    normalMap: {fileID: 2800000, guid: de583d50f4424df4eb77053c6ec99bd4, type: 3}
+    tileSize: {x: 2, y: 2}
+    tileOffset: {x: 0, y: 0}
+    metallic: 0
+    smoothness: 0
+  isSampleAsset: 0

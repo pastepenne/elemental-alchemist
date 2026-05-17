@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 74996c3da7ad92f428bb0e1f1f2da3df
+timeCreated: 1526359717
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Samples/Pinwheel Studio/Prefabs/WinterBranch.prefab
+  uploadId: 913908

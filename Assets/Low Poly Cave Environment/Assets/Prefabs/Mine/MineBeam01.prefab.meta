@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 72203e64040424944b8b5d7f8d9efbc5
+timeCreated: 1514386375
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Mine/MineBeam01.prefab
+  uploadId: 907228

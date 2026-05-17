@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: be92d4bdeb4da30499d3104d16b44698
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/Internal/TextureTool/SplatsToAlbedo.shader
+  uploadId: 913908

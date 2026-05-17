@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2b48895e6ddc0e4409b245952f9896d4
+timeCreated: 1531126792
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Samples/Pinwheel Studio/Prefabs/Rock.prefab
+  uploadId: 913908

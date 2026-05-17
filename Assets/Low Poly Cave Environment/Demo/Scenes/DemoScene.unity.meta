@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8e8de71bbf9a9d44f8a4b5fdaa8b4d00
+timeCreated: 1512586295
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Demo/Scenes/DemoScene.unity
+  uploadId: 907228

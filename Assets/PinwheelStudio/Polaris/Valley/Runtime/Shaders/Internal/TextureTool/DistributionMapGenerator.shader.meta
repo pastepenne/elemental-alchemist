@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b886b3f1e292d3940a46b39c2e878c08
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/Internal/TextureTool/DistributionMapGenerator.shader
+  uploadId: 913908

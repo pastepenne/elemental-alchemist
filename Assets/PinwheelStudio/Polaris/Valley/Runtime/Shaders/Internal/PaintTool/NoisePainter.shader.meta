@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c0e3ee36e0239ba428ca3b3b6ff612f7
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/Internal/PaintTool/NoisePainter.shader
+  uploadId: 913908

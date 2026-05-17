@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1c5c06d7a33b9fb4d9914eeac9f1eca9
+timeCreated: 1513602216
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Animations/ChestA-close.anim
+  uploadId: 907228

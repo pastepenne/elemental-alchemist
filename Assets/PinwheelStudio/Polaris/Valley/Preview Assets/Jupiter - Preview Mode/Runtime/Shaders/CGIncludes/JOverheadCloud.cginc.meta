@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6f96321706ab1c048bb87e883d0f2f0d
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Jupiter - Preview
+    Mode/Runtime/Shaders/CGIncludes/JOverheadCloud.cginc
+  uploadId: 913908

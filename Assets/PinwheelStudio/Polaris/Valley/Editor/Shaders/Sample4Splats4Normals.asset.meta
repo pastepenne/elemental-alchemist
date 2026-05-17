@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 45f7d1aa5e9d58743aec839bd3751783
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Editor/Shaders/Sample4Splats4Normals.asset
+  uploadId: 913908

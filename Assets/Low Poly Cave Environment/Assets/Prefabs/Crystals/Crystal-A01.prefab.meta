@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d1c90a93965a0624f8c7a8ba05048423
+timeCreated: 1512667225
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Crystals/Crystal-A01.prefab
+  uploadId: 907228

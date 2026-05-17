@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8d4ff87008bb3914f9250cf6f31d75f2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Summit/Runtime/Scripts/ErosionTool/GThermalErosionConfigs.cs
+  uploadId: 913908

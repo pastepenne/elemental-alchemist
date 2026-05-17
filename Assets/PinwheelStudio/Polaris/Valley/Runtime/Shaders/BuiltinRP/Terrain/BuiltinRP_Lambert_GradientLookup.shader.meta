@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ed98cc4b1beb6e34bbe15048dc534e5a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/BuiltinRP/Terrain/BuiltinRP_Lambert_GradientLookup.shader
+  uploadId: 913908

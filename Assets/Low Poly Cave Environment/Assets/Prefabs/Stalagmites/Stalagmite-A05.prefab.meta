@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 46f38d8fc3e5fca4eada3a055840ff95
+timeCreated: 1512755671
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Stalagmites/Stalagmite-A05.prefab
+  uploadId: 907228

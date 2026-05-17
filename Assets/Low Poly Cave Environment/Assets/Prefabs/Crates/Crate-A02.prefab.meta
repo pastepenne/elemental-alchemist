@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 057b6d2c83bc46646b79c2be0123e680
+timeCreated: 1512933411
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Crates/Crate-A02.prefab
+  uploadId: 907228

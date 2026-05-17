@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6be8cd4531afb7344a29905068331f1e
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/Internal/Utilities/DrawTextureArraySlice.shader
+  uploadId: 913908

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2c1748de5d3a91d4684f8d941d112e61
+timeCreated: 1514383919
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Mine/MineEntrance06.prefab
+  uploadId: 907228

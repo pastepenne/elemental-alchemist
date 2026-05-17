@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e99cd3f086ac8cd44be4b4c82f2cf243
+timeCreated: 1514549754
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Ruins/RuinGate-A02.prefab
+  uploadId: 907228

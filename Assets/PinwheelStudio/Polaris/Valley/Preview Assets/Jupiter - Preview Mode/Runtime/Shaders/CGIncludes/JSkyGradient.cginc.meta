@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3024f1e4b0732254cb983a2ffa1dc816
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Jupiter - Preview
+    Mode/Runtime/Shaders/CGIncludes/JSkyGradient.cginc
+  uploadId: 913908

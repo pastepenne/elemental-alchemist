@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a2fd10e5b6c979d44ab369eb0b69decd
+timeCreated: 1513992872
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Scripts/Minecart.cs
+  uploadId: 907228

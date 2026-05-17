@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 91d73117985efe841aeeee919e47e3fd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Materials/Foliage/Builtin_GrassLOD1.mat
+  uploadId: 913908

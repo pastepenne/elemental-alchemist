@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1e0e6e19142609a47af208887b94f58a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Highland/Runtime/Scripts/SplineTool/GSpline.cs
+  uploadId: 913908

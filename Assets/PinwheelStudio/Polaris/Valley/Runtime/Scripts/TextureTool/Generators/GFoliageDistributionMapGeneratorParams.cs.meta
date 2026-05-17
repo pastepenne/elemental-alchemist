@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b36399c21dbed6447a3296b4790f4b22
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Scripts/TextureTool/Generators/GFoliageDistributionMapGeneratorParams.cs
+  uploadId: 913908

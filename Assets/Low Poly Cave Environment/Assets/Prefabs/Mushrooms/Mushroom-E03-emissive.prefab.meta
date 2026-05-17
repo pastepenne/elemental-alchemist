@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 907fdf90ddb3df9419e7b8b70c187722
+timeCreated: 1514550181
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Mushrooms/Mushroom-E03-emissive.prefab
+  uploadId: 907228

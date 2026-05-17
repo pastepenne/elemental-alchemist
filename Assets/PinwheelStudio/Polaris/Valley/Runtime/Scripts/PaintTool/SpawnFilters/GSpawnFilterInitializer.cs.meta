@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6c2a2b5d0203f5c44a179b59888e1083
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Scripts/PaintTool/SpawnFilters/GSpawnFilterInitializer.cs
+  uploadId: 913908

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a5b308068e2815e419e86eca59be563b
+timeCreated: 1514389467
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Floors/FloorHole05.prefab
+  uploadId: 907228

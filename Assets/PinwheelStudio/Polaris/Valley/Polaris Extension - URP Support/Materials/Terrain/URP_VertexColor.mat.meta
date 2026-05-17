@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 50e9e558358acd741be588d31e086cf1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Polaris Extension - URP Support/Materials/Terrain/URP_VertexColor.mat
+  uploadId: 913908

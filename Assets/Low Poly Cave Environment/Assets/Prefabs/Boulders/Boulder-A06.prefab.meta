@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1d093f2affb8840409ddb3dbc94e5f4c
+timeCreated: 1512752215
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Boulders/Boulder-A06.prefab
+  uploadId: 907228

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c5603fd431239da438393d3609ba20f8
+timeCreated: 1513899469
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Demo/animations/CrystalItems-Presentation.anim
+  uploadId: 907228
