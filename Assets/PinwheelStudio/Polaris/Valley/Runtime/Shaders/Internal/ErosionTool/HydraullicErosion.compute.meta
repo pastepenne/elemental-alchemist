@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5a8f6fd8bb447824185ed7786e38a535
+ComputeShaderImporter:
+  externalObjects: {}
+  currentAPIMask: 4
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/Internal/ErosionTool/HydraullicErosion.compute
+  uploadId: 913908

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8d39a13fc2a7a164fa1708057ff071d3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Editor/Shaders/GrassWindAnimation.asset
+  uploadId: 913908

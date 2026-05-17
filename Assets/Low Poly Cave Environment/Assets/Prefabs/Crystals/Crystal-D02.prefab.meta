@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8dc9a9964e664754f94685733f3fc2e8
+timeCreated: 1513898105
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Crystals/Crystal-D02.prefab
+  uploadId: 907228

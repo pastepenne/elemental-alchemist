@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dd1275cafa300c6449986dcc73e0bcfb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Editor/Scripts/Utilities/GLinkStripDrawer.cs
+  uploadId: 913908

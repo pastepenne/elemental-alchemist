@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d698939ffdff1b445953db6f4fd77a48
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Jupiter - Preview
+    Mode/Runtime/Scripts/Core/JCommon.cs
+  uploadId: 913908

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 7b5acb73755bceb4d8263fff5b60c004
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - terrainData: {instanceID: 0}
+  - trees: {instanceID: 0}
+  - grasses: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Scripts/TerrainData/GFoliage.cs
+  uploadId: 913908

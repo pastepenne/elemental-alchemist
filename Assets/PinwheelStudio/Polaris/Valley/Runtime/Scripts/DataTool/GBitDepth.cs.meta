@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 97f8aa96543decd419fc44e24ad0b5b4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Scripts/DataTool/GBitDepth.cs
+  uploadId: 913908

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7d5a4f69e71ebb14cae41f87bcbac4ed
+timeCreated: 1513177800
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Rocks/Rock-A06.prefab
+  uploadId: 907228

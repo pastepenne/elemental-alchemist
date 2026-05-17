@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 943afc0fbe39c9d44a7ad7918e0f5a71
+timeCreated: 1513602401
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Animations/Chest-A.controller
+  uploadId: 907228

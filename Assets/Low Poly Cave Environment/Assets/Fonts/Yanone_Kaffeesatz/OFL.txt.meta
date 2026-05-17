@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b9735845d40a8d341af1c9b148039932
+timeCreated: 1513361171
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Fonts/Yanone_Kaffeesatz/OFL.txt
+  uploadId: 907228

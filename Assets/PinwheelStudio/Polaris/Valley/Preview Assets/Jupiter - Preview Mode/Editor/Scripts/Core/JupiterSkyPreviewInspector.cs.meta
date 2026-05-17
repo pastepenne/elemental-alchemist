@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 5434227d215cb4643b06601bedce88a6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - jupiterBackground: {fileID: 2800000, guid: 1f0a1f3826cfbdd4bbb8b8abece20bed, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Jupiter - Preview
+    Mode/Editor/Scripts/Core/JupiterSkyPreviewInspector.cs
+  uploadId: 913908

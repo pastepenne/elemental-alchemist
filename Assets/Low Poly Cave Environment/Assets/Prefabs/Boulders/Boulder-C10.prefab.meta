@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 77a46d0665a44a14e98721bee2f3e327
+timeCreated: 1512752266
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Boulders/Boulder-C10.prefab
+  uploadId: 907228

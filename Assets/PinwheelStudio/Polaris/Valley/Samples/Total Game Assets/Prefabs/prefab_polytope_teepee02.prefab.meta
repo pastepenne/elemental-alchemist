@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c1ea5178c70ddd547902bdaa4e97d92b
+timeCreated: 1522083601
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Samples/Total Game Assets/Prefabs/prefab_polytope_teepee02.prefab
+  uploadId: 913908

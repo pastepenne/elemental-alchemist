@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0e22dc59638bb654491d3c89b44527d3
+AssemblyDefinitionReferenceImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Highland/Runtime/Scripts/Pinwheel.Polaris.Highland.Runtime.asmref
+  uploadId: 913908

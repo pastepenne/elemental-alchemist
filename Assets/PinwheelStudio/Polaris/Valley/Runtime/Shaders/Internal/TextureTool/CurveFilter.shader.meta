@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9811b6f3401a9f9498905bac674be222
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/Internal/TextureTool/CurveFilter.shader
+  uploadId: 913908

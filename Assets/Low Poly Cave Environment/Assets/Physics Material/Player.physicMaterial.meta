@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2b3f3baab529de54e890ba54310c7378
+timeCreated: 1512846080
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 13400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Physics Material/Player.physicMaterial
+  uploadId: 907228

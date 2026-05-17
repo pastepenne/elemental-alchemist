@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6f76466c9fa43ee4a9e584ca8b5854b4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Editor/Scripts/Extensions/VSP Integration/GVSPSettings.cs
+  uploadId: 913908

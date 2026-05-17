@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b7c8b72688d52c14fbae78bd319405c1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Editor/Scripts/WizardTool/Wizard
+    Pages/VistaPage.cs
+  uploadId: 913908

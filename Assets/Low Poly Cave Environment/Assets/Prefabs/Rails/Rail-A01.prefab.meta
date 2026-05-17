@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3720f8b3fafe884428f4b179a592c511
+timeCreated: 1514554834
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Rails/Rail-A01.prefab
+  uploadId: 907228

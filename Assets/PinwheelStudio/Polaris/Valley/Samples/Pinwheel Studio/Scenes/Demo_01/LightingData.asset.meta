@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2b58d2f9e5626dd4286313cf4bf1b43b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Samples/Pinwheel Studio/Scenes/Demo_01/LightingData.asset
+  uploadId: 913908

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 86f2be2d3cc01a1459ff0af5879bd0b7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Poseidon - Preview
+    Mode/Runtime/Scripts/AreaMeshGenerator.cs
+  uploadId: 913908

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0d48935311a77774ca2176a40f1437b0
+timeCreated: 1513977728
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Rails/RailStopper-03.prefab
+  uploadId: 907228

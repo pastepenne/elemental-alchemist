@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a3415352b26e3b447a0dcfae640327b2
+timeCreated: 1513262675
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Rocks/Rock-B10.prefab
+  uploadId: 907228

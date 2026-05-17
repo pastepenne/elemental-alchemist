@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 95cedf161cefbcf48ba21cabd6bb918b
+timeCreated: 1526371192
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Samples/Pinwheel Studio/Prefabs/Snowman.prefab
+  uploadId: 913908

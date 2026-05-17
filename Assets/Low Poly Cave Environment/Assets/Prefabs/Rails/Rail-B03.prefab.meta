@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 314cb451e13d5914db1f32c7bbb3a779
+timeCreated: 1514554835
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Rails/Rail-B03.prefab
+  uploadId: 907228

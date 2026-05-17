@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 000f20cc202b1d449bb31bd160ebd2ad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Editor/Resources/MicroSplatIntegrationSettings.asset
+  uploadId: 913908

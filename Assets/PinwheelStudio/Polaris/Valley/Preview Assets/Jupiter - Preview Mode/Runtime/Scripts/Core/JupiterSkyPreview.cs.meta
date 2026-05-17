@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 1bfc3fea4b3c905478aa670e43d1ef4c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sunLightSource: {instanceID: 0}
+  - skyShader: {fileID: 4800000, guid: 3a4c7560faf0cb742bbbc7a877bbb364, type: 3}
+  - defaultSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  - noiseTexture: {fileID: 2800000, guid: 890bfba885b62614fa09cd08d8c8e43e, type: 3}
+  - cloudTexture: {fileID: 2800000, guid: 0c3cce1751f7cc44daf35f0ff9fcfcbd, type: 3}
+  - material: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Jupiter - Preview
+    Mode/Runtime/Scripts/Core/JupiterSkyPreview.cs
+  uploadId: 913908

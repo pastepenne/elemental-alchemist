@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 24c71d8ee3a7ef347b14cfd8803e9b32
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/Internal/SplineTool/PathPainterMetallicSmoothness.shader
+  uploadId: 913908

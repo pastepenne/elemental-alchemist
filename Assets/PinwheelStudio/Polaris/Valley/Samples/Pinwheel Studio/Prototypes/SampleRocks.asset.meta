@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ca01d84a231c96f4abd987bd233a0384
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Samples/Pinwheel Studio/Prototypes/SampleRocks.asset
+  uploadId: 913908

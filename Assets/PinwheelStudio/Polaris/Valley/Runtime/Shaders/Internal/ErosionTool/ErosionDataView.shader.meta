@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: dd6b79bd14a692943be50cc3b75ea79f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/Internal/ErosionTool/ErosionDataView.shader
+  uploadId: 913908

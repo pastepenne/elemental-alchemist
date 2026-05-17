@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 7136b5e7cb6d2da4285f19308a5d484b
+labels:
+- PolarisSampleMaterials
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Samples/Pinwheel Studio/Materials/Skeleton.mat
+  uploadId: 913908

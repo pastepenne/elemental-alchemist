@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0c1e2a391d6742643afac00313644bef
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Shaders/Internal/TextureTool/BlurRadius.shader
+  uploadId: 913908

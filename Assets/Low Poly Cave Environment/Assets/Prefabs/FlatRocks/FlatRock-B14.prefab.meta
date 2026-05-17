@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5adb0f736aaa34f4aa462b6dd703df00
+timeCreated: 1513267186
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/FlatRocks/FlatRock-B14.prefab
+  uploadId: 907228

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: de9a62c6bacea6b4888ce2cdd0a3d3f8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Editor/Shaders/GrassTouchBending.asset
+  uploadId: 913908

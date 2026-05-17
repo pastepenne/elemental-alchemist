@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4216ec8f0e3f86f41ba1bbddcdb3606b
+timeCreated: 1513976023
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Minecart/Minecart02.prefab
+  uploadId: 907228

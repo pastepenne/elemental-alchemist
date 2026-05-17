@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3a4c7560faf0cb742bbbc7a877bbb364
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Preview Assets/Jupiter - Preview
+    Mode/Runtime/Shaders/PolarisSkyPreview.shader
+  uploadId: 913908

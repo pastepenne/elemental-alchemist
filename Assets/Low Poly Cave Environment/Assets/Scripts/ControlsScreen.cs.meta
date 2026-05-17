@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ac39e598e35db294a86eb757956fa825
+timeCreated: 1512853527
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Scripts/ControlsScreen.cs
+  uploadId: 907228

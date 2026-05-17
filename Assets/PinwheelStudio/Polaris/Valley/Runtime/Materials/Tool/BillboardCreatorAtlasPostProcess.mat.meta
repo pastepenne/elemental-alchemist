@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cdea24d5b52553e47bfc68e765afde8f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Runtime/Materials/Tool/BillboardCreatorAtlasPostProcess.mat
+  uploadId: 913908

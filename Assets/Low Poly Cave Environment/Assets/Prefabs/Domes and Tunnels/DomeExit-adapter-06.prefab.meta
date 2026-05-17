@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 99aa8ce60ff0d4646a483dcf4fa0b1cb
+timeCreated: 1513355591
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Domes and Tunnels/DomeExit-adapter-06.prefab
+  uploadId: 907228

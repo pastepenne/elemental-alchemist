@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2fc81725a4ba76448952785fad77c265
+timeCreated: 1513355576
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Domes and Tunnels/Dome-2exits-02.prefab
+  uploadId: 907228

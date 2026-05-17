@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 59edf9e3116c6ec468e7b92c823850ba
+timeCreated: 1514301349
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Ladders/Ladder07.prefab
+  uploadId: 907228

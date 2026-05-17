@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 291f505b6d03b6946bc4c396e187efb4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Highland/Editor/Scripts/StampTool/GFoliageStamperInspector.cs
+  uploadId: 913908

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a6542bf9c5c8f58429b0b70f81c0cb12
+labels:
+- PolarisSampleGrasses
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286886
+  packageName: Polaris Summit - Low Poly Terrain Editor
+  packageVersion: 3.4.4
+  assetPath: Assets/PinwheelStudio/Polaris/Valley/Samples/Pinwheel Studio/Prototypes/SampleGrasses.asset
+  uploadId: 913908

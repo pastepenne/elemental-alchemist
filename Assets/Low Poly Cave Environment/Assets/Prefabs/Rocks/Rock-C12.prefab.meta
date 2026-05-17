@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b5997f35053603f4bbddac39f1f6cfdc
+timeCreated: 1513267488
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Rocks/Rock-C12.prefab
+  uploadId: 907228

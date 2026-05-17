@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5225ae3701f4c3d4d9d52e2e910c0d9a
+timeCreated: 1514386275
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Mine/MineFrame01.prefab
+  uploadId: 907228

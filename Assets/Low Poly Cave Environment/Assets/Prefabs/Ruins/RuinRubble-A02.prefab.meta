@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e4c370f62e0109e4e97cb71536123fbe
+timeCreated: 1514549770
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104686
+  packageName: Low Poly Cave Environment
+  packageVersion: 1.1.2
+  assetPath: Assets/Low Poly Cave Environment/Assets/Prefabs/Ruins/RuinRubble-A02.prefab
+  uploadId: 907228
