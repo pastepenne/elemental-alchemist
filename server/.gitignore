@@ -1,0 +1,20 @@
+# Re-include server project files excluded by the Unity root .gitignore
+!*.sln
+!*.slnx
+!*.csproj
+
+# .NET build artifacts
+bin/
+obj/
+
+# Local SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+# Secrets / local run config
+**/launchSettings.json
+**/appsettings.Development.json
+
+# Rider cache directory
+.idea/
