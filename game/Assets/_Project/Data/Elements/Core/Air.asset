@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b515efcce0186a43a8231138a703e44, type: 3}
   m_Name: Air
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Data.Element
-  id: air
-  displayName: Air
-  description: Invisible yet ever present.
-  icon: {fileID: 21300000, guid: e9137738869ea594aa43d7479b33333a, type: 3}
-  tier: 0
+  _id: air
+  _displayName: Air
+  _description: This is air
+  _icon: {fileID: 21300000, guid: e9137738869ea594aa43d7479b33333a, type: 3}
+  _tier: 0

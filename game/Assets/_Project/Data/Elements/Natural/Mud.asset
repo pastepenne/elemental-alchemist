@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b515efcce0186a43a8231138a703e44, type: 3}
   m_Name: Mud
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Data.Element
-  id: mud
-  displayName: Mud
-  description: 
-  icon: {fileID: 21300000, guid: f54c226081ff38c4aa5c05b5c592ab5e, type: 3}
-  tier: 1
+  _id: mud
+  _displayName: Mud
+  _description: This is mud
+  _icon: {fileID: 21300000, guid: f54c226081ff38c4aa5c05b5c592ab5e, type: 3}
+  _tier: 1
