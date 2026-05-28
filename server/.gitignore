@@ -18,3 +18,7 @@ obj/
 
 # Rider cache directory
 .idea/
+
+# Rider per-user settings
+*.user
+*.DotSettings.user

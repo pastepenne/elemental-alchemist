@@ -1,63 +1,65 @@
 using System.Text.Json;
-using ElementalAlchemist.Server.Database;
-using ElementalAlchemist.Server.Models;
-using ElementalAlchemist.Server.Services;
+using Anthropic.SDK;
+using ElementalAlchemist.Server;
+using ElementalAlchemist.Server.Data;
+using ElementalAlchemist.Server.Generation;
+using ElementalAlchemist.Server.Seeding;
+using ElementalAlchemist.Shared;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("Default") ?? "Data Source=fusions.db"));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Default")));
 
+builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase);
+
+// Seeding
+builder.Services.Configure<SeedingOptions>(builder.Configuration.GetSection("Seeding"));
+builder.Services.AddScoped<DatabaseSeeder>();
+
+// Generation
+builder.Services.Configure<GenerationOptions>(builder.Configuration.GetSection("Generation"));
+builder.Services.AddSingleton(_ =>
+{
+    if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("ANTHROPIC_API_KEY")))
+    {
+        throw new InvalidOperationException("Anthropic API key not configured. Set the ANTHROPIC_API_KEY environment variable.");
+    }
+    
+    return new AnthropicClient();
+});
+
+builder.Services.AddScoped<ElementGenerator>();
+
+// Fusion
 builder.Services.AddScoped<FusionService>();
-
-builder.Services.Configure<AnthropicOptions>(builder.Configuration.GetSection("Anthropic"));
-builder.Services.PostConfigure<AnthropicOptions>(o =>
-{
-    // Convenience fallback to the conventional env var when not set under Anthropic:ApiKey.
-    if (string.IsNullOrEmpty(o.ApiKey))
-    {
-        o.ApiKey = Environment.GetEnvironmentVariable("ANTHROPIC_API_KEY") ?? "";
-    }
-});
-
-builder.Services.AddHttpClient<AnthropicService>((sp, client) =>
-{
-    var o = sp.GetRequiredService<IOptions<AnthropicOptions>>().Value;
-    if (string.IsNullOrEmpty(o.ApiKey))
-    {
-        throw new InvalidOperationException(
-            "Anthropic API key not configured. Set ANTHROPIC_API_KEY or Anthropic:ApiKey.");
-    }
-
-    client.BaseAddress = new Uri("https://api.anthropic.com");
-    client.DefaultRequestHeaders.Add("x-api-key", o.ApiKey);
-    client.DefaultRequestHeaders.Add("anthropic-version", o.Version);
-});
-
-builder.Services.ConfigureHttpJsonOptions(options =>
-    options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase);
 
 var app = builder.Build();
 
+// Ensure database is created and seeded on startup
 using (var scope = app.Services.CreateScope())
 {
-    await scope.ServiceProvider.GetRequiredService<AppDbContext>().Database.EnsureCreatedAsync();
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    await db.Database.EnsureCreatedAsync();
+    
+    var seeder = scope.ServiceProvider.GetRequiredService<DatabaseSeeder>();
+    await seeder.SeedAsync();
 }
 
-app.MapPost("/fuse", async (FuseRequest req, FusionService fusion, CancellationToken ct) =>
+// Endpoint for fusing two elements
+app.MapPost("/fuse", async (FusionPair request, FusionService fusion, CancellationToken ct) =>
 {
-    if (string.IsNullOrWhiteSpace(req.ElementA) || string.IsNullOrWhiteSpace(req.ElementB))
+    if (string.IsNullOrWhiteSpace(request.ElementA) || string.IsNullOrWhiteSpace(request.ElementB))
     {
         return Results.BadRequest(new { error = "Both elementA and elementB are required." });
     }
 
     try
     {
-        return Results.Ok(await fusion.FuseAsync(req.ElementA, req.ElementB, ct));
+        var result = await fusion.FuseAsync(request, ct);
+        return result is null ? Results.NoContent() : Results.Ok(result);
     }
-    catch (Exception ex) when (ex is AnthropicException or JsonException)
+    catch (GeneratorException)
     {
         return Results.StatusCode(StatusCodes.Status502BadGateway);
     }
