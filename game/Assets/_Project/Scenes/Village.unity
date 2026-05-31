@@ -2086,6 +2086,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4731421425081982357, guid: 987b73b1f8bdc4747aa0817adc6744f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6278811310415068520, guid: 987b73b1f8bdc4747aa0817adc6744f4, type: 3}
       propertyPath: m_Name
       value: Canvas_Dialogue
@@ -4799,6 +4803,14 @@ PrefabInstance:
     - target: {fileID: 8315028727244712486, guid: 7bfcad86c75ec054aa1cdf757eea7ce7, type: 3}
       propertyPath: m_Name
       value: Canvas_PlayerMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991198463197299952, guid: 7bfcad86c75ec054aa1cdf757eea7ce7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994886181985835716, guid: 7bfcad86c75ec054aa1cdf757eea7ce7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

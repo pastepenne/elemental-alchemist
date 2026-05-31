@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae0948b8d2d391418bd2d1bdd5679cb, type: 3}
+  m_Name: ElementRegistry
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementRegistry
+  _elements:
+  - {fileID: 11400000, guid: a41900b1e584f294ca657b8a1ba8ecf3, type: 2}
+  - {fileID: 11400000, guid: c151a7ec27f57fe4881407218504a881, type: 2}
+  - {fileID: 11400000, guid: 17ac814eacaf397448a903d52e38b92d, type: 2}
+  - {fileID: 11400000, guid: e018a698998c17148a53289846dd2cca, type: 2}
+  - {fileID: 11400000, guid: 066ea723751047947bc8a43c110bcefc, type: 2}
+  - {fileID: 11400000, guid: 8b8a5a9f19dea034096dcf530af8a47b, type: 2}
+  - {fileID: 11400000, guid: 56ef0fbcd89706846b1723c0f3bb28f8, type: 2}
+  _tagSprites: {fileID: 11400000, guid: e42f9f98e6e3aac4589670edae2575a6, type: 2}

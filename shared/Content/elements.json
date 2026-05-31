@@ -1,0 +1,51 @@
+[
+  {
+    "id": "air",
+    "displayName": "Air",
+    "description": "This is air",
+    "tier": "Core",
+    "tags": []
+  },
+  {
+    "id": "earth",
+    "displayName": "Earth",
+    "description": "This is earth",
+    "tier": "Core",
+    "tags": []
+  },
+  {
+    "id": "fire",
+    "displayName": "Fire",
+    "description": "This is Fire",
+    "tier": "Core",
+    "tags": []
+  },
+  {
+    "id": "water",
+    "displayName": "Water",
+    "description": "This is water",
+    "tier": "Core",
+    "tags": []
+  },
+  {
+    "id": "mud",
+    "displayName": "Mud",
+    "description": "This is mud",
+    "tier": "Natural",
+    "tags": []
+  },
+  {
+    "id": "stone",
+    "displayName": "Stone",
+    "description": "This is stone",
+    "tier": "Natural",
+    "tags": []
+  },
+  {
+    "id": "wood",
+    "displayName": "Wood",
+    "description": "This is wood",
+    "tier": "Natural",
+    "tags": []
+  }
+]

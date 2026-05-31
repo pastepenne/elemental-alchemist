@@ -17,7 +17,7 @@ namespace ElementalAlchemist.Progression
         private readonly HashSet<ElementData> _unlockedCoreElements = new();
         private ProgressionStage _currentStage;
         
-        public bool IsFreeplayActive { get; private set; }
+        public bool IsFreeplayActive => _currentStage == ProgressionStage.Master;
         public bool HasBreathFragment { get; private set; }
         public bool HasFleshFragment { get; private set; }
         public bool HasSoulFragment { get; private set; }
@@ -68,7 +68,6 @@ namespace ElementalAlchemist.Progression
 
             HasSoulFragment = true;
             _currentStage = ProgressionStage.Master;
-            IsFreeplayActive = true;
         }
         
         private void Awake()

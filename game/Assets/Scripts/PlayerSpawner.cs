@@ -13,6 +13,7 @@ namespace ElementalAlchemist
                 return;
             }
             
+            
             // Turn off CharacterController temporarily if you use one
             var cc = player.GetComponent<CharacterController>();
             if (cc)

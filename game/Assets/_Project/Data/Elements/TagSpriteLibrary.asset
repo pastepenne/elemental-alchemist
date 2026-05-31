@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b2f8a071e5dae44868a99ef89947f8, type: 3}
+  m_Name: TagSpriteLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.TagSpriteLibrary
+  _entries:
+  - tag: air
+    sprite: {fileID: 21300000, guid: e9137738869ea594aa43d7479b33333a, type: 3}
+  - tag: earth
+    sprite: {fileID: 21300000, guid: 6d50f166d22521f42832b4e3ca9f3fc8, type: 3}
+  - tag: fire
+    sprite: {fileID: 21300000, guid: cc30a9e384526a94b83ea4075afdf3a8, type: 3}
+  - tag: water
+    sprite: {fileID: 21300000, guid: ad7f6142c9620b64f8164eae57038d6f, type: 3}
+  - tag: mud
+    sprite: {fileID: 21300000, guid: f54c226081ff38c4aa5c05b5c592ab5e, type: 3}
+  - tag: stone
+    sprite: {fileID: 21300000, guid: 0ef20406d8e474b49bc20fcd50ddeeba, type: 3}
+  - tag: wood
+    sprite: {fileID: 21300000, guid: d8020eb6b26d2f3489ce210d3957c45a, type: 3}
+  _fallback: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}

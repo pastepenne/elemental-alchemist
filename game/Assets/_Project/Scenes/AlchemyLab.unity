@@ -5460,6 +5460,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8991198463197299952, guid: 7bfcad86c75ec054aa1cdf757eea7ce7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994886181985835716, guid: 7bfcad86c75ec054aa1cdf757eea7ce7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7696,6 +7704,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4077674404868520283, guid: b8b13f111457ef549bdbbf9867060847, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241819523809938039, guid: b8b13f111457ef549bdbbf9867060847, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6627712178670600495, guid: b8b13f111457ef549bdbbf9867060847, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7776,6 +7792,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7074376640858667638, guid: b8b13f111457ef549bdbbf9867060847, type: 3}
+      propertyPath: _serverConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c2e9b8a1d3f4061a7b2c3d4e5f60718, type: 2}
+    - target: {fileID: 7074376640858667638, guid: b8b13f111457ef549bdbbf9867060847, type: 3}
+      propertyPath: _elementRegistry
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c9ad2271319bb047af80ed9303686e1, type: 2}
     - target: {fileID: 8985016667900413920, guid: b8b13f111457ef549bdbbf9867060847, type: 3}
       propertyPath: m_Name
       value: Canvas_Fusion
