@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b515efcce0186a43a8231138a703e44, type: 3}
-  m_Name: Mud
-  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Data.Element
-  _id: mud
-  _displayName: Mud
-  _description: This is mud
-  _icon: {fileID: 21300000, guid: f54c226081ff38c4aa5c05b5c592ab5e, type: 3}
-  _tier: 1
+  m_Name: Ice
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
+  _id: ice
+  _displayName: Ice
+  _description: This is ice
+  _icon: {fileID: 21300000, guid: bc392f0a34c22e24bb2fc001b7fd19be, type: 3}
+  _tier: 2
   _tags:
-  - mud
+  - ice

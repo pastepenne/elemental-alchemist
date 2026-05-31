@@ -17,3 +17,5 @@ MonoBehaviour:
   _description: This is stone
   _icon: {fileID: 21300000, guid: 0ef20406d8e474b49bc20fcd50ddeeba, type: 3}
   _tier: 1
+  _tags:
+  - stone
