@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using ElementalAlchemist.Element;
+using ElementalAlchemist.Shared;
 using UnityEngine;
 
 namespace ElementalAlchemist.Progression
@@ -67,6 +68,7 @@ namespace ElementalAlchemist.Progression
 
             HasSoulFragment = true;
             _currentStage = ProgressionStage.Master;
+            IsFreeplayActive = true;
         }
         
         private void Awake()

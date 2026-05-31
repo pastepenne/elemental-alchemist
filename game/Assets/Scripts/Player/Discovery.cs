@@ -22,17 +22,27 @@ namespace ElementalAlchemist.Player
         
         public bool IsRecipeDiscovered(RecipeData recipe)
         {
-            return _discoveredRecipes.Contains(new RecipeKey(recipe));
+            return IsRecipeDiscovered(new RecipeKey(recipe));
+        }
+
+        public bool IsRecipeDiscovered(RecipeKey key)
+        {
+            return _discoveredRecipes.Contains(key);
         }
 
         public void DiscoverElement(ElementData element)
         {
             _discoveredElements.Add(element);
         }
-        
+
         public void DiscoverRecipe(RecipeData recipe)
         {
-            _discoveredRecipes.Add(new RecipeKey(recipe));
+            DiscoverRecipe(new RecipeKey(recipe));
+        }
+
+        public void DiscoverRecipe(RecipeKey key)
+        {
+            _discoveredRecipes.Add(key);
         }
     }
 }

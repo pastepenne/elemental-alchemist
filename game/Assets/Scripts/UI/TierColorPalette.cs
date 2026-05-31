@@ -1,16 +1,8 @@
-﻿using UnityEngine;
+using ElementalAlchemist.Shared;
+using UnityEngine;
 
-namespace ElementalAlchemist.Element
+namespace ElementalAlchemist.UI
 {
-    public enum ElementTier
-    {
-        Core,
-        Natural,
-        Refined,
-        Advanced,
-        Exotic
-    }
-    
     [CreateAssetMenu(fileName = "New Tier Color Palette", menuName = "Elemental Alchemist/Tier Color Palette")]
     public class TierColorPalette : ScriptableObject
     {

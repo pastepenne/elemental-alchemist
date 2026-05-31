@@ -1,11 +1,10 @@
-﻿namespace ElementalAlchemist.Shared
+namespace ElementalAlchemist.Shared;
+
+public record ElementDefinition
 {
-    public record ElementDefinition
-    {
-        public required string Id { get; init; }
-        public required string DisplayName { get; init; }
-        public required string Description { get; init; }
-        public required ElementTier Tier { get; init; }
-        public required string[] Tags { get; init; }
-    }
+    public string Id { get; set; } = string.Empty;
+    public string DisplayName { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
+    public ElementTier Tier { get; set; }
+    public string[] Tags { get; set; } = System.Array.Empty<string>();
 }

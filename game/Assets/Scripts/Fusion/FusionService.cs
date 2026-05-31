@@ -1,36 +1,118 @@
+using System;
+using System.Collections;
+using System.Text;
 using ElementalAlchemist.Element;
 using ElementalAlchemist.Player;
 using ElementalAlchemist.Progression;
+using ElementalAlchemist.Shared;
+using Newtonsoft.Json;
+using UnityEngine;
+using UnityEngine.Networking;
 
 namespace ElementalAlchemist.Fusion
 {
     public static class FusionService
     {
-        public static FusionResult TryFuse(RecipeCatalog catalog, ElementData inputA, ElementData inputB)
+        public static IEnumerator Fuse(
+            RecipeCatalog catalog,
+            ElementRegistry registry,
+            string baseUrl,
+            ElementData inputA,
+            ElementData inputB,
+            Action<FusionResult> onComplete)
+        {
+            var inventory = PlayerManager.Instance.Inventory;
+
+            var recipe = catalog.FindRecipe(inputA, inputB);
+            if (recipe)
+            {
+                var allowed = IsTierAllowed(recipe) && HasRequiredElements(inputA, inputB, inventory);
+                onComplete?.Invoke(allowed
+                    ? ApplyFusion(inputA, inputB, recipe.output)
+                    : new FusionResult { Success = false });
+                yield break;
+            }
+
+            if (!ProgressionManager.Instance.IsFreeplayActive || !HasRequiredElements(inputA, inputB, inventory))
+            {
+                onComplete?.Invoke(new FusionResult { Success = false });
+                yield break;
+            }
+
+            var pair = new FusionPair(inputA.Id, inputB.Id);
+            var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(pair, SerializerSettings));
+
+            using var request = new UnityWebRequest($"{baseUrl}/fuse", UnityWebRequest.kHttpVerbPOST)
+            {
+                uploadHandler = new UploadHandlerRaw(body),
+                downloadHandler = new DownloadHandlerBuffer()
+            };
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Accept", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogWarning($"[FusionService] Fusion request failed ({request.responseCode}): {request.error}");
+                onComplete?.Invoke(new FusionResult { Success = false });
+                yield break;
+            }
+
+            if (request.responseCode == 204 || string.IsNullOrWhiteSpace(request.downloadHandler.text))
+            {
+                onComplete?.Invoke(new FusionResult { Success = false });
+                yield break;
+            }
+
+            ElementDefinition definition;
+            try
+            {
+                definition = JsonConvert.DeserializeObject<ElementDefinition>(request.downloadHandler.text);
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning($"[FusionService] Could not parse fusion response: {e.Message}");
+                onComplete?.Invoke(new FusionResult { Success = false });
+                yield break;
+            }
+
+            var output = registry ? registry.Resolve(definition) : null;
+            if (!output)
+            {
+                onComplete?.Invoke(new FusionResult { Success = false });
+                yield break;
+            }
+
+            onComplete?.Invoke(ApplyFusion(inputA, inputB, output));
+        }
+
+        private static readonly JsonSerializerSettings SerializerSettings = new()
+        {
+            ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
+        };
+
+        private static FusionResult ApplyFusion(ElementData inputA, ElementData inputB, ElementData output)
         {
             var inventory = PlayerManager.Instance.Inventory;
             var discovery = PlayerManager.Instance.Discovery;
-            
-            var recipe = catalog.FindRecipe(inputA, inputB);
-            if (!recipe || !IsTierAllowed(recipe) || !HasRequiredElements(inputA, inputB, inventory))
-            {
-                return new FusionResult { Success = false };
-            }
 
             ConsumeElements(inputA, inputB, inventory);
+            inventory.AddElement(output);
 
-            inventory.AddElement(recipe.output);
-
-            var newDiscovery = !discovery.IsRecipeDiscovered(recipe);
+            var key = new RecipeKey(inputA.Id, inputB.Id);
+            var newDiscovery = !discovery.IsRecipeDiscovered(key);
             if (newDiscovery)
             {
-                discovery.DiscoverRecipe(recipe);
+                discovery.DiscoverRecipe(key);
             }
+
+            discovery.DiscoverElement(output);
 
             return new FusionResult
             {
                 Success = true,
-                Output = recipe.output,
+                Output = output,
                 NewDiscovery = newDiscovery
             };
         }
@@ -39,7 +121,7 @@ namespace ElementalAlchemist.Fusion
         {
             return recipe.output.Tier <= ProgressionManager.Instance.CurrentAllowedFusionTier;
         }
-        
+
         private static bool HasRequiredElements(ElementData inputA, ElementData inputB, Inventory inventory)
         {
             if (inputA.IsCore && inputB.IsCore)

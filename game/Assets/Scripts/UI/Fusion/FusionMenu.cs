@@ -3,7 +3,9 @@ using System.Linq;
 using ElementalAlchemist.Element;
 using ElementalAlchemist.Fusion;
 using ElementalAlchemist.GameInput;
+using ElementalAlchemist.Network;
 using ElementalAlchemist.Player;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -18,7 +20,10 @@ namespace ElementalAlchemist.UI.Fusion
         [SerializeField] private GameObject _backdropPanel;
         [SerializeField] private GameObject _windowPanel;
         [SerializeField] private RecipeCatalog _recipeCatalog;
-        
+        [SerializeField] private ElementRegistry _elementRegistry;
+        [SerializeField] private ServerConfig _serverConfig;
+        [SerializeField] private TMP_Text _statusText;
+
         [SerializeField] private TierColorPalette _tierColors;
         [SerializeField] private ElementData[] _coreElements;
 
@@ -35,6 +40,7 @@ namespace ElementalAlchemist.UI.Fusion
         
         private InputAction _cancelAction;
         private bool _isOpen;
+        private bool _isFusing;
 
         private void Awake()
         {
@@ -70,7 +76,9 @@ namespace ElementalAlchemist.UI.Fusion
             _cancelAction.performed += OnCancel;
 
             _ingredientSlotA.Clear();
-            _ingredientSlotA.Clear();
+            _ingredientSlotB.Clear();
+            _fuseButton.interactable = true;
+            SetStatus(string.Empty);
 
             RefreshCoreElements();
             RefreshPouchElements();
@@ -150,20 +158,47 @@ namespace ElementalAlchemist.UI.Fusion
         
         private void OnFusePressed()
         {
-            if (!_ingredientSlotA.Current || !_ingredientSlotB.Current)
+            if (_isFusing || !_ingredientSlotA.Current || !_ingredientSlotB.Current)
             {
                 return;
             }
 
-            var result = FusionService.TryFuse(_recipeCatalog, _ingredientSlotA.Current, _ingredientSlotB.Current);
+            var inputA = _ingredientSlotA.Current;
+            var inputB = _ingredientSlotB.Current;
 
-            if (result.Success)
-            {
-                UnityEngine.Debug.Log(result.Output.DisplayName);
-            }
-            
+            _isFusing = true;
+            _fuseButton.interactable = false;
+            SetStatus("Fusing...");
+            StartCoroutine(FusionService.Fuse(_recipeCatalog, _elementRegistry, _serverConfig.BaseUrl, inputA, inputB, OnFusionComplete));
+        }
+
+        private void OnFusionComplete(FusionResult result)
+        {
+            _isFusing = false;
+            _fuseButton.interactable = true;
+            ShowResult(result);
             _ingredientSlotA.Clear();
             _ingredientSlotB.Clear();
+        }
+
+        private void ShowResult(FusionResult result)
+        {
+            if (result.Success)
+            {
+                SetStatus(result.Output.DisplayName);
+            }
+            else
+            {
+                SetStatus("Nothing happens...");
+            }
+        }
+
+        private void SetStatus(string message)
+        {
+            if (_statusText)
+            {
+                _statusText.text = message;
+            }
         }
         
         private void OnInventoryChanged(ElementData _)
