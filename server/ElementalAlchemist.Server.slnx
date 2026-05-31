@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../shared/ElementalAlchemist.Shared/ElementalAlchemist.Shared.csproj" />
+  <Project Path="ElementalAlchemist.Server/ElementalAlchemist.Server.csproj" />
+</Solution>
