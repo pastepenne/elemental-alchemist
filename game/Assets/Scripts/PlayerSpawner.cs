@@ -4,24 +4,29 @@ namespace ElementalAlchemist
 {
     public class PlayerSpawner : MonoBehaviour
     {
+        public static string PendingSpawnId;
+
+        [SerializeField] private string _spawnId;
+
         private void Start()
         {
-            var player = GameObject.FindWithTag("Player");
-
-            if (player == null)
+            if (!ShouldSnap())
             {
                 return;
             }
-            
-            
-            // Turn off CharacterController temporarily if you use one
+
+            var player = GameObject.FindWithTag("Player");
+            if (!player)
+            {
+                return;
+            }
+
             var cc = player.GetComponent<CharacterController>();
             if (cc)
             {
                 cc.enabled = false;
             }
 
-            // Snap player to this object's position and rotation
             player.transform.position = transform.position;
             player.transform.rotation = transform.rotation;
 
@@ -29,6 +34,18 @@ namespace ElementalAlchemist
             {
                 cc.enabled = true;
             }
+
+            PendingSpawnId = null;
+        }
+
+        private bool ShouldSnap()
+        {
+            if (!string.IsNullOrEmpty(PendingSpawnId))
+            {
+                return _spawnId == PendingSpawnId;
+            }
+
+            return string.IsNullOrEmpty(_spawnId);
         }
     }
 }

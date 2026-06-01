@@ -17,7 +17,6 @@ namespace ElementalAlchemist.Player
 
         private void Awake()
         {
-            // Ensure only one instance of PlayerManager exists
             if (!Instance)
             {
                 Instance = this;
@@ -26,6 +25,7 @@ namespace ElementalAlchemist.Player
                 Discovery = new Discovery();
                 Inventory = new Inventory();
                 Inventory.ElementAdded += Discovery.DiscoverElement;
+                ProgressionManager.CoreUnlocked += Discovery.DiscoverElement;
 
                 Animation = GetComponent<PlayerAnimation>();
                 Interaction = GetComponent<PlayerInteraction>();
@@ -39,10 +39,17 @@ namespace ElementalAlchemist.Player
 
         private void Start()
         {
-            // Add core elements as discovered at game start
             foreach (var element in ProgressionManager.Instance.UnlockedCoreElements)
             {
                 Discovery.DiscoverElement(element);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (Instance == this)
+            {
+                ProgressionManager.CoreUnlocked -= Discovery.DiscoverElement;
             }
         }
     }

@@ -39,6 +39,8 @@ namespace ElementalAlchemist.UI.Fusion
         private readonly List<GameObject> _pouchEntries = new();
         
         private InputAction _cancelAction;
+        public static event System.Action Closed;
+
         private bool _isOpen;
         private bool _isFusing;
 
@@ -94,9 +96,11 @@ namespace ElementalAlchemist.UI.Fusion
             _windowPanel.SetActive(false);
             ActionMapController.SetActionMap(ActionMaps.Player);
             _cancelAction.performed -= OnCancel;
-            
+
             PlayerManager.Instance.Inventory.ElementAdded -= OnInventoryChanged;
             PlayerManager.Instance.Inventory.ElementRemoved -= OnInventoryChanged;
+
+            Closed?.Invoke();
         }
         
         private void RefreshCoreElements()

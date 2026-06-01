@@ -1,4 +1,5 @@
 using ElementalAlchemist.GameInput;
+using ElementalAlchemist.Progression;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -85,11 +86,20 @@ namespace ElementalAlchemist.UI
             if (_isOpen)
             {
                 Close();
+                return;
             }
-            else
+
+            if (!ProgressionManager.Instance.HasMenuUnlocked)
             {
-                Open();
+                return;
             }
+
+            if (ActionMapController.Current != ActionMaps.Player)
+            {
+                return;
+            }
+
+            Open();
         }
     }
 }
