@@ -60,26 +60,40 @@ public class DatabaseSeeder(AppDbContext db, IOptions<SeedingOptions> options)
     private async Task SeedFusionsAsync(ElementDefinition[] elements, RecipeDefinition[] recipes, CancellationToken ct)
     {
         var now = DateTime.UtcNow;
-        
-        var recipeResults = recipes.ToDictionary(
-            r => new FusionPair(r.ElementA, r.ElementB),
-            r => r.Result);
-
-        var ids = elements
-            .OrderBy(e => e.Tier)
-            .ThenBy(e => e.Id, StringComparer.Ordinal)
-            .Select(e => e.Id)
-            .ToArray();
 
         var existingPairs = await _db.Fusions
             .Select(f => new FusionPair(f.ElementA, f.ElementB))
             .ToHashSetAsync(ct);
 
-        for (var i = 0; i < ids.Length; i++)
+        foreach (var recipe in recipes)
         {
-            for (var j = i + 1; j < ids.Length; j++)
+            var pair = new FusionPair(recipe.ElementA, recipe.ElementB);
+            if (!existingPairs.Add(pair))
             {
-                var pair = new FusionPair(ids[i], ids[j]);
+                continue;
+            }
+
+            _db.Fusions.Add(new Fusion
+            {
+                ElementA = pair.ElementA,
+                ElementB = pair.ElementB,
+                ResultId = string.IsNullOrEmpty(recipe.Result) ? null : recipe.Result,
+                CreatedAt = now,
+            });
+        }
+
+        // Lock the all core fusions
+        var coreIds = elements
+            .Where(e => e.Tier == ElementTier.Core)
+            .Select(e => e.Id)
+            .OrderBy(id => id, StringComparer.Ordinal)
+            .ToArray();
+
+        for (var i = 0; i < coreIds.Length; i++)
+        {
+            for (var j = i + 1; j < coreIds.Length; j++)
+            {
+                var pair = new FusionPair(coreIds[i], coreIds[j]);
                 if (!existingPairs.Add(pair))
                 {
                     continue;
@@ -89,7 +103,7 @@ public class DatabaseSeeder(AppDbContext db, IOptions<SeedingOptions> options)
                 {
                     ElementA = pair.ElementA,
                     ElementB = pair.ElementB,
-                    ResultId = recipeResults.GetValueOrDefault(pair),
+                    ResultId = null,
                     CreatedAt = now,
                 });
             }
