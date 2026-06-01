@@ -11,6 +11,8 @@ namespace ElementalAlchemist.GameInput
         private static string _current;
         private static string _pending;
 
+        public static string Current => _current;
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void Init()
         {

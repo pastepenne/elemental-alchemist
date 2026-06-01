@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8a252226495cb43b5a5da0c9420953, type: 3}
+  m_Name: TutorialSequence
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Progression.StorySequence
+  _sequenceId: tutorial
+  _activationStage: 0
+  _onComplete: 1
+  _openingWaypointKey: wp-lab
+  _openingDialogue: {fileID: 11400000, guid: aa4aec64d110f0340a44e76facb76e49, type: 2}
+  _steps:
+  - {fileID: 11400000, guid: c1465b254376950469f95dd561bbb29a, type: 2}
+  - {fileID: 11400000, guid: f1e56f2614973364c842ad70ee4602f1, type: 2}
+  - {fileID: 11400000, guid: 6b14c3761b2bd5341a72a8cf8784ac8e, type: 2}
+  - {fileID: 11400000, guid: a061c7fa921cadd4d9dc65ebdb6e0559, type: 2}
+  - {fileID: 11400000, guid: ad938f499aa69cb43905f42b232c41d9, type: 2}
+  - {fileID: 11400000, guid: 2160178eb7766a74784b58b1965d7d36, type: 2}
+  - {fileID: 11400000, guid: 9479ce216a861d04a8fe95c58ff2df48, type: 2}
+  - {fileID: 11400000, guid: dba3e478c1572f545bb5b8f35ed6d79e, type: 2}
+  - {fileID: 11400000, guid: a535bcb78e3d68346a570d06bd3bf1a9, type: 2}
