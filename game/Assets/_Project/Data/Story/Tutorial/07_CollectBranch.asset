@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Progression.StoryStep
   _triggerId: branch-collected-03
   _objectiveText: Collect three branches
-  _waypointKey: wp-lab
+  _waypointKey: wp-wood
   _dialogue: {fileID: 11400000, guid: 89ba3d5eda3393546b9719c8d9a6c9c5, type: 2}
