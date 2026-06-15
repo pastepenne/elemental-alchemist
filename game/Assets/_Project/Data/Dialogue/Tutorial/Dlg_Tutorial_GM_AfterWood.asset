@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
+  m_Name: Dlg_Tutorial_GM_AfterWood
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
+  _speaker: Grand Master
+  _lines:
+  - "Collecting those branches also helped you discover a new element \u2014 Wood. "
+  - By pressing TAB you can look into your pouch to see what elements you have collected.
+  - Tough you won't see the core elements, since they are always in your lab.
+  - You can also read the tome, there you will find every element you discovered.
+  - Now go throw the wood on the furnace.
