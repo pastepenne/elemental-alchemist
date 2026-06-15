@@ -6,6 +6,9 @@ namespace ElementalAlchemist.Player
     /// <summary>
     /// Singleton entry point for all player systems. Persists across scene loads.
     /// </summary>
+    [RequireComponent(typeof(PlayerMovement))]
+    [RequireComponent(typeof(PlayerAnimation))]
+    [RequireComponent(typeof(PlayerInteraction))]
     public class PlayerManager : MonoBehaviour
     {
         public static PlayerManager Instance { get; private set; }

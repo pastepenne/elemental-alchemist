@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 namespace ElementalAlchemist.UI.Fusion
 {
+    [RequireComponent(typeof(Button))]
     public class FusionIngredientSlot : MonoBehaviour
     {
         [SerializeField] private Image _icon;

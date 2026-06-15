@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace ElementalAlchemist.Player
 {
+    [RequireComponent(typeof(CharacterController))]
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] private float _baseSpeed = 5f;

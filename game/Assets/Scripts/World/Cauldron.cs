@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace ElementalAlchemist.World
 {
+    [RequireComponent(typeof(Collider))]
     public class Cauldron : MonoBehaviour, IInteractable
     {
         [SerializeField] private string _triggerId = "cauldron-filled";

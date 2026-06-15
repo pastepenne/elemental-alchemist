@@ -9,6 +9,7 @@ namespace ElementalAlchemist.UI.Tome
     /// <summary>
     /// Displays a single discovered element with the recipes used to obtain it.
     /// </summary>
+    [RequireComponent(typeof(Toggle))]
     public class TomeEntry : MonoBehaviour
     {
         [SerializeField] private Image _icon;

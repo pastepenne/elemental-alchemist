@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 namespace ElementalAlchemist.UI.Fusion
 {
+    [RequireComponent(typeof(Button))]
     public class FusionPouchEntry : MonoBehaviour
     {
         [SerializeField] private Image _icon;

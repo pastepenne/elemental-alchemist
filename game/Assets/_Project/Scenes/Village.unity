@@ -2314,6 +2314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754346030}
+  - component: {fileID: 754346031}
   m_Layer: 6
   m_Name: Shovel
   m_TagString: Untagged
@@ -2338,6 +2339,20 @@ Transform:
   - {fileID: 1191197845}
   m_Father: {fileID: 1966458343}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &754346031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754346029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393359d7330443f09a8aec54a7a4a39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.World.Shovel
+  _triggerId: shovel-taken
+  _gateDialogue: {fileID: 11400000, guid: 93960998bdab89c4ebc56e18a1044c4d, type: 2}
 --- !u!1 &822212974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,9 +2519,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8473347937480995496, guid: 1de271fd83a36d94abbd8c5494c94102, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1924043306}
     - targetCorrespondingSourceObject: {fileID: 8473347937480995496, guid: 1de271fd83a36d94abbd8c5494c94102, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1924043309}
@@ -5688,20 +5700,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3778061106047335679, guid: 1de271fd83a36d94abbd8c5494c94102, type: 3}
   m_PrefabInstance: {fileID: 881797567}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1924043306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924043302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393359d7330443f09a8aec54a7a4a39b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.World.Shovel
-  _triggerId: shovel-taken
-  _gateDialogue: {fileID: 11400000, guid: 93960998bdab89c4ebc56e18a1044c4d, type: 2}
 --- !u!65 &1924043309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13239,7 +13237,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 196869291792429432, guid: 81fdacd5f6b1fdb40ab981d8941dcabe, type: 3}
       propertyPath: m_Name
-      value: Mentor
+      value: GrandMaster
       objectReference: {fileID: 0}
     - target: {fileID: 4366709783034704412, guid: 81fdacd5f6b1fdb40ab981d8941dcabe, type: 3}
       propertyPath: m_Speed
