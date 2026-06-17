@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
+  m_Name: Dlg_Tutorial_GM_AfterCauldron
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
+  _speaker: Grand Master
+  _lines:
+  - Good. Now we need air.
+  - "Yes, I know \u2014 air is everywhere. But we need a way to harness it before
+    we can fuse with it."
+  - There's an old windmill outside your lab. Start it up, and the wind is yours.

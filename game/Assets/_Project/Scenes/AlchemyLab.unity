@@ -7743,7 +7743,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 196869291792429432, guid: 81fdacd5f6b1fdb40ab981d8941dcabe, type: 3}
       propertyPath: m_Name
-      value: Mentor
+      value: GrandMaster
       objectReference: {fileID: 0}
     - target: {fileID: 4659669186889948010, guid: 81fdacd5f6b1fdb40ab981d8941dcabe, type: 3}
       propertyPath: _spawnKey
@@ -7844,6 +7844,8 @@ MonoBehaviour:
   _sceneName: Village
   _arriveAtSpawnId: from-alchemy-lab
   _prompt: Exit
+  _requiredStage: 0
+  _gateDialogue: {fileID: 0}
 --- !u!65 &2025794563
 BoxCollider:
   m_ObjectHideFlags: 0

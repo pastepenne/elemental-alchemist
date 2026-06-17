@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace ElementalAlchemist.World
 {
+    [RequireComponent(typeof(Collider))]
     public class Furnace : MonoBehaviour, IInteractable
     {
         [SerializeField] private string _triggerId = "furnace-started";

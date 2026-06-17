@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace ElementalAlchemist.Player
 {
+    [RequireComponent(typeof(CharacterController))]
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] private float _baseSpeed = 5f;
@@ -88,6 +89,13 @@ namespace ElementalAlchemist.Player
 
         private Vector3 GetCameraRelativeDirection(Vector2 input)
         {
+            // The player persists across scenes but each scene has its own camera, so re-acquire when the cached
+            // one has been destroyed on a scene change.
+            if (!_camera)
+            {
+                _camera = Camera.main;
+            }
+
             if (!_camera)
             {
                 return new Vector3(input.x, 0f, input.y).normalized;

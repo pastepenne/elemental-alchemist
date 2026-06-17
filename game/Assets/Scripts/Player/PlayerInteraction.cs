@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace ElementalAlchemist.Player
 {
+    [RequireComponent(typeof(CharacterController))]
     public class PlayerInteraction : MonoBehaviour
     {
         [SerializeField] private float _interactDistance = 2.5f;

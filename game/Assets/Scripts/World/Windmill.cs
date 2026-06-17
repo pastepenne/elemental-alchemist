@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace ElementalAlchemist.World
 {
+    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(Collider))]
     public class Windmill : MonoBehaviour, IInteractable
     {
         [SerializeField] private string _triggerId = "windmill-started";

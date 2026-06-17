@@ -9,6 +9,7 @@ namespace ElementalAlchemist.UI.Pouch
     /// <summary>
     /// Displays a single element stack in the inventory grid.
     /// </summary>
+    [RequireComponent(typeof(Toggle))]
     public class PouchSlot : MonoBehaviour
     {
         [SerializeField] private Image _icon;
