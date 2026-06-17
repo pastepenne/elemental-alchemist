@@ -133,10 +133,40 @@ namespace ElementalAlchemist.Progression
                 DontDestroyOnLoad(gameObject);
 
                 _currentStage = _initialStage;
+                ApplyInitialStageUnlocks();
             }
             else
             {
                 Destroy(gameObject);
+            }
+        }
+
+        /// <summary>Grants everything the starting stage implies, so the game can boot mid-progression without
+        /// replaying earlier stages (Tutorial grants nothing).</summary>
+        private void ApplyInitialStageUnlocks()
+        {
+            if (_currentStage >= ProgressionStage.Novice)
+            {
+                OnWaterUnlocked();
+                OnAirUnlocked();
+                OnEarthUnlocked();
+                OnFireUnlocked();
+                OnMenuUnlocked();
+            }
+
+            if (_currentStage >= ProgressionStage.Apprentice)
+            {
+                HasBreathFragment = true;
+            }
+
+            if (_currentStage >= ProgressionStage.Adept)
+            {
+                HasFleshFragment = true;
+            }
+
+            if (_currentStage >= ProgressionStage.Master)
+            {
+                HasSoulFragment = true;
             }
         }
 

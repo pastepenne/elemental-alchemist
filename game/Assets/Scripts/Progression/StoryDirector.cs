@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace ElementalAlchemist.Progression
 {
-    /// <summary>Singleton that runs the active StorySequence based on the current progression stage.</summary>
+    /// <summary>Singleton that runs one StorySequence at a time. Scenes begin their sequence via
+    /// <see cref="StorySequenceStarter"/>; the director ignores a sequence that is already running or finished.</summary>
     public class StoryDirector : MonoBehaviour
     {
         public static StoryDirector Instance { get; private set; }
@@ -13,8 +14,6 @@ namespace ElementalAlchemist.Progression
         public static event Action<StoryStep> StepStarted;
         public static event Action<StoryStep> StepCompleted;
         public static event Action<string> SequenceCompleted;
-
-        [SerializeField] private StorySequence[] _sequences;
 
         private readonly Dictionary<string, int> _stepIndexBySequenceId = new();
         private readonly HashSet<string> _firedTriggers = new();
@@ -42,38 +41,48 @@ namespace ElementalAlchemist.Progression
             }
         }
 
-        private void Start()
+        private void OnEnable()
         {
             StoryTrigger.Fired += OnTriggerFired;
+        }
 
-            if (ProgressionManager.Instance)
-            {
-                TryStartSequenceForStage(ProgressionManager.Instance.CurrentStage);
-            }
+        private void OnDisable()
+        {
+            StoryTrigger.Fired -= OnTriggerFired;
         }
 
         private void OnDestroy()
         {
-            StoryTrigger.Fired -= OnTriggerFired;
             if (Instance == this)
             {
                 Instance = null;
             }
         }
 
-        private void TryStartSequenceForStage(ProgressionStage stage)
+        /// <summary>Begins a sequence, or resumes it if the scene is re-entered. Does nothing if it is already
+        /// running or already finished.</summary>
+        public void BeginSequence(StorySequence sequence)
         {
-            var sequence = FindSequence(stage);
-            if (!sequence)
+            if (!sequence || sequence.Steps == null || sequence.Steps.Length == 0)
             {
-                _currentSequence = null;
-                _currentStep = null;
+                return;
+            }
+
+            // Already running this sequence: re-emit the current step so a freshly loaded ObjectiveHud repopulates,
+            // but never replay the opening.
+            if (_currentSequence == sequence)
+            {
+                if (_currentStep)
+                {
+                    StepStarted?.Invoke(_currentStep);
+                }
                 return;
             }
 
             var startIndex = _stepIndexBySequenceId.TryGetValue(sequence.SequenceId, out var stored) ? stored : 0;
             if (startIndex >= sequence.Steps.Length)
             {
+                // Sequence already completed in a previous visit.
                 return;
             }
 
@@ -86,18 +95,6 @@ namespace ElementalAlchemist.Progression
             }
 
             StartStep(sequence.Steps[_currentIndex]);
-        }
-
-        private StorySequence FindSequence(ProgressionStage stage)
-        {
-            foreach (var sequence in _sequences)
-            {
-                if (sequence && sequence.ActivationStage == stage && sequence.Steps != null && sequence.Steps.Length > 0)
-                {
-                    return sequence;
-                }
-            }
-            return null;
         }
 
         private void StartStep(StoryStep step)
@@ -128,11 +125,6 @@ namespace ElementalAlchemist.Progression
                 _currentSequence = null;
                 ApplyOutcome(finishedSequence.OnComplete);
                 SequenceCompleted?.Invoke(finishedSequence.SequenceId);
-
-                if (ProgressionManager.Instance)
-                {
-                    TryStartSequenceForStage(ProgressionManager.Instance.CurrentStage);
-                }
                 return;
             }
 

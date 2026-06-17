@@ -114,7 +114,7 @@ namespace ElementalAlchemist.Characters
 
         private void OnStepCompleted(StoryStep step)
         {
-            GoTo(step.WaypointKey, step.Dialogue);
+            GoTo(step.WaypointKey, step.Dialogue, step.WarpWaypointKey);
         }
 
         private void OnSequenceCompleted(string sequenceId)
@@ -123,7 +123,7 @@ namespace ElementalAlchemist.Characters
             _forms.ApplyCurrentForm();
         }
 
-        private void GoTo(string waypointKey, DialogueData dialogue)
+        private void GoTo(string waypointKey, DialogueData dialogue, string approachWaypointKey = null)
         {
             _pendingDialogue = dialogue;
 
@@ -135,6 +135,12 @@ namespace ElementalAlchemist.Characters
                 }
                 _pendingDialogue = null;
                 return;
+            }
+
+            // Optional dramatic entrance: warp out of sight near the destination, then walk the last steps in.
+            if (TryGetWaypoint(approachWaypointKey, out var approach))
+            {
+                _movement.Warp(approach.position);
             }
 
             ActionMapController.SetActionMap(ActionMaps.Cutscene);
