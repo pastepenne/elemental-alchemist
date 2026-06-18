@@ -1477,6 +1477,8 @@ MonoBehaviour:
   _baseSpeed: 5
   _sprintMultiplier: 2
   _rotationSpeed: 720
+  _jumpHeight: 0.7
+  _mass: 2.5
 --- !u!143 &8912327058311125625
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1497,8 +1499,8 @@ CharacterController:
   serializedVersion: 3
   m_Height: 1.44
   m_Radius: 0.42
-  m_SlopeLimit: 20
-  m_StepOffset: 0.3
+  m_SlopeLimit: 40
+  m_StepOffset: 0.4
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.56, z: 0.01}
@@ -1589,7 +1591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05592fd37a244a2a142f7ccdf797aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.UI.InteractPromptController
-  _offset: {x: 0, y: 1.5, z: -0.5}
+  _heightOffset: 1.5
+  _towardCameraOffset: 1
   _promptText: {fileID: 7025527095450465973}
 --- !u!1 &7844386405695131341
 GameObject:
