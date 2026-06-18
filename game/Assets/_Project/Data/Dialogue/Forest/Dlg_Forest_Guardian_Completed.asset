@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Forest Guardian
   _lines:
-  - You are now worthy of holding this.
+  - Smoke, rising where the forest meets the flame. You have read the riddle truly.
+  - Take the Fragment of Breath. You have proven yourself worthy to carry it.

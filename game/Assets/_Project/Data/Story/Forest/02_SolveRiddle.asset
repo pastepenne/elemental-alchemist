@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Progression.StoryStep
   _triggerId: breath-claimed
   _objectiveText: Unravel the Guardian's riddle
-  _waypointKey: wp-guardian-meet
-  _approachWaypointKey: wp-guardian-approach
+  _waypointKey: wp-forest-guardian-meet
+  _warpWaypointKey: wp-forest-guardian-approach
   _dialogue: {fileID: 11400000, guid: 655f1eb51f2647649928a146609cf8d4, type: 2}

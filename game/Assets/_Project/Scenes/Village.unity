@@ -5469,6 +5469,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8912327058311125625, guid: f1ddd4cc179d84d40a4db7572a6ef260, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912327058311125625, guid: f1ddd4cc179d84d40a4db7572a6ef260, type: 3}
       propertyPath: m_StepOffset
       value: 0.4
       objectReference: {fileID: 0}
