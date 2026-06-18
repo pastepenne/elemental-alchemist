@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
+  m_Name: Dlg_Underground_Guardian_Riddle
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
+  _speaker: Underground Guardian
+  _lines:
+  - Far from the sun, you reach the cradle of the realm of Flesh. Every creature that ever walked above is gathered here below, held in the patient dark.
+  - The stone forgets nothing. It takes what the living leave behind and keeps its shape for an age of ages.
+  - Answer me this, and prove you understand my realm. When bone is laid down and stone closes over it, and time presses the two as one, what remains?
+  - Bring me your answer, and the Fragment of Flesh will be yours.

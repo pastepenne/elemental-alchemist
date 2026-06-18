@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
+  m_Name: Dlg_Underground_GM_Finale
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
+  _speaker: Grand Master
+  _lines:
+  - Breath and Flesh, both yours now. The Guardian does not give its Fragment lightly, and neither do I give my praise.
+  - You are no longer an apprentice. From this moment you are an Adept, and the deeper workings of alchemy are open to you.
+  - One realm remains. Beyond the Underground lie the Ruins, where the Fragment of Soul is kept. It is the hardest trial of all, and many never return from it.
+  - Gather your strength, then climb to the Ruins. I will meet you where the old world ended.

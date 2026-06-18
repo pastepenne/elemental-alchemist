@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6adc961100372224bb3b63086ba88b07, type: 3}
   m_Name: 01_FindGuardian
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Progression.StoryStep
-  _triggerId: guardian-met
+  _triggerId: forest-guardian-met
   _objectiveText: Find the Guardian of the Forest
   _waypointKey:
   _approachWaypointKey:

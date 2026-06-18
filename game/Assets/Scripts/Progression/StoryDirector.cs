@@ -68,6 +68,14 @@ namespace ElementalAlchemist.Progression
                 return;
             }
 
+            // Only run a sequence while the player is at the stage it belongs to. Past it means the realm is already
+            // cleared; before it means they have not reached it yet. Either way, do not (re)start it.
+            if (ProgressionManager.Instance &&
+                ProgressionManager.Instance.CurrentStage != sequence.ActivationStage)
+            {
+                return;
+            }
+
             // Already running this sequence: re-emit the current step so a freshly loaded ObjectiveHud repopulates,
             // but never replay the opening.
             if (_currentSequence == sequence)
