@@ -7,6 +7,7 @@ namespace ElementalAlchemist.GameInput
             public const string Move = "Move";
             public const string Sprint = "Sprint";
             public const string Interact = "Interact";
+            public const string Jump = "Jump";
         }
 
         public static class UI

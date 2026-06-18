@@ -10,13 +10,17 @@ namespace ElementalAlchemist.Player
         [SerializeField] private float _baseSpeed = 5f;
         [SerializeField] private float _sprintMultiplier = 2f;
         [SerializeField] private float _rotationSpeed = 720f;
-    
+        [SerializeField] private float _jumpHeight = 0.7f;
+        [SerializeField] private float _mass = 2.5f;
+
         private CharacterController _characterController;
         private InputAction _moveAction;
         private InputAction _sprintAction;
+        private InputAction _jumpAction;
         private Vector2 _moveInput;
         private float _verticalVelocity;
         private bool _isSprinting;
+        private bool _jumpRequested;
         private Camera _camera;
         
         // Current player speed
@@ -29,6 +33,7 @@ namespace ElementalAlchemist.Player
             _characterController = GetComponent<CharacterController>();
             _moveAction = InputSystem.actions.FindAction(InputActions.Player.Move);
             _sprintAction = InputSystem.actions.FindAction(InputActions.Player.Sprint);
+            _jumpAction = InputSystem.actions.FindAction(InputActions.Player.Jump);
             _camera = Camera.main;
         }
 
@@ -41,6 +46,9 @@ namespace ElementalAlchemist.Player
             // Subscribe to sprint action events (when sprint starts and stops)
             _sprintAction.performed += OnSprint;
             _sprintAction.canceled += OnSprint;
+
+            // Subscribe to jump action (on press)
+            _jumpAction.started += OnJump;
         }
 
         private void OnDisable()
@@ -52,25 +60,39 @@ namespace ElementalAlchemist.Player
             // Unsubscribe from sprint action events
             _sprintAction.performed -= OnSprint;
             _sprintAction.canceled -= OnSprint;
-        
+
+            // Unsubscribe from jump action
+            _jumpAction.started -= OnJump;
+
             // Reset cached input to prevent movement after disabling
             _moveInput = Vector2.zero;
             _isSprinting = false;
+            _jumpRequested = false;
         }
 
         private void Update()
         {
-            // Apply gravity
-            if (!_characterController.isGrounded)
-            {
-                // The character falls faster over time
-                _verticalVelocity += Physics.gravity.y * Time.deltaTime;
-            }
-            else
+            // Heavier mass = faster fall: scale real-world gravity by the player's weight.
+            var gravity = Physics.gravity.y * _mass;
+
+            // Apply gravity, and launch a queued jump while grounded.
+            if (_characterController.isGrounded)
             {
                 // Push character down to keep it stuck to the ground
                 _verticalVelocity = -2f;
+
+                if (_jumpRequested)
+                {
+                    _verticalVelocity = Mathf.Sqrt(_jumpHeight * -2f * gravity);
+                }
             }
+            else
+            {
+                // The character falls faster over time
+                _verticalVelocity += gravity * Time.deltaTime;
+            }
+
+            _jumpRequested = false;
         
             var movement = Vector3.zero;
             if (_moveInput != Vector2.zero)
@@ -118,6 +140,11 @@ namespace ElementalAlchemist.Player
         {
             // Check if sprint button is held down
             _isSprinting = context.ReadValueAsButton();
+        }
+
+        private void OnJump(InputAction.CallbackContext context)
+        {
+            _jumpRequested = true;
         }
     
         private float GetSpeedMultiplier() => _isSprinting ? _baseSpeed * _sprintMultiplier : _baseSpeed;
