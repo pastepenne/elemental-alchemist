@@ -22,6 +22,15 @@ namespace ElementalAlchemist.Element
         public bool IsCore => Tier == ElementTier.Core;
         public bool IsDynamic { get; private set; }
 
+        public ElementDefinition ToDefinition() => new()
+        {
+            Id = _id,
+            DisplayName = _displayName,
+            Description = _description,
+            Tier = _tier,
+            Tags = _tags
+        };
+
         /// <summary>
         /// Creates an in-memory ElementData for a server-provided element.
         /// </summary>

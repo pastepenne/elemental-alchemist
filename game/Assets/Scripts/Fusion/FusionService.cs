@@ -42,11 +42,9 @@ namespace ElementalAlchemist.Fusion
             var pair = new FusionPair(inputA.Id, inputB.Id);
             var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(pair, SerializerSettings));
 
-            using var request = new UnityWebRequest($"{baseUrl}/fuse", UnityWebRequest.kHttpVerbPOST)
-            {
-                uploadHandler = new UploadHandlerRaw(body),
-                downloadHandler = new DownloadHandlerBuffer()
-            };
+            using var request = new UnityWebRequest($"{baseUrl}/fuse", UnityWebRequest.kHttpVerbPOST);
+            request.uploadHandler = new UploadHandlerRaw(body);
+            request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("Accept", "application/json");
 
@@ -100,11 +98,11 @@ namespace ElementalAlchemist.Fusion
             ConsumeElements(inputA, inputB, inventory);
             inventory.AddElement(output);
 
-            var key = new RecipeKey(inputA.Id, inputB.Id);
-            var newDiscovery = !discovery.IsRecipeDiscovered(key);
+            var recipe = RecipeData.CreateRuntime(inputA, inputB, output);
+            var newDiscovery = !discovery.IsRecipeDiscovered(recipe);
             if (newDiscovery)
             {
-                discovery.DiscoverRecipe(key);
+                discovery.DiscoverRecipe(recipe);
             }
 
             discovery.DiscoverElement(output);

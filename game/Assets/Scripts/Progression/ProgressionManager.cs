@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using ElementalAlchemist.Element;
+using ElementalAlchemist.Save;
 using ElementalAlchemist.Shared;
 using UnityEngine;
 
@@ -123,6 +124,37 @@ namespace ElementalAlchemist.Progression
         public void OnMenuUnlocked()
         {
             HasMenuUnlocked = true;
+        }
+
+        public ProgressionData CaptureState() => new()
+        {
+            stage = (int)_currentStage,
+            hasBreath = HasBreathFragment,
+            hasFlesh = HasFleshFragment,
+            hasSoul = HasSoulFragment,
+            hasWater = HasWater,
+            hasAir = HasAir,
+            hasEarth = HasEarth,
+            hasFire = HasFire,
+            hasMenu = HasMenuUnlocked
+        };
+
+        public void RestoreState(ProgressionData data)
+        {
+            if (data == null)
+            {
+                return;
+            }
+
+            _currentStage = (ProgressionStage)data.stage;
+            HasBreathFragment = data.hasBreath;
+            HasFleshFragment = data.hasFlesh;
+            HasSoulFragment = data.hasSoul;
+            HasWater = data.hasWater;
+            HasAir = data.hasAir;
+            HasEarth = data.hasEarth;
+            HasFire = data.hasFire;
+            HasMenuUnlocked = data.hasMenu;
         }
 
         private void Awake()

@@ -24,6 +24,7 @@ namespace ElementalAlchemist.GameInput
         {
             public const string Debug = "Debug";
             public const string TogglePlayerMenu = "TogglePlayerMenu";
+            public const string Pause = "Pause";
         }
     }
 }
