@@ -18,6 +18,7 @@ namespace ElementalAlchemist.Save
         public static SaveManager Instance { get; private set; }
 
         [SerializeField] private ElementRegistry _registry;
+        [SerializeField] private string _menuSceneName = "MainMenu";
 
         private SaveData _pendingLoad;
         private string _currentSpawnId;
@@ -57,6 +58,14 @@ namespace ElementalAlchemist.Save
         public void Save()
         {
             if (_restoring)
+            {
+                return;
+            }
+
+            // The menu is never a resume point. This is the hard guard: SaveManager persists into the menu, so its
+            // scene-load autosave would otherwise overwrite a good save with sceneName=menu (the gameplay managers
+            // are only Destroy()'d at end of frame, so the null check below still passes during that load).
+            if (SceneManager.GetActiveScene().name == _menuSceneName)
             {
                 return;
             }

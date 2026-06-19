@@ -1,3 +1,5 @@
+using ElementalAlchemist.Player;
+using ElementalAlchemist.Progression;
 using ElementalAlchemist.Save;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,6 +14,25 @@ namespace ElementalAlchemist.UI
         [SerializeField] private Button _newGameButton;
         [SerializeField] private Button _continueButton;
         [SerializeField] private Button _quitButton;
+
+        private void Awake()
+        {
+            // Quitting to the menu leaves the gameplay singletons alive (DontDestroyOnLoad). Clear them here —
+            // the gameplay scene and its camera are already gone, so this can't collide with a scene transition —
+            // so New Game / Continue start from a clean slate. SaveManager is intentionally kept.
+            ClearManager(PlayerManager.Instance);
+            ClearManager(ProgressionManager.Instance);
+            ClearManager(StoryDirector.Instance);
+        }
+
+        private static void ClearManager(Component manager)
+        {
+            if (manager)
+            {
+                manager.gameObject.SetActive(false);
+                Destroy(manager.gameObject);
+            }
+        }
 
         private void OnEnable()
         {
