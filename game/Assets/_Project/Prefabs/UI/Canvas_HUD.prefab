@@ -376,7 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.UI.HudDisplay
   _objectivePanel: {fileID: 8233284906356510263}
   _objectiveText: {fileID: 1564182911258159319}
-  _fragmentsPanel: {fileID: 0}
+  _fragmentsPanel: {fileID: 2271482899287446915}
   _breathIcon: {fileID: 1715746325501158338}
   _fleshIcon: {fileID: 1713664739319075190}
   _soulIcon: {fileID: 8505733296549670229}
