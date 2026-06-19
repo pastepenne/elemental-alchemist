@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using ElementalAlchemist.Element;
 using ElementalAlchemist.Fusion;
+using ElementalAlchemist.Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,13 +34,37 @@ namespace ElementalAlchemist.UI.Tome
 
             _recipeEntries.Clear();
             
-            var recipes = _recipeCatalog.GetRecipesForOutput(element);
-            foreach (var recipe in recipes)
+            foreach (var recipe in CollectRecipes(element))
             {
                 var entryObject = Instantiate(_recipeEntryPrefab, _recipeContentGroup);
                 entryObject.GetComponent<TomeRecipeEntry>().Setup(recipe);
                 _recipeEntries.Add(entryObject);
             }
+        }
+
+        /// <summary>Static catalog recipes plus the player's discovered ones (incl. dynamic fusions), deduped by input pair.</summary>
+        private List<RecipeData> CollectRecipes(ElementData element)
+        {
+            var seen = new HashSet<RecipeKey>();
+            var recipes = new List<RecipeData>();
+
+            foreach (var recipe in _recipeCatalog.GetRecipesForOutput(element))
+            {
+                if (seen.Add(new RecipeKey(recipe)))
+                {
+                    recipes.Add(recipe);
+                }
+            }
+
+            foreach (var recipe in PlayerManager.Instance.Discovery.GetDiscoveredRecipes())
+            {
+                if (recipe.output == element && seen.Add(new RecipeKey(recipe)))
+                {
+                    recipes.Add(recipe);
+                }
+            }
+
+            return recipes;
         }
     }
 }
