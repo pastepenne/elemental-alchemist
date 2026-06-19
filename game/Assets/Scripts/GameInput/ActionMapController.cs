@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +13,7 @@ namespace ElementalAlchemist.GameInput
         private static string _pending;
 
         public static string Current => _current;
+        public static event Action<string> Changed;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void Init()
@@ -42,6 +44,7 @@ namespace ElementalAlchemist.GameInput
             _current = _pending;
             _pending = null;
             InputSystem.actions.FindActionMap(_current).Enable();
+            Changed?.Invoke(_current);
         }
     }
 }
