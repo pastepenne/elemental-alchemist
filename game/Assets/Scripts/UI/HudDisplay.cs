@@ -5,8 +5,8 @@ using UnityEngine;
 
 namespace ElementalAlchemist.UI
 {
-    /// <summary>Canvas-level HUD controller: shows the current objective and collected realm fragments, and hides
-    /// the whole HUD whenever the player is not in control (Grand Master cutscene / dialogue).</summary>
+    /// <summary>Canvas-level HUD: mirrors the current objective and collected fragments, and hides everything
+    /// while the player has no control (Grand Master cutscene / dialogue).</summary>
     public class HudDisplay : MonoBehaviour
     {
         [SerializeField] private GameObject _objectivePanel;
@@ -16,85 +16,57 @@ namespace ElementalAlchemist.UI
         [SerializeField] private GameObject _fleshIcon;
         [SerializeField] private GameObject _soulIcon;
 
-        private bool _hasObjective;
-
-        private void Awake()
-        {
-            _objectivePanel.SetActive(false);
-        }
-
         private void OnEnable()
         {
-            StoryDirector.StepStarted += OnStepStarted;
-            StoryDirector.StepCompleted += OnStepCompleted;
-            StoryDirector.SequenceCompleted += OnSequenceCompleted;
-            ActionMapController.Changed += OnActionMapChanged;
+            StoryDirector.StepStarted += OnStepChanged;
+            StoryDirector.StepCompleted += OnStepChanged;
+            StoryDirector.SequenceCompleted += OnSequenceChanged;
+            ActionMapController.Changed += OnMapChanged;
         }
 
         private void OnDisable()
         {
-            StoryDirector.StepStarted -= OnStepStarted;
-            StoryDirector.StepCompleted -= OnStepCompleted;
-            StoryDirector.SequenceCompleted -= OnSequenceCompleted;
-            ActionMapController.Changed -= OnActionMapChanged;
+            StoryDirector.StepStarted -= OnStepChanged;
+            StoryDirector.StepCompleted -= OnStepChanged;
+            StoryDirector.SequenceCompleted -= OnSequenceChanged;
+            ActionMapController.Changed -= OnMapChanged;
         }
 
         // Start, not OnEnable: a loaded save applies progression in SaveManager's sceneLoaded callback,
-        // which runs after OnEnable but before Start, so Start sees the restored fragments.
-        private void Start()
-        {
-            RefreshFragments();
-            ApplyVisibility();
-        }
+        // which runs after OnEnable but before Start.
+        private void Start() => Refresh();
 
-        private void OnStepStarted(StoryStep step)
+        private void OnStepChanged(StoryStep step) => Refresh();
+        private void OnSequenceChanged(string sequenceId) => Refresh();
+        private void OnMapChanged(string actionMap) => Refresh();
+
+        /// <summary>Re-renders the HUD from current game state.</summary>
+        private void Refresh()
         {
-            _hasObjective = !string.IsNullOrEmpty(step.ObjectiveText);
-            if (_hasObjective)
+            var inControl = ActionMapController.Current == ActionMaps.Player;
+
+            var step = StoryDirector.Instance ? StoryDirector.Instance.CurrentStep : null;
+            var objective = step ? step.ObjectiveText : null;
+            var hasObjective = !string.IsNullOrEmpty(objective);
+            if (hasObjective)
             {
-                _objectiveText.text = step.ObjectiveText;
+                _objectiveText.text = objective;
             }
 
-            ApplyVisibility();
-        }
+            // TEMP diagnostic — remove once the scene-change objective issue is confirmed fixed.
+            Debug.Log($"[HudDisplay] {gameObject.scene.name}: map={ActionMapController.Current}, " +
+                      $"step={(step ? step.name : "null")}, objective='{objective}'");
 
-        private void OnStepCompleted(StoryStep step)
-        {
-            _hasObjective = false;
-            ApplyVisibility();
-        }
+            _objectivePanel.SetActive(inControl && hasObjective);
+            _fragmentsPanel.SetActive(inControl);
 
-        private void OnSequenceCompleted(string sequenceId)
-        {
-            _hasObjective = false;
-            RefreshFragments();
-            ApplyVisibility();
-        }
-
-        private void OnActionMapChanged(string actionMap)
-        {
-            ApplyVisibility();
-        }
-
-        private void ApplyVisibility()
-        {
-            // The HUD is for the player at large; hide it whenever they have no control.
-            var playerInControl = ActionMapController.Current == ActionMaps.Player;
-            SetActive(_fragmentsPanel, playerInControl);
-            SetActive(_objectivePanel, playerInControl && _hasObjective);
-        }
-
-        private void RefreshFragments()
-        {
             var progression = ProgressionManager.Instance;
-            if (!progression)
+            if (progression)
             {
-                return;
+                SetActive(_breathIcon, progression.HasBreathFragment);
+                SetActive(_fleshIcon, progression.HasFleshFragment);
+                SetActive(_soulIcon, progression.HasSoulFragment);
             }
-
-            SetActive(_breathIcon, progression.HasBreathFragment);
-            SetActive(_fleshIcon, progression.HasFleshFragment);
-            SetActive(_soulIcon, progression.HasSoulFragment);
         }
 
         private static void SetActive(GameObject go, bool active)

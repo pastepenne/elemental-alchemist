@@ -451,6 +451,7 @@ GameObject:
   - component: {fileID: 231784252}
   - component: {fileID: 231784254}
   - component: {fileID: 231784251}
+  - component: {fileID: 231784255}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -514,6 +515,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a06e2733faa22574b9bcc70fe1017590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Progression.StoryDirector
+--- !u!114 &231784255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231784250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f3334cf42c15b46bd38b27fa4846a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Save.SaveManager
+  _registry: {fileID: 11400000, guid: 6c9ad2271319bb047af80ed9303686e1, type: 2}
 --- !u!1 &233017966
 GameObject:
   m_ObjectHideFlags: 0

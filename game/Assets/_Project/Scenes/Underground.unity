@@ -1464,6 +1464,7 @@ GameObject:
   - component: {fileID: 75677445}
   - component: {fileID: 75677444}
   - component: {fileID: 75677443}
+  - component: {fileID: 75677447}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1527,6 +1528,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &75677447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75677442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f3334cf42c15b46bd38b27fa4846a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Save.SaveManager
+  _registry: {fileID: 11400000, guid: 6c9ad2271319bb047af80ed9303686e1, type: 2}
 --- !u!1001 &94756873
 PrefabInstance:
   m_ObjectHideFlags: 0
