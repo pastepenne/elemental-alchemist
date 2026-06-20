@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8a252226495cb43b5a5da0c9420953, type: 3}
+  m_Name: ForestSequence
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Progression.StorySequence
+  _sequenceId: forest
+  _activationStage: 1
+  _onComplete: 0
+  _openingWaypointKey: wp-forest-intro
+  _openingDialogue: {fileID: 11400000, guid: 83424f9b785242cf8978cf95dc3439b8, type: 2}
+  _steps:
+  - {fileID: 11400000, guid: 4d682bc76f78491e9e8727f4fa49c08e, type: 2}
+  - {fileID: 11400000, guid: 58d40c8720544aaca364307ffe831b5e, type: 2}

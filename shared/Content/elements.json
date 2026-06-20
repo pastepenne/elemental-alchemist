@@ -1,51 +1,425 @@
 [
   {
+    "id": "acid",
+    "displayName": "Acid",
+    "description": "A patient, hungry liquid that whispers to all it touches, give way, give way.",
+    "tier": "Advanced",
+    "tags": [
+      "acid"
+    ]
+  },
+  {
+    "id": "aether",
+    "displayName": "Aether",
+    "description": "The rarefied breath of the heavens, the fifth element said to fill the space between stars.",
+    "tier": "Advanced",
+    "tags": [
+      "aether"
+    ]
+  },
+  {
+    "id": "amber",
+    "displayName": "Amber",
+    "description": "Ancient sap turned to golden stone, forever cradling whatever once wandered into it.",
+    "tier": "Advanced",
+    "tags": [
+      "amber"
+    ]
+  },
+  {
+    "id": "crystal",
+    "displayName": "Crystal",
+    "description": "Stone that grew into geometry, catching the light and bending it into quiet rainbows.",
+    "tier": "Advanced",
+    "tags": [
+      "crystal"
+    ]
+  },
+  {
+    "id": "diamond",
+    "displayName": "Diamond",
+    "description": "The hardest, purest jewel the deep can yield, a sliver of starlight pressed into stone.",
+    "tier": "Advanced",
+    "tags": [
+      "diamond"
+    ]
+  },
+  {
+    "id": "elixir",
+    "displayName": "Elixir",
+    "description": "The deathless draught, bottled life itself, sought by every alchemist who ever feared the grave.",
+    "tier": "Advanced",
+    "tags": [
+      "elixir"
+    ]
+  },
+  {
+    "id": "light",
+    "displayName": "Light",
+    "description": "The first and fastest of all things, pure radiance given shape against the dark.",
+    "tier": "Advanced",
+    "tags": [
+      "light"
+    ]
+  },
+  {
+    "id": "lightning",
+    "displayName": "Lightning",
+    "description": "The sky's sudden fury, a jagged heartbeat of raw power written across the storm.",
+    "tier": "Advanced",
+    "tags": [
+      "lightning"
+    ]
+  },
+  {
+    "id": "mirror",
+    "displayName": "Mirror",
+    "description": "A still pool of frozen light that steals your face and offers it politely back.",
+    "tier": "Advanced",
+    "tags": [
+      "mirror"
+    ]
+  },
+  {
+    "id": "pearl",
+    "displayName": "Pearl",
+    "description": "A slow secret grown in the dark, the sea's patient answer to a single grain of grief.",
+    "tier": "Advanced",
+    "tags": [
+      "pearl"
+    ]
+  },
+  {
+    "id": "philosopher-stone",
+    "displayName": "Philosopher's Stone",
+    "description": "The legendary prize of all alchemy, perfection itself, said to turn lead to gold and death to life.",
+    "tier": "Advanced",
+    "tags": [
+      "philosopher-stone"
+    ]
+  },
+  {
+    "id": "plasma",
+    "displayName": "Plasma",
+    "description": "The fourth and fiercest state of being, raw matter unbound and blazing like a caged star.",
+    "tier": "Advanced",
+    "tags": [
+      "plasma"
+    ]
+  },
+  {
+    "id": "shadow",
+    "displayName": "Shadow",
+    "description": "The shape that light leaves behind, neither thing nor nothing, clinging to all that is.",
+    "tier": "Advanced",
+    "tags": [
+      "shadow"
+    ]
+  },
+  {
+    "id": "void",
+    "displayName": "Void",
+    "description": "The hungry nothing between worlds, a doorway opening onto everything that is not.",
+    "tier": "Advanced",
+    "tags": [
+      "void"
+    ]
+  },
+  {
     "id": "air",
     "displayName": "Air",
-    "description": "This is air",
+    "description": "The first breath of the world, restless and unseen, forever slipping between your fingers.",
     "tier": "Core",
-    "tags": []
+    "tags": [
+      "air"
+    ]
   },
   {
     "id": "earth",
     "displayName": "Earth",
-    "description": "This is earth",
+    "description": "Patient and ancient, the bones of creation that hold everything else in place.",
     "tier": "Core",
-    "tags": []
+    "tags": [
+      "earth"
+    ]
   },
   {
     "id": "fire",
     "displayName": "Fire",
-    "description": "This is Fire",
+    "description": "A hungry spark that dances, devours, and remembers every secret it burns.",
     "tier": "Core",
-    "tags": []
+    "tags": [
+      "fire"
+    ]
   },
   {
     "id": "water",
     "displayName": "Water",
-    "description": "This is water",
+    "description": "The wanderer of the elements, shaping all it touches while keeping no shape of its own.",
     "tier": "Core",
-    "tags": []
+    "tags": [
+      "water"
+    ]
+  },
+  {
+    "id": "ash",
+    "displayName": "Ash",
+    "description": "The grey memory of fire, all that remains when the dancing flame finally tires.",
+    "tier": "Natural",
+    "tags": [
+      "ash"
+    ]
+  },
+  {
+    "id": "bone",
+    "displayName": "Bone",
+    "description": "The quiet scaffold of the once-living, whispering of bodies long returned to dust.",
+    "tier": "Natural",
+    "tags": [
+      "bone"
+    ]
+  },
+  {
+    "id": "brine",
+    "displayName": "Brine",
+    "description": "Bitter seawater wrung to its salty soul, the ocean distilled into a single sharp tear.",
+    "tier": "Natural",
+    "tags": [
+      "brine"
+    ]
+  },
+  {
+    "id": "coal",
+    "displayName": "Coal",
+    "description": "Buried sunlight, patient and black, waiting an age for the chance to burn again.",
+    "tier": "Natural",
+    "tags": [
+      "coal"
+    ]
+  },
+  {
+    "id": "dust",
+    "displayName": "Dust",
+    "description": "The world ground small, a thousand forgotten things adrift on a single beam of light.",
+    "tier": "Natural",
+    "tags": [
+      "dust"
+    ]
+  },
+  {
+    "id": "frost",
+    "displayName": "Frost",
+    "description": "Winter's delicate handwriting, lacing the world in fragile, glittering lace.",
+    "tier": "Natural",
+    "tags": [
+      "frost"
+    ]
+  },
+  {
+    "id": "lava",
+    "displayName": "Lava",
+    "description": "The earth's molten heartbeat, slow and furious, remaking the land wherever it crawls.",
+    "tier": "Natural",
+    "tags": [
+      "lava"
+    ]
+  },
+  {
+    "id": "mist",
+    "displayName": "Mist",
+    "description": "The breath of morning made visible, a soft grey veil that hides as much as it reveals.",
+    "tier": "Natural",
+    "tags": [
+      "mist"
+    ]
   },
   {
     "id": "mud",
     "displayName": "Mud",
-    "description": "This is mud",
+    "description": "Earth and water in their oldest argument, sticky, humble, and the cradle of small life.",
     "tier": "Natural",
-    "tags": []
+    "tags": [
+      "mud"
+    ]
+  },
+  {
+    "id": "ore",
+    "displayName": "Ore",
+    "description": "Raw promise locked in stone, the sleeping metal that dreams of fire and form.",
+    "tier": "Natural",
+    "tags": [
+      "ore"
+    ]
+  },
+  {
+    "id": "petal",
+    "displayName": "Petal",
+    "description": "A scrap of captured spring, soft and bright, holding the faintest perfume of life.",
+    "tier": "Natural",
+    "tags": [
+      "petal"
+    ]
+  },
+  {
+    "id": "salt",
+    "displayName": "Salt",
+    "description": "The taste of tears and tides, a humble crystal that preserves what time would steal.",
+    "tier": "Natural",
+    "tags": [
+      "salt"
+    ]
+  },
+  {
+    "id": "sand",
+    "displayName": "Sand",
+    "description": "The desert's countless hourglass grains, each one a mountain worn down by patience.",
+    "tier": "Natural",
+    "tags": [
+      "sand"
+    ]
+  },
+  {
+    "id": "smoke",
+    "displayName": "Smoke",
+    "description": "Fire's restless ghost, climbing toward the sky to carry secrets no one can read.",
+    "tier": "Natural",
+    "tags": [
+      "smoke"
+    ]
+  },
+  {
+    "id": "steam",
+    "displayName": "Steam",
+    "description": "Water freed from its weight, a hissing spirit rushing upward to rejoin the clouds.",
+    "tier": "Natural",
+    "tags": [
+      "steam"
+    ]
   },
   {
     "id": "stone",
     "displayName": "Stone",
-    "description": "This is stone",
+    "description": "Time made solid, steadfast and silent, keeping the long patience of the mountains.",
     "tier": "Natural",
-    "tags": []
+    "tags": [
+      "stone"
+    ]
   },
   {
     "id": "wood",
     "displayName": "Wood",
-    "description": "This is wood",
+    "description": "The slow green ambition of the forest, sunlight and seasons woven into living grain.",
     "tier": "Natural",
-    "tags": []
+    "tags": [
+      "wood"
+    ]
+  },
+  {
+    "id": "ceramic",
+    "displayName": "Ceramic",
+    "description": "Humble mud tempered by fire into something proud, ringing clear when it is struck.",
+    "tier": "Refined",
+    "tags": [
+      "ceramic"
+    ]
+  },
+  {
+    "id": "essence",
+    "displayName": "Essence",
+    "description": "The distilled spark of living things, a bottled whisper of the breath of life.",
+    "tier": "Refined",
+    "tags": [
+      "essence"
+    ]
+  },
+  {
+    "id": "firesalt",
+    "displayName": "Firesalt",
+    "description": "Salt that swallowed a flame and never let go, smouldering with a buried, bitter heat.",
+    "tier": "Refined",
+    "tags": [
+      "firesalt"
+    ]
+  },
+  {
+    "id": "fossil",
+    "displayName": "Fossil",
+    "description": "Life turned to patient stone, a creature's last secret kept for a thousand ages.",
+    "tier": "Refined",
+    "tags": [
+      "fossil"
+    ]
+  },
+  {
+    "id": "glass",
+    "displayName": "Glass",
+    "description": "Sand seduced by fire into clarity, fragile, gleaming, and honest to a fault.",
+    "tier": "Refined",
+    "tags": [
+      "glass"
+    ]
+  },
+  {
+    "id": "gold",
+    "displayName": "Gold",
+    "description": "The metal that never tarnishes, hoarded by kings and dragons and dreamed of by fools.",
+    "tier": "Refined",
+    "tags": [
+      "gold"
+    ]
+  },
+  {
+    "id": "ice",
+    "displayName": "Ice",
+    "description": "Water caught mid-thought and frozen there, sharp, clear, and quietly merciless.",
+    "tier": "Refined",
+    "tags": [
+      "ice"
+    ]
+  },
+  {
+    "id": "iron",
+    "displayName": "Iron",
+    "description": "The stubborn backbone of the forge, plain but unyielding, the maker of a hundred tools.",
+    "tier": "Refined",
+    "tags": [
+      "iron"
+    ]
+  },
+  {
+    "id": "obsidian",
+    "displayName": "Obsidian",
+    "description": "Lava kissed by sudden water, frozen into black glass with an edge keener than regret.",
+    "tier": "Refined",
+    "tags": [
+      "obsidian"
+    ]
+  },
+  {
+    "id": "quicksilver",
+    "displayName": "Quicksilver",
+    "description": "A liquid metal that refuses to be held, trembling, mirror-bright, and ever restless.",
+    "tier": "Refined",
+    "tags": [
+      "quicksilver"
+    ]
+  },
+  {
+    "id": "rust",
+    "displayName": "Rust",
+    "description": "Iron's slow surrender to air and rain, a flaking orange ruin that was once so proud.",
+    "tier": "Refined",
+    "tags": [
+      "rust"
+    ]
+  },
+  {
+    "id": "steel",
+    "displayName": "Steel",
+    "description": "Iron schooled by fire and coal until it learned to be both sharp and unbreakable.",
+    "tier": "Refined",
+    "tags": [
+      "steel"
+    ]
   }
 ]

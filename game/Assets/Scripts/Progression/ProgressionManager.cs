@@ -23,7 +23,7 @@ namespace ElementalAlchemist.Progression
         private ProgressionStage _currentStage;
 
         public ProgressionStage CurrentStage => _currentStage;
-        public bool IsFreeplayActive => _currentStage == ProgressionStage.Master;
+        public bool IsFreeplayActive { get; private set; }
         public bool HasBreathFragment { get; private set; }
         public bool HasFleshFragment { get; private set; }
         public bool HasSoulFragment { get; private set; }
@@ -126,6 +126,11 @@ namespace ElementalAlchemist.Progression
             HasMenuUnlocked = true;
         }
 
+        public void OnFreeplayActivated()
+        {
+            IsFreeplayActive = true;
+        }
+
         public ProgressionData CaptureState() => new()
         {
             stage = (int)_currentStage,
@@ -136,7 +141,8 @@ namespace ElementalAlchemist.Progression
             hasAir = HasAir,
             hasEarth = HasEarth,
             hasFire = HasFire,
-            hasMenu = HasMenuUnlocked
+            hasMenu = HasMenuUnlocked,
+            isFreeplay = IsFreeplayActive
         };
 
         public void RestoreState(ProgressionData data)
@@ -155,6 +161,7 @@ namespace ElementalAlchemist.Progression
             HasEarth = data.hasEarth;
             HasFire = data.hasFire;
             HasMenuUnlocked = data.hasMenu;
+            IsFreeplayActive = data.isFreeplay;
         }
 
         private void Awake()

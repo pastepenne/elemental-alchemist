@@ -10,9 +10,11 @@ namespace ElementalAlchemist.Element
     {
         [SerializeField] private ElementData[] _elements;
         [SerializeField] private TagSpriteLibrary _tagSprites;
-
+        
         private Dictionary<string, ElementData> _lookup;
 
+        public IReadOnlyList<ElementData> Elements => _elements;
+        
         private void OnEnable()
         {
             _lookup = new Dictionary<string, ElementData>(StringComparer.Ordinal);

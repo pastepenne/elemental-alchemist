@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
+  m_Name: Dlg_Ruins_GM_Finale
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
+  _speaker: Grand Master
+  _lines:
+  - So. The Guardian gave up the last Fragment. I felt it the instant the Stone took shape. The whole realm leaned toward you.
+  - You are no longer my student. From this moment you are a Master of alchemy, my equal in every art that matters. I have waited my whole life to say that to someone.
+  - And now, the work we were truly made for. At the Sanctuary, in the heart of these Ruins, stands the old altar where the three Fragments can be made one.
+  - Carry Breath, Flesh, and Soul to the Sanctuary and fuse them. Create Life itself, the ultimate Element, the thing all alchemy has only ever pointed toward.
+  - Go. I will be right behind you. After all these years, we finish it together.

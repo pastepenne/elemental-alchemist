@@ -1929,6 +1929,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: b8b91185b9bc47eeb71da9915c2cb1c0, type: 2}
     - target: {fileID: 7951783644587884500, guid: eb3ba3275408a5e4ea30701208ead2d4, type: 3}
+      propertyPath: _grantedFragment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951783644587884500, guid: eb3ba3275408a5e4ea30701208ead2d4, type: 3}
       propertyPath: _requiredElement
       value: 
       objectReference: {fileID: 11400000, guid: 6ce64aa84c797814fbd6ffa3cd7573ad, type: 2}
@@ -30789,10 +30793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b8805751598314da62d513385825f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.DebugTools.DebugElementAdder
-  _elements:
-  - {fileID: 11400000, guid: 8b8a5a9f19dea034096dcf530af8a47b, type: 2}
-  - {fileID: 11400000, guid: 80f72147d575100448cc9d04d72a82ee, type: 2}
-  - {fileID: 11400000, guid: 6ce64aa84c797814fbd6ffa3cd7573ad, type: 2}
+  _registry: {fileID: 11400000, guid: 6c9ad2271319bb047af80ed9303686e1, type: 2}
+  _requiredElement: {fileID: 11400000, guid: 6ce64aa84c797814fbd6ffa3cd7573ad, type: 2}
 --- !u!1001 &1658260249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41074,19 +41076,19 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1149030697}
-  - {fileID: 196918767}
-  - {fileID: 545375640}
   - {fileID: 639291640}
   - {fileID: 235286729}
   - {fileID: 132266479}
+  - {fileID: 1702211325}
+  - {fileID: 43265599}
+  - {fileID: 545375640}
+  - {fileID: 196918767}
+  - {fileID: 1415992664}
   - {fileID: 1744635619}
   - {fileID: 2056829661}
   - {fileID: 199735056}
-  - {fileID: 1657660575}
   - {fileID: 1568936621}
   - {fileID: 1593832542}
   - {fileID: 1576917436}
-  - {fileID: 1415992664}
   - {fileID: 1113404281}
-  - {fileID: 1702211325}
-  - {fileID: 43265599}
+  - {fileID: 1657660575}

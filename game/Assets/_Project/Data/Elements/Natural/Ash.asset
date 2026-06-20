@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: ash
   _displayName: Ash
-  _description: This is ash
+  _description: The grey memory of fire, all that remains when the dancing flame finally tires.
   _icon: {fileID: 21300000, guid: 779c8d72d3a0364439481feee73ca47e, type: 3}
   _tier: 1
   _tags:

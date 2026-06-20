@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: bone
   _displayName: Bone
-  _description: 'This is bone '
+  _description: The quiet scaffold of the once-living, whispering of bodies long returned to dust.
   _icon: {fileID: 21300000, guid: 3a5996d5a8dd0124a8a29f38be277fd5, type: 3}
   _tier: 1
   _tags:

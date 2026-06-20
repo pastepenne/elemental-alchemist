@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 8412043564773842648}
   - component: {fileID: 8620492079482400316}
   - component: {fileID: 7102187192597338443}
-  - component: {fileID: 93927623682703542}
   m_Layer: 5
   m_Name: Img_FragmentFlesh
   m_TagString: Untagged
@@ -141,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b23cee1ecb48c354e8b9fc9cf1f13e40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93ecba941e8cad14cb7d9358ca4d229c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -151,21 +150,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &93927623682703542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713664739319075190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!1 &1715746325501158338
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +161,6 @@ GameObject:
   - component: {fileID: 3379260341570228368}
   - component: {fileID: 940799856711099820}
   - component: {fileID: 3656032600270299088}
-  - component: {fileID: 8361046386385539531}
   m_Layer: 5
   m_Name: Img_FragmentBreath
   m_TagString: Untagged
@@ -232,7 +215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0e0fcf4cb03261345b2e5c6b74f8b568, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85cf6c92e556d1e4a84367b263dac379, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -242,21 +225,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8361046386385539531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715746325501158338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: 1}
-  m_UseGraphicAlpha: 1
 --- !u!1 &1993897595028708631
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +490,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 2
-  m_Spacing: 0
+  m_Spacing: 16
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -633,7 +601,6 @@ GameObject:
   - component: {fileID: 4844231368172762082}
   - component: {fileID: 5793901349864401225}
   - component: {fileID: 2030180540704126198}
-  - component: {fileID: 1655136645738500405}
   m_Layer: 5
   m_Name: Img_FragmentSoul
   m_TagString: Untagged
@@ -688,7 +655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fa24dbf45fc0205468e2dbf17015d759, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc97f3001140a444bb57bf2da79c40fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -698,21 +665,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1655136645738500405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8505733296549670229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!1 &9033083412310967119
 GameObject:
   m_ObjectHideFlags: 0

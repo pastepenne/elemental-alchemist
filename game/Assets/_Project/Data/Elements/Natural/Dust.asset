@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: dust
   _displayName: Dust
-  _description: This is dust
+  _description: The world ground small, a thousand forgotten things adrift on a single beam of light.
   _icon: {fileID: 21300000, guid: bc1afbb914bbbae448d6f837de031068, type: 3}
   _tier: 1
   _tags:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: glass
   _displayName: Glass
-  _description: This is glass
+  _description: Sand seduced by fire into clarity, fragile, gleaming, and honest to a fault.
   _icon: {fileID: 21300000, guid: 1bc41ddef6b750a4eb7094eaa9ada38f, type: 3}
   _tier: 2
   _tags:

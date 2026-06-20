@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
+  m_Name: Dlg_Ruins_GM_Angry
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
+  _speaker: Grand Master
+  _lines:
+  - What are you doing? It is right there, everything, within your reach, and you hesitate?
+  - Do you understand what I gave for this moment? Years. Everything I had. Every realm I sent you through was for this single fusion.
+  - I made you a Master. I handed you the whole of my art. And now, at the very end, you let it come to nothing over some borrowed scruple.
+  - Then we are finished, you and I. Keep your fragments. Keep your conscience. I will find another way, without you.
+  - Do not come looking for me. You will not find me again.

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: crystal
   _displayName: Crystal
-  _description: This is crystal
+  _description: Stone that grew into geometry, catching the light and bending it into quiet rainbows.
   _icon: {fileID: 21300000, guid: d3b7f31e386ec8a4fbe09217a0b3b05a, type: 3}
   _tier: 3
   _tags:

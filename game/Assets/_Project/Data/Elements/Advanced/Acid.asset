@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: acid
   _displayName: Acid
-  _description: This is acid
+  _description: A patient, hungry liquid that whispers to all it touches, give way, give way.
   _icon: {fileID: 21300000, guid: 46a35ef39a45da841922c69cf1c633fe, type: 3}
   _tier: 3
   _tags:

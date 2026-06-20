@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: ice
   _displayName: Ice
-  _description: This is ice
+  _description: Water caught mid-thought and frozen there, sharp, clear, and quietly merciless.
   _icon: {fileID: 21300000, guid: bc392f0a34c22e24bb2fc001b7fd19be, type: 3}
   _tier: 2
   _tags:

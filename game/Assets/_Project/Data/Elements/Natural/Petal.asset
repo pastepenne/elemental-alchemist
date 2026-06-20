@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: petal
   _displayName: Petal
-  _description: This is petal
+  _description: A scrap of captured spring, soft and bright, holding the faintest perfume of life.
   _icon: {fileID: 21300000, guid: 176439ab7b25600459ee25871a8fea4e, type: 3}
   _tier: 1
   _tags:

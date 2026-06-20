@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: ceramic
   _displayName: Ceramic
-  _description: This is ceramic
+  _description: Humble mud tempered by fire into something proud, ringing clear when it is struck.
   _icon: {fileID: 21300000, guid: 1294dcae1d82f7c43be1289cc794a5b0, type: 3}
   _tier: 2
   _tags:

@@ -1,7 +1,192 @@
 [
   {
-    "elementA": "earth",
+    "elementA": "firesalt",
+    "elementB": "brine",
+    "result": "acid"
+  },
+  {
+    "elementA": "essence",
+    "elementB": "air",
+    "result": "aether"
+  },
+  {
+    "elementA": "crystal",
+    "elementB": "wood",
+    "result": "amber"
+  },
+  {
+    "elementA": "coal",
+    "elementB": "fire",
+    "result": "ash"
+  },
+  {
+    "elementA": "wood",
+    "elementB": "fire",
+    "result": "ash"
+  },
+  {
+    "elementA": "salt",
     "elementB": "water",
+    "result": "brine"
+  },
+  {
+    "elementA": "mud",
+    "elementB": "fire",
+    "result": "ceramic"
+  },
+  {
+    "elementA": "ore",
+    "elementB": "glass",
+    "result": "crystal"
+  },
+  {
+    "elementA": "crystal",
+    "elementB": "coal",
+    "result": "diamond"
+  },
+  {
+    "elementA": "earth",
+    "elementB": "air",
+    "result": "dust"
+  },
+  {
+    "elementA": "essence",
+    "elementB": "gold",
+    "result": "elixir"
+  },
+  {
+    "elementA": "petal",
+    "elementB": "brine",
+    "result": "essence"
+  },
+  {
+    "elementA": "fire",
+    "elementB": "salt",
+    "result": "firesalt"
+  },
+  {
+    "elementA": "bone",
+    "elementB": "stone",
+    "result": "fossil"
+  },
+  {
+    "elementA": "mist",
+    "elementB": "stone",
+    "result": "frost"
+  },
+  {
+    "elementA": "sand",
+    "elementB": "fire",
+    "result": "glass"
+  },
+  {
+    "elementA": "ore",
+    "elementB": "petal",
+    "result": "gold"
+  },
+  {
+    "elementA": "frost",
+    "elementB": "water",
+    "result": "ice"
+  },
+  {
+    "elementA": "ore",
+    "elementB": "fire",
+    "result": "iron"
+  },
+  {
+    "elementA": "stone",
+    "elementB": "fire",
+    "result": "lava"
+  },
+  {
+    "elementA": "aether",
+    "elementB": "crystal",
+    "result": "light"
+  },
+  {
+    "elementA": "air",
+    "elementB": "plasma",
+    "result": "lightning"
+  },
+  {
+    "elementA": "glass",
+    "elementB": "light",
+    "result": "mirror"
+  },
+  {
+    "elementA": "water",
+    "elementB": "air",
+    "result": "mist"
+  },
+  {
+    "elementA": "water",
+    "elementB": "dust",
     "result": "mud"
+  },
+  {
+    "elementA": "water",
+    "elementB": "earth",
+    "result": "mud"
+  },
+  {
+    "elementA": "water",
+    "elementB": "lava",
+    "result": "obsidian"
+  },
+  {
+    "elementA": "brine",
+    "elementB": "stone",
+    "result": "pearl"
+  },
+  {
+    "elementA": "diamond",
+    "elementB": "elixir",
+    "result": "philosopher-stone"
+  },
+  {
+    "elementA": "aether",
+    "elementB": "lava",
+    "result": "plasma"
+  },
+  {
+    "elementA": "ore",
+    "elementB": "water",
+    "result": "quicksilver"
+  },
+  {
+    "elementA": "iron",
+    "elementB": "water",
+    "result": "rust"
+  },
+  {
+    "elementA": "brine",
+    "elementB": "fire",
+    "result": "salt"
+  },
+  {
+    "elementA": "light",
+    "elementB": "void",
+    "result": "shadow"
+  },
+  {
+    "elementA": "ash",
+    "elementB": "air",
+    "result": "smoke"
+  },
+  {
+    "elementA": "water",
+    "elementB": "fire",
+    "result": "steam"
+  },
+  {
+    "elementA": "iron",
+    "elementB": "coal",
+    "result": "steel"
+  },
+  {
+    "elementA": "aether",
+    "elementB": "obsidian",
+    "result": "void"
   }
 ]

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: salt
   _displayName: Salt
-  _description: This is salt
+  _description: The taste of tears and tides, a humble crystal that preserves what time would steal.
   _icon: {fileID: 21300000, guid: 957a6690223edf54d89d8782c112ff2b, type: 3}
   _tier: 1
   _tags:
