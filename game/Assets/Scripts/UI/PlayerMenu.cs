@@ -1,6 +1,5 @@
 using ElementalAlchemist.Audio;
 using ElementalAlchemist.GameInput;
-using ElementalAlchemist.Progression;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -102,11 +101,6 @@ namespace ElementalAlchemist.UI
             if (_isOpen)
             {
                 Close();
-                return;
-            }
-
-            if (!ProgressionManager.Instance.HasMenuUnlocked)
-            {
                 return;
             }
 

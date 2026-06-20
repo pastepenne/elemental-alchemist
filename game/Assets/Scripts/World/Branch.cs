@@ -22,7 +22,6 @@ namespace ElementalAlchemist.World
             }
             
             PlayerManager.Instance.Inventory.AddElement(_wood, 1);
-            ProgressionManager.Instance.OnMenuUnlocked();
 
             StoryTrigger.Fire(_triggerId);
             Destroy(gameObject);

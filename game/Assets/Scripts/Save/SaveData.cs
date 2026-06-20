@@ -24,7 +24,6 @@ namespace ElementalAlchemist.Save
         public bool hasAir;
         public bool hasEarth;
         public bool hasFire;
-        public bool hasMenu;
         public bool isFreeplay;
     }
 }
