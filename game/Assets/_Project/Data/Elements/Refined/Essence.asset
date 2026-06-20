@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: essence
   _displayName: Essence
-  _description: This is essence
+  _description: The distilled spark of living things, a bottled whisper of the breath of life.
   _icon: {fileID: 21300000, guid: aacece10f436489428182888d839ef24, type: 3}
   _tier: 2
   _tags:

@@ -7,8 +7,6 @@ using UnityEngine;
 
 namespace ElementalAlchemist.Characters
 {
-    /// <summary>Guide NPC brain. Reacts to story sequences (walk to waypoints, deliver dialogue) and shows the
-    /// form matching progression. Whether he exists in a scene is gated separately by <see cref="DespawnIfStoryDone"/>.</summary>
     [RequireComponent(typeof(NpcMovement))]
     [RequireComponent(typeof(GrandMasterForms))]
     public class GrandMaster : MonoBehaviour
@@ -23,6 +21,7 @@ namespace ElementalAlchemist.Characters
         private GrandMasterForms _forms;
         private DialogueData _pendingDialogue;
         private bool _waitingForArrival;
+        private bool _reportOutroToDirector;
         private Transform _player;
 
         private void Awake()
@@ -33,6 +32,8 @@ namespace ElementalAlchemist.Characters
 
         private void Start()
         {
+            RefreshPresence();
+
             if (PlayerManager.Instance)
             {
                 _player = PlayerManager.Instance.transform;
@@ -46,14 +47,28 @@ namespace ElementalAlchemist.Characters
             _forms.ApplyCurrentForm();
         }
 
-        private bool IsTutorialActive => ProgressionManager.Instance &&
-                                         ProgressionManager.Instance.CurrentStage == ProgressionStage.Tutorial;
+        // The master shepherds the player by trailing them: through the Tutorial, and again in the endgame once the
+        // Soul fragment is won (until freeplay begins), so he is already at the Sanctuary for the finale.
+        private bool ShouldFollowPlayer
+        {
+            get
+            {
+                var progression = ProgressionManager.Instance;
+                if (!progression)
+                {
+                    return false;
+                }
+
+                return progression.CurrentStage is ProgressionStage.Tutorial or ProgressionStage.Master;
+            }
+        }
 
         private void OnEnable()
         {
             StoryDirector.SequenceStarted += OnSequenceStarted;
             StoryDirector.StepCompleted += OnStepCompleted;
             StoryDirector.SequenceCompleted += OnSequenceCompleted;
+            DialogueManager.DialogueEnded += OnDialogueEnded;
         }
 
         private void OnDisable()
@@ -61,6 +76,7 @@ namespace ElementalAlchemist.Characters
             StoryDirector.SequenceStarted -= OnSequenceStarted;
             StoryDirector.StepCompleted -= OnStepCompleted;
             StoryDirector.SequenceCompleted -= OnSequenceCompleted;
+            DialogueManager.DialogueEnded -= OnDialogueEnded;
         }
 
         private void Update()
@@ -80,7 +96,7 @@ namespace ElementalAlchemist.Characters
 
         private void FollowPlayerIfNeeded()
         {
-            if (!_player || !IsTutorialActive)
+            if (!_player || !ShouldFollowPlayer)
             {
                 return;
             }
@@ -94,6 +110,14 @@ namespace ElementalAlchemist.Characters
             }
         }
 
+        private void RefreshPresence()
+        {
+            if (ProgressionManager.Instance && ProgressionManager.Instance.IsFreeplayActive)
+            {
+                Destroy(gameObject);
+            }
+        }
+
         private void OnArrived()
         {
             if (_pendingDialogue)
@@ -103,24 +127,75 @@ namespace ElementalAlchemist.Characters
             else
             {
                 ActionMapController.SetActionMap(ActionMaps.Player);
+                ReportStepOutroFinished(); // Arrived with no line to speak: the outro is already over.
             }
             _pendingDialogue = null;
         }
 
         private void OnSequenceStarted(StorySequence sequence)
         {
+            _reportOutroToDirector = false; // The opening is not a step outro.
             GoTo(sequence.OpeningWaypointKey, sequence.OpeningDialogue);
         }
 
         private void OnStepCompleted(StoryStep step)
         {
+            // The Guardian grants the fragment before firing this step's trigger, so progression is already current.
+            // Refresh the form now, before he sets off, so he approaches the player already wearing the new one.
+            _forms.ApplyCurrentForm();
+
+            _reportOutroToDirector = !string.IsNullOrEmpty(step.WaypointKey) || step.Dialogue;
             GoTo(step.WaypointKey, step.Dialogue, step.WarpWaypointKey);
         }
 
         private void OnSequenceCompleted(string sequenceId)
         {
-            // A fragment may have just been granted, so update to the matching form.
-            _forms.ApplyCurrentForm();
+            RefreshPresence();
+        }
+
+        private void OnDialogueEnded()
+        {
+            // When a step's outro dialogue finishes, the sequence can complete.
+            ReportStepOutroFinished();
+        }
+
+        private void ReportStepOutroFinished()
+        {
+            if (!_reportOutroToDirector)
+            {
+                return;
+            }
+
+            _reportOutroToDirector = false;
+            var director = StoryDirector.Instance;
+            if (!director)
+            {
+                return;
+            }
+
+            // Apply the completing sequence's outcome BEFORE telling the director it is done: that call synchronously
+            // fires SequenceCompleted (and the checkpoint autosave), which must see the updated progression.
+            ApplySequenceOutcome(director.CurrentSequence);
+            director.NotifyStepOutroFinished();
+        }
+
+        // Fragments are granted by the Guardians; the master owns only the two beats he himself concludes.
+        private static void ApplySequenceOutcome(StorySequence sequence)
+        {
+            if (!sequence || !ProgressionManager.Instance)
+            {
+                return;
+            }
+
+            switch (sequence.OnComplete)
+            {
+                case SequenceOutcome.CompleteTutorial:
+                    ProgressionManager.Instance.OnTutorialCompleted();
+                    break;
+                case SequenceOutcome.ActivateFreeplay:
+                    ProgressionManager.Instance.OnFreeplayActivated();
+                    break;
+            }
         }
 
         private void GoTo(string waypointKey, DialogueData dialogue, string approachWaypointKey = null)

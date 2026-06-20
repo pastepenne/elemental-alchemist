@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: mist
   _displayName: Mist
-  _description: This is mist
+  _description: The breath of morning made visible, a soft grey veil that hides as much as it reveals.
   _icon: {fileID: 21300000, guid: 42ac5d26f1da0ec469f459ad0c6404ad, type: 3}
   _tier: 1
   _tags:

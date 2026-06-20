@@ -21,6 +21,7 @@ namespace ElementalAlchemist.Progression
         private StorySequence _currentSequence;
         private int _currentIndex;
         private StoryStep _currentStep;
+        private bool _awaitingOutro;
 
         public StorySequence CurrentSequence => _currentSequence;
         public StoryStep CurrentStep => _currentStep;
@@ -129,38 +130,46 @@ namespace ElementalAlchemist.Progression
 
             if (_currentIndex >= _currentSequence.Steps.Length)
             {
-                var finishedSequence = _currentSequence;
-                _currentSequence = null;
-                ApplyOutcome(finishedSequence.OnComplete);
-                SequenceCompleted?.Invoke(finishedSequence.SequenceId);
+                // The final step's trigger has fired, but its outro (the Grand Master walking to the waypoint and
+                // speaking) plays out after. If there is one, hold completion until he reports it finished - keeping
+                // CurrentSequence set so he can read its outcome - otherwise there is nothing to wait for.
+                if (HasOutro(finished))
+                {
+                    _awaitingOutro = true;
+                }
+                else
+                {
+                    CompleteSequence();
+                }
                 return;
             }
 
             StartStep(_currentSequence.Steps[_currentIndex]);
         }
 
-        private static void ApplyOutcome(SequenceOutcome outcome)
+        /// <summary>Called by the actor performing a final step's outro (the Grand Master) once his walk and dialogue
+        /// have finished, so the sequence completes only after the player has seen it play out.</summary>
+        public void NotifyStepOutroFinished()
         {
-            if (!ProgressionManager.Instance)
+            if (!_awaitingOutro)
             {
                 return;
             }
 
-            switch (outcome)
-            {
-                case SequenceOutcome.CompleteTutorial:
-                    ProgressionManager.Instance.OnTutorialCompleted();
-                    break;
-                case SequenceOutcome.GrantBreathFragment:
-                    ProgressionManager.Instance.OnBreathFragmentGranted();
-                    break;
-                case SequenceOutcome.GrantFleshFragment:
-                    ProgressionManager.Instance.OnFleshFragmentGranted();
-                    break;
-                case SequenceOutcome.GrantSoulFragment:
-                    ProgressionManager.Instance.OnSoulFragmentGranted();
-                    break;
-            }
+            _awaitingOutro = false;
+            CompleteSequence();
+        }
+
+        private static bool HasOutro(StoryStep step)
+        {
+            return step && (!string.IsNullOrEmpty(step.WaypointKey) || step.Dialogue);
+        }
+
+        private void CompleteSequence()
+        {
+            var sequence = _currentSequence;
+            _currentSequence = null;
+            SequenceCompleted?.Invoke(sequence.SequenceId);
         }
     }
 }

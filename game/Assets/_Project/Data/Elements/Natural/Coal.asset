@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: coal
   _displayName: Coal
-  _description: 'This is coal '
+  _description: Buried sunlight, patient and black, waiting an age for the chance to burn again.
   _icon: {fileID: 21300000, guid: 73cfc06a1ceb2f349a8d393fcaefbd74, type: 3}
   _tier: 1
   _tags:

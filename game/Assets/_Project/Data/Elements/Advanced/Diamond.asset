@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: diamond
   _displayName: Diamond
-  _description: This is diamond
+  _description: The hardest, purest jewel the deep can yield, a sliver of starlight pressed into stone.
   _icon: {fileID: 21300000, guid: 43a3511f8ae3e2c48b4142e7f5f5b217, type: 3}
   _tier: 3
   _tags:

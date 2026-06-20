@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
+  m_Name: Dlg_Ruins_Guardian_Completed
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
+  _speaker: Ruins Guardian
+  _lines:
+  - The Philosopher's Stone. Perfection itself, resting in your open hand. No one has carried it into these Ruins for a thousand years.
+  - Take the Fragment of Soul. Breath, Flesh, and Soul are yours now. You are whole, alchemist, in a way that almost no one ever becomes.
+  - But hear me before you go. The power you now hold can mend a world or end one, and it does not care which you choose.
+  - Whatever you are asked to make at the Sanctuary, do not turn it against what lives. Be very careful with the strength you carry now.

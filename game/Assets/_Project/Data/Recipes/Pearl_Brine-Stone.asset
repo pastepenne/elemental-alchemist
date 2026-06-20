@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53fde366ed06924683f3a8198d33cac, type: 3}
+  m_Name: Pearl_Brine-Stone
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Fusion.RecipeData
+  _inputA: {fileID: 11400000, guid: d2fecc7b0505493fa958552cdbb2cae0, type: 2}
+  _inputB: {fileID: 11400000, guid: 8b8a5a9f19dea034096dcf530af8a47b, type: 2}
+  _output: {fileID: 11400000, guid: ee921733c6d413c4880be3dd70bc2af4, type: 2}

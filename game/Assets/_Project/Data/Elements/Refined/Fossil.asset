@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: fossil
   _displayName: Fossil
-  _description: This is fossil
+  _description: Life turned to patient stone, a creature's last secret kept for a thousand ages.
   _icon: {fileID: 21300000, guid: 2f9d62d0a5b8e2c458523524a0ff52a1, type: 3}
   _tier: 2
   _tags:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: smoke
   _displayName: Smoke
-  _description: This is smoke
+  _description: Fire's restless ghost, climbing toward the sky to carry secrets no one can read.
   _icon: {fileID: 21300000, guid: 7dff211409b8af34ead7df20d7750fda, type: 3}
   _tier: 1
   _tags:

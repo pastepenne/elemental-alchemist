@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: elixir
   _displayName: Elixir
-  _description: This is elixir
+  _description: The deathless draught, bottled life itself, sought by every alchemist who ever feared the grave.
   _icon: {fileID: 21300000, guid: 1ac523a56cbcaf7479c9992d31e169db, type: 3}
   _tier: 3
   _tags:

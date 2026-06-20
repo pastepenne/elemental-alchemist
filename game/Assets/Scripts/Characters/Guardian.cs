@@ -10,7 +10,6 @@ namespace ElementalAlchemist.Characters
     /// meeting, re-hints until the player has discovered the answer element, then congratulates and advances.</summary>
     public class Guardian : MonoBehaviour, IInteractable
     {
-        [SerializeField] private string _guardianName;
         [SerializeField] private DialogueData _riddleDialogue;
         [SerializeField] private DialogueData _completedDialogue;
         [SerializeField] private DialogueData _idleDialogue;
@@ -18,8 +17,11 @@ namespace ElementalAlchemist.Characters
         [SerializeField] private ElementData _requiredElement;
         [SerializeField] private string _metTriggerId;
         [SerializeField] private string _claimTriggerId;
+        [SerializeField] private LifeFragment _grantedFragment;
 
         private string _triggerOnDialogueEnd;
+
+        private enum LifeFragment { Breath, Flesh, Soul }
 
         public string Prompt => "Talk";
 
@@ -75,7 +77,36 @@ namespace ElementalAlchemist.Characters
             DialogueManager.DialogueEnded -= OnDialogueEnded;
             var triggerId = _triggerOnDialogueEnd;
             _triggerOnDialogueEnd = null;
+
+            // Hand over the realm's fragment the moment the riddle is solved - before the trigger fires the rest of
+            // the sequence (and its checkpoint autosave), so the new state is what gets saved.
+            if (triggerId == _claimTriggerId)
+            {
+                GrantFragment();
+            }
+
             StoryTrigger.Fire(triggerId);
+        }
+
+        private void GrantFragment()
+        {
+            if (!ProgressionManager.Instance)
+            {
+                return;
+            }
+
+            switch (_grantedFragment)
+            {
+                case LifeFragment.Breath:
+                    ProgressionManager.Instance.OnBreathFragmentGranted();
+                    break;
+                case LifeFragment.Flesh:
+                    ProgressionManager.Instance.OnFleshFragmentGranted();
+                    break;
+                case LifeFragment.Soul:
+                    ProgressionManager.Instance.OnSoulFragmentGranted();
+                    break;
+            }
         }
 
         private void OnDisable()

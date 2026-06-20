@@ -292,7 +292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75812457a1994ec47a2830e6f6068f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Characters.Mentor
-  _presence: 1
   _followCatchUpDistance: 10
   _followStopDistance: 5
   _spawnKey: 
@@ -370,7 +369,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 360

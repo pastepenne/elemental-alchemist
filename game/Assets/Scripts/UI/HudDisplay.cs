@@ -43,6 +43,16 @@ namespace ElementalAlchemist.UI
         /// <summary>Re-renders the HUD from current game state.</summary>
         private void Refresh()
         {
+            var progression = ProgressionManager.Instance;
+
+            // The story is over in freeplay - hide the HUD entirely; there is no objective or fragment tally to track.
+            if (progression && progression.IsFreeplayActive)
+            {
+                _objectivePanel.SetActive(false);
+                _fragmentsPanel.SetActive(false);
+                return;
+            }
+
             var inControl = ActionMapController.Current == ActionMaps.Player;
 
             var step = StoryDirector.Instance ? StoryDirector.Instance.CurrentStep : null;
@@ -53,14 +63,9 @@ namespace ElementalAlchemist.UI
                 _objectiveText.text = objective;
             }
 
-            // TEMP diagnostic — remove once the scene-change objective issue is confirmed fixed.
-            Debug.Log($"[HudDisplay] {gameObject.scene.name}: map={ActionMapController.Current}, " +
-                      $"step={(step ? step.name : "null")}, objective='{objective}'");
-
             _objectivePanel.SetActive(inControl && hasObjective);
             _fragmentsPanel.SetActive(inControl);
 
-            var progression = ProgressionManager.Instance;
             if (progression)
             {
                 SetActive(_breathIcon, progression.HasBreathFragment);

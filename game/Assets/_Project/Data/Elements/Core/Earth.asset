@@ -11,9 +11,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b515efcce0186a43a8231138a703e44, type: 3}
   m_Name: Earth
-  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Data.Element
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Element.ElementData
   _id: earth
   _displayName: Earth
-  _description: This is earth
+  _description: Patient and ancient, the bones of creation that hold everything else in place.
   _icon: {fileID: 21300000, guid: 6d50f166d22521f42832b4e3ca9f3fc8, type: 3}
   _tier: 0
+  _tags:
+  - earth
