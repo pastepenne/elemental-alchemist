@@ -16,6 +16,7 @@ MonoBehaviour:
   _activationStage: 0
   _onComplete: 1
   _openingWaypointKey: wp-lab
+  _openingWarpWaypointKey: wp-entrance
   _openingDialogue: {fileID: 11400000, guid: aa4aec64d110f0340a44e76facb76e49, type: 2}
   _steps:
   - {fileID: 11400000, guid: c1465b254376950469f95dd561bbb29a, type: 2}

@@ -169,7 +169,31 @@ namespace ElementalAlchemist.Progression
         {
             var sequence = _currentSequence;
             _currentSequence = null;
+
+            // Apply the sequence's progression outcome before announcing completion, so the checkpoint autosave
+            // (which listens to SequenceCompleted) captures the updated stage.
+            ApplySequenceOutcome(sequence);
+
             SequenceCompleted?.Invoke(sequence.SequenceId);
+        }
+
+        // Fragment grants live on the Guardians; a sequence's own outcome is the Tutorial/freeplay transition it ends on.
+        private static void ApplySequenceOutcome(StorySequence sequence)
+        {
+            if (!sequence || !ProgressionManager.Instance)
+            {
+                return;
+            }
+
+            switch (sequence.OnComplete)
+            {
+                case SequenceOutcome.CompleteTutorial:
+                    ProgressionManager.Instance.OnTutorialCompleted();
+                    break;
+                case SequenceOutcome.ActivateFreeplay:
+                    ProgressionManager.Instance.OnFreeplayActivated();
+                    break;
+            }
         }
     }
 }
