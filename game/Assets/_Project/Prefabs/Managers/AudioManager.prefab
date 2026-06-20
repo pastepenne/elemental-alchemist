@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5410110925625876014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3571158696353115131}
+  - component: {fileID: 3733033343404432629}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3571158696353115131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410110925625876014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3733033343404432629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410110925625876014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48ce474280dfe44aa57c398b23827c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Audio.AudioManager
+  _menuMusic: {fileID: 8300000, guid: 833ee0779f701e04093ae669082612d9, type: 3}
+  _explorationMusic: {fileID: 8300000, guid: 5ffd99c68ddbd9b48b9cdbd7888385a4, type: 3}
+  _cutsceneMusic: {fileID: 8300000, guid: ef9ea2c0153bf4a47ad446f2672af8a4, type: 3}
+  _menuSceneName: MainMenu
+  _uiClick: {fileID: 8300000, guid: d61a4b42b5fea4b47abc2cc3871906d7, type: 3}
+  _pauseMenuOpen: {fileID: 8300000, guid: f3a91a547298c1640add87a6261cbc45, type: 3}
+  _playerMenuOpen: {fileID: 8300000, guid: d61a4b42b5fea4b47abc2cc3871906d7, type: 3}
+  _fusionMenuOpen: {fileID: 8300000, guid: d61a4b42b5fea4b47abc2cc3871906d7, type: 3}
+  _sanctuaryMenuOpen: {fileID: 8300000, guid: d61a4b42b5fea4b47abc2cc3871906d7, type: 3}
+  _pickup: {fileID: 8300000, guid: 8eaa52d6b4d71f24bb00c92737dde5a7, type: 3}
+  _dialogueLine: {fileID: 8300000, guid: d61a4b42b5fea4b47abc2cc3871906d7, type: 3}
+  _stepChime: {fileID: 8300000, guid: 06c53211d61f75847b447172b2959b11, type: 3}

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.Element;
 using ElementalAlchemist.Fusion;
 using ElementalAlchemist.GameInput;
@@ -72,6 +73,7 @@ namespace ElementalAlchemist.UI.Fusion
         private void Open()
         {
             _isOpen = true;
+            AudioManager.FusionMenuOpen();
             _backdropPanel.SetActive(true);
             _windowPanel.SetActive(true);
             ActionMapController.SetActionMap(ActionMaps.UI);
@@ -92,6 +94,7 @@ namespace ElementalAlchemist.UI.Fusion
         private void Close()
         {
             _isOpen = false;
+            AudioManager.Click();
             _backdropPanel.SetActive(false);
             _windowPanel.SetActive(false);
             ActionMapController.SetActionMap(ActionMaps.Player);

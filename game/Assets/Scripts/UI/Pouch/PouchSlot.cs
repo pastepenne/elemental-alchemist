@@ -1,4 +1,5 @@
 using System;
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.Element;
 using TMPro;
 using UnityEngine;
@@ -52,6 +53,7 @@ namespace ElementalAlchemist.UI.Pouch
         {
             if (isOn && _stack != null && _stack.Element)
             {
+                AudioManager.Click();
                 StackSelected?.Invoke(_stack);
             }
         }

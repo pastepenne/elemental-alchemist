@@ -1,4 +1,5 @@
 using System;
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.Element;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,6 +43,7 @@ namespace ElementalAlchemist.UI.Fusion
         {
             if (_element)
             {
+                AudioManager.Click();
                 ElementSelected?.Invoke(_element);
             }
         }

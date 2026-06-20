@@ -1,3 +1,4 @@
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.GameInput;
 using ElementalAlchemist.Save;
 using UnityEngine;
@@ -60,6 +61,7 @@ namespace ElementalAlchemist.UI
         private void Open()
         {
             _isOpen = true;
+            AudioManager.PauseOpen();
             _backdropPanel.SetActive(true);
             _menuPanel.SetActive(true);
             ActionMapController.SetActionMap(ActionMaps.UI);
@@ -69,6 +71,7 @@ namespace ElementalAlchemist.UI
         private void Close()
         {
             _isOpen = false;
+            AudioManager.Click();
             _backdropPanel.SetActive(false);
             _menuPanel.SetActive(false);
             Time.timeScale = 1f;
@@ -77,6 +80,7 @@ namespace ElementalAlchemist.UI
 
         private void OnQuit()
         {
+            AudioManager.Click();
             Time.timeScale = 1f;
 
             // Save on the way out (the pause menu's only save point).

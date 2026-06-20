@@ -1,3 +1,4 @@
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.Element;
 using UnityEngine;
 using UnityEngine.UI;
@@ -51,6 +52,12 @@ namespace ElementalAlchemist.UI.Fusion
         
         private void OnClicked()
         {
+            if (!Current)
+            {
+                return;
+            }
+
+            AudioManager.Click();
             Clear();
         }
     }

@@ -1,3 +1,4 @@
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.Dialogue;
 using ElementalAlchemist.GameInput;
 using ElementalAlchemist.Progression;
@@ -54,6 +55,7 @@ namespace ElementalAlchemist.UI
         private void Open()
         {
             _isOpen = true;
+            AudioManager.SanctuaryMenuOpen();
             _backdropPanel.SetActive(true);
             _windowPanel.SetActive(true);
             ActionMapController.SetActionMap(ActionMaps.UI);
@@ -68,6 +70,7 @@ namespace ElementalAlchemist.UI
             }
 
             _isOpen = false;
+            AudioManager.Click();
             _backdropPanel.SetActive(false);
             _windowPanel.SetActive(false);
             _cancelAction.performed -= OnCancel;
