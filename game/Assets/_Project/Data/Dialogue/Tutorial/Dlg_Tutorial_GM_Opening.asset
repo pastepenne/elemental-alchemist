@@ -14,15 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - Ah, you're awake. Ready for your training?
-  - Did you forget? Today we start your journey into the alchemy world.
-  - "Once we're done, you'll be just like me \u2014 a Grand Master."
-  - Unfortunately alchemy forbids human transmutation, so you'll remain that short.
-    But at least in rank you'll feel big.
-  - "Now \u2014 alchemy is the art of fusing different elements into new ones."
-  - We can't create something from nothing. We transmute what we have into what we
-    want.
-  - And for that, you first need to learn the elements.
-  - There are four core elements, and you'll always need them in your lab. So let's
-    get yours properly set up.
-  - First, water. Head to the river and fetch some.
+  - Ah, you're awake. Ready to begin your training?
+  - Today your journey into alchemy starts. Stay close to me, and one day you may stand where I stand.
+  - Alchemy forbids human transmutation, sadly, so you'll stay exactly that height. But your name, that we can make grow.
+  - Alchemy is the art of fusing elements into new ones. We create nothing from nothing; we only transmute what we have into what we want.
+  - So first you must gather the four core elements every lab needs.
+  - We begin with water. Walk to the river, and press E to interact with the world around you.

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
-  m_Name: Dlg_Ruins_Totem_Shadow
+  m_Name: Dlg_Ruins_Totem_Crystal
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Ancient Totem
   _lines:
-  - The last totem is faceless, and your reflection never appears upon it.
-  - Marry the first light to the void that would swallow it. What is born is neither, only the shape that light leaves behind.
+  - A totem of bone-white stone hums as you draw near, and words surface unbidden in your mind.
+  - Wed the mountain's raw vein to that clear skin, and the bond hardens into a bright lattice that hoards the light.

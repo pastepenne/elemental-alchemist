@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Underground Guardian
   _lines:
-  - Far from the sun, you reach the cradle of the realm of Flesh. Every creature that ever walked above is gathered here below, held in the patient dark.
-  - The stone forgets nothing. It takes what the living leave behind and keeps its shape for an age of ages.
-  - Answer me this, and prove you understand my realm. When bone is laid down and stone closes over it, and time presses the two as one, what remains?
-  - Bring me your answer, and the Fragment of Flesh will be yours.
+  - Welcome to the cradle of Flesh. Every creature that ever walked beneath the sun is gathered here, held in the patient dark, and the deep forgets nothing.
+  - So answer me. Lay what the living leave behind into the cold grip of the mountain's grey body, and let the slow weight of ages press the two as one.
+  - Name what the deep keeps long after the flesh is gone. Bring it to me, and the Fragment of Flesh is yours.

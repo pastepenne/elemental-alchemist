@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - The Ruins. Where the first alchemists reached too far, and the world broke beneath their hands. This is the realm of Soul.
-  - Breath gave you life. Flesh gave you form. Here you face the last and hardest truth of all, what a thing is worth once it can never die.
-  - The Guardian of the Ruins keeps the final Fragment. Find it, answer what it asks, and the Fragment of Soul will be yours.
-  - I will be waiting when it is done. Go.
+  - The Ruins. Here the first alchemists reached too far, and the world broke under their hands. This is the realm of Soul.
+  - Breath gave you life. Flesh gave you form. Here you face the truth that frightens lesser minds: what a thing is worth once it can no longer die.
+  - The Guardian of the Ruins keeps the final Fragment. Find it, answer what it asks, and the last of your power will be yours.
+  - Do this, and you will hold what no one has held in a thousand years. I will be waiting. Go.

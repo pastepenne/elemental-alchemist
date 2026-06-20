@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Underground Guardian
   _lines:
-  - A Fossil. Life turned to stone, yet never truly lost. You understand what endures here.
-  - Take the Fragment of Flesh. You have earned the right to carry the memory of all that lived.
+  - The living turned to stone, yet never truly lost. You understand what endures here.
+  - Take the Fragment of Flesh. Two now rest in your hands, and you grow harder to stop with each one you gather.
+  - But weigh this in the dark. The more a hand can make, the more it can unmake. Never forget there is a difference.

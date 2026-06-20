@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - This forest is alive with elements waiting to be gathered.
-  - Collect what you find and carry it back to the village. Fuse them, and always try new combinations.
-  - But knowledge alone will not make you a master. Hidden deep in these woods lives the Guardian of the Forest.
-  - Seek it out and prove yourself worthy. Only then will I believe you are ready.
+  - This forest breathes with elements waiting to be gathered.
+  - Collect what you find, carry it back to the village, and fuse it. Always try new pairings; that is how mastery is built.
+  - But gathering alone will never make you great. Deep in these woods lives the Guardian of the Forest.
+  - Seek it out and prove yourself. It keeps a Fragment that will make you stronger than any common alchemist, and I mean for you to have it.

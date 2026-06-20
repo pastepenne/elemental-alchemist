@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Forest Guardian
   _lines:
-  - Smoke, rising where the forest meets the flame. You have read the riddle truly.
-  - Take the Fragment of Breath. You have proven yourself worthy to carry it.
+  - The grey ghost that climbs from a dying fire. You read the riddle truly.
+  - Take the Fragment of Breath. With it, doors that were shut to your hands will open.
+  - One word before you go. Strength like this is a road, and a road can be walked the wrong way. Do not lose yourself upon it.

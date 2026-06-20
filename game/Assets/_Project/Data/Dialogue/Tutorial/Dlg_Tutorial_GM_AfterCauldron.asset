@@ -15,6 +15,5 @@ MonoBehaviour:
   _speaker: Grand Master
   _lines:
   - Good. Now we need air.
-  - "Yes, I know \u2014 air is everywhere. But we need a way to harness it before
-    we can fuse with it."
-  - There's an old windmill outside your lab. Start it up, and the wind is yours.
+  - Yes, I know, air is all around us. But we need a way to gather it before we can fuse with it.
+  - An old windmill stands outside your lab. Set it turning, and the wind is yours. Press Space to jump any ledge or fence that gets in your way.

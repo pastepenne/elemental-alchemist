@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - So you followed me down into the Underground. Good. This is the realm of Flesh, where the earth remembers everything that has ever lived.
-  - The breath you mastered above will not be enough here. These depths answer to those who understand what endures when life itself is gone.
-  - Somewhere in these caverns waits the Guardian of the Underground. Seek it out, and let it judge whether you are ready to carry the Fragment of Flesh.
-  - Go. I will be near when it matters.
+  - So you followed me down. Good. This is the Underground, where the earth keeps everything that has ever lived.
+  - The breath you mastered above will not carry you here. These depths answer only to those who understand what lasts when life is gone.
+  - Somewhere in the dark waits the Guardian of the Underground. Find it, and let it judge whether you are ready for the next Fragment, and the power that comes with it.
+  - Go. I will not be far.

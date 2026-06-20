@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - "Perfect \u2014 a watering can is exactly what we need."
-  - There's an empty cauldron in your lab. Go fill it.
+  - A watering can. That is exactly what we needed.
+  - There's an empty cauldron waiting in your lab. Go and fill it.
+  - And don't dawdle. Hold Left Shift to sprint when your legs feel slow.

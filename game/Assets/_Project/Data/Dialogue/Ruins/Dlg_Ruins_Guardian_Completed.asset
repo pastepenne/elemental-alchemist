@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Ruins Guardian
   _lines:
-  - The Philosopher's Stone. Perfection itself, resting in your open hand. No one has carried it into these Ruins for a thousand years.
-  - Take the Fragment of Soul. Breath, Flesh, and Soul are yours now. You are whole, alchemist, in a way that almost no one ever becomes.
-  - But hear me before you go. The power you now hold can mend a world or end one, and it does not care which you choose.
-  - Whatever you are asked to make at the Sanctuary, do not turn it against what lives. Be very careful with the strength you carry now.
+  - Perfection itself, resting in your open hand. No one has carried it into these Ruins for a thousand years.
+  - Take the Fragment of Soul. Breath, Flesh, and Soul are yours now. You are whole, alchemist, in a way almost no one ever becomes.
+  - But hear me before you go. The power you carry can mend a world or end one, and it does not care which you choose.
+  - Whatever you are asked to make at the Sanctuary, do not turn it against what lives. And weigh this. The one who led you here may not want for you what you would want for yourself.
