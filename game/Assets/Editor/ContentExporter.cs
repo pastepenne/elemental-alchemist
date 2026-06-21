@@ -16,6 +16,7 @@ namespace ElementalAlchemist.Editor
         private const string _outputDirRelativeToProject = "../../shared/Content";
         private const string _elementsFileName = "elements.json";
         private const string _recipesFileName = "recipes.json";
+        private const string _tagsFileName = "tags.json";
 
         private static readonly JsonSerializerSettings _jsonSettings = new()
         {
@@ -32,10 +33,11 @@ namespace ElementalAlchemist.Editor
 
             var elementCount = ExportElements(Path.Combine(outputDir, _elementsFileName));
             var recipeCount = ExportRecipes(Path.Combine(outputDir, _recipesFileName));
+            var tagCount = ExportTags(Path.Combine(outputDir, _tagsFileName));
 
             AssetDatabase.Refresh();
 
-            var message = $"Exported {elementCount} elements and {recipeCount} recipes to:\n{outputDir}";
+            var message = $"Exported {elementCount} elements, {recipeCount} recipes and {tagCount} tags to:\n{outputDir}";
             Debug.Log($"[ContentExporter] {message}");
             EditorUtility.DisplayDialog("Export Server Content", message, "OK");
         }
@@ -100,6 +102,26 @@ namespace ElementalAlchemist.Editor
 
             File.WriteAllText(path, JsonConvert.SerializeObject(recipes, _jsonSettings));
             return recipes.Count;
+        }
+
+        private static int ExportTags(string path)
+        {
+            var tags = new List<string>();
+            var seen = new HashSet<string>();
+
+            foreach (var library in LoadAll<TagSpriteLibrary>())
+            {
+                foreach (var tag in library.Tags)
+                {
+                    if (seen.Add(tag))
+                    {
+                        tags.Add(tag);
+                    }
+                }
+            }
+
+            File.WriteAllText(path, JsonConvert.SerializeObject(tags, _jsonSettings));
+            return tags.Count;
         }
 
         private static IEnumerable<T> LoadAll<T>() where T : Object

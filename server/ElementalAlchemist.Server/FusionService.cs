@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ElementalAlchemist.Server;
 
-public class FusionService(AppDbContext db, ElementGenerator generator)
+public class FusionService(AppDbContext db, IElementGenerator generator)
 {
     private readonly AppDbContext _db = db;
-    private readonly ElementGenerator _generator = generator;
+    private readonly IElementGenerator _generator = generator;
     
     public async Task<ElementDefinition?> FuseAsync(FusionPair pair, CancellationToken ct)
     {
