@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Ruins Guardian
   _lines:
-  - You stand among the bones of an age that wanted to live forever. They chased one thing above all else, and it unmade them, every one.
-  - Two things you must wed. First, the unbreakable jewel the deep weeps under unbearable weight, clear and without flaw, the proudest thing the earth can harden.
-  - Second, the golden draught that turns death from the door, the drink the dying have always begged for and never found.
-  - Marry the flawless jewel to the deathless drink, and you will hold the prize that emptied this whole world. Make it, return to me, and the Fragment of Soul is yours.
+  - You stand among the bones of an age that begged never to die. They chased a single prize, and it unmade every one of them.
+  - Wed the flawless jewel the deep weeps under unbearable weight to the golden draught that holds death at the door. Together they make that prize.
+  - The old totems still remember how each is wrought, if you stop to listen. Bring me the prize, and the Fragment of Soul is yours.

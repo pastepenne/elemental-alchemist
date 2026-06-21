@@ -167,7 +167,6 @@ namespace ElementalAlchemist.Save
 
         private void OnCheckpoint(string sequenceId) => Save();
         private void OnCoreUnlocked(ElementData element) => Save();
-        private void OnApplicationQuit() => Save();
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             _currentSpawnId = PlayerSpawner.PendingSpawnId;
