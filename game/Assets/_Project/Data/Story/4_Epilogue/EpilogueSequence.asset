@@ -15,7 +15,7 @@ MonoBehaviour:
   _sequenceId: epilogue
   _activationStage: 4
   _onComplete: 2
-  _openingWaypointKey: 
+  _openingWaypointKey: wp-ruins-sanctuary
   _openingDialogue: {fileID: 11400000, guid: 9ea192db56524cbebb2cc8980e0df8cf, type: 2}
   _steps:
   - {fileID: 11400000, guid: 0d767e743a5945a88c175bdc6b0731d1, type: 2}

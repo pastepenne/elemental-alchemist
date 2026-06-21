@@ -20,6 +20,7 @@ namespace ElementalAlchemist.UI
         [SerializeField] private Button _walkAwayButton;
         [SerializeField] private DialogueData _gateDialogue;
         [SerializeField] private StorySequence _epilogueSequence;
+        [SerializeField] private DialogueData _finalDialogue;
 
         private InputAction _cancelAction;
         private bool _isOpen;
@@ -45,6 +46,7 @@ namespace ElementalAlchemist.UI
             _walkAwayButton.onClick.RemoveListener(OnWalkAway);
             DialogueManager.DialogueEnded -= ReopenAfterGate;
             DialogueManager.DialogueEnded -= OnFarewellSpoken;
+            StoryDirector.SequenceCompleted -= OnEpilogueComplete;
 
             if (_isOpen)
             {
@@ -109,6 +111,8 @@ namespace ElementalAlchemist.UI
             // dialogue to end first: firing immediately would flip the action map to Cutscene mid-sentence.
             if (StoryDirector.Instance && _epilogueSequence)
             {
+                // The sequence opening has a waypoint, so the Grand Master enters the Cutscene action map as it begins,
+                // which starts cutscene music; it then carries through his farewell, walk-out, and the final monologue.
                 StoryDirector.Instance.BeginSequence(_epilogueSequence);
                 DialogueManager.DialogueEnded += OnFarewellSpoken;
             }
@@ -118,10 +122,31 @@ namespace ElementalAlchemist.UI
         {
             DialogueManager.DialogueEnded -= OnFarewellSpoken;
 
+            // The leave step has no dialogue, so it completes (and the master despawns) the instant he reaches the
+            // exit - before he can turn back to follow the player. The lone reflection then plays over his absence.
+            StoryDirector.SequenceCompleted += OnEpilogueComplete;
+
             var steps = _epilogueSequence.Steps;
             if (steps != null && steps.Length > 0)
             {
                 StoryTrigger.Fire(steps[0].TriggerId);
+            }
+        }
+
+        private void OnEpilogueComplete(string sequenceId)
+        {
+            if (sequenceId != _epilogueSequence.SequenceId)
+            {
+                return;
+            }
+
+            StoryDirector.SequenceCompleted -= OnEpilogueComplete;
+
+            // The master has reached the exit and despawned; the lone reflection plays over his absence. When it ends
+            // the action map returns to Player, which drops cutscene music back to exploration.
+            if (_finalDialogue)
+            {
+                DialogueManager.Instance.StartDialogue(_finalDialogue);
             }
         }
 

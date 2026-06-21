@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: You
   _lines:
-  - I am on my own now.
-  - Whatever I become from here, it will be by my own hand. And my hands are still clean.
+  - I am on my own now...
