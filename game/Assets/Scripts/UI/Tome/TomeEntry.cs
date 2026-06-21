@@ -1,4 +1,5 @@
 using System;
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.Element;
 using TMPro;
 using UnityEngine;
@@ -46,6 +47,7 @@ namespace ElementalAlchemist.UI.Tome
         {
             if (isOn && _element)
             {
+                AudioManager.Click();
                 EntrySelected?.Invoke(_element);
             }
         }

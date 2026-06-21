@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - "Collecting those branches also helped you discover a new element \u2014 Wood. "
-  - By pressing TAB you can look into your pouch to see what elements you have collected.
-  - Tough you won't see the core elements, since they are always in your lab.
-  - You can also read the tome, there you will find every element you discovered.
-  - Now go throw the wood on the furnace.
+  - Gathering those branches taught you something new. Wood, your first discovered element.
+  - Press Tab to open your pouch and see everything you have collected. The four cores won't show there, since they always live in your lab.
+  - In that same menu you'll find your tome, a record of every element you have ever discovered.
+  - Now, throw that wood into the furnace.

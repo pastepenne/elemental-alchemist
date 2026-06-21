@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - "The last element is the most exciting one \u2014 fire."
-  - You have a fine furnace in your lab, but it needs to be lit.
-  - Gather some wood to throw in. Three branches should be enough.
+  - Now the most exciting of the four. Fire.
+  - You have a fine furnace in your lab, but it sits cold and unlit.
+  - Gather some wood to feed it. Three branches should be plenty.

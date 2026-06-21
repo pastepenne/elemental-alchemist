@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Forest Guardian
   _lines:
-  - I can see it in you, alchemist, the makings of a master.
+  - I see it in you already, the shape of something far larger than an alchemist.
+  - Tread carefully in here. Power has a way of arriving long before the wisdom to hold it.

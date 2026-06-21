@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - "There it is \u2014 your very first fusion."
-  - You might just become a great alchemist one day.
-  - "Well then. You're ready for your journey. Head to the forest across the bridge
-    \u2014 we'll talk more there."
+  - There it is. Your very first fusion.
+  - You may make a fine alchemist one day. Better than fine, if you stay the course with me.
+  - Now you're ready. Cross the bridge to the forest, and we'll talk more there.

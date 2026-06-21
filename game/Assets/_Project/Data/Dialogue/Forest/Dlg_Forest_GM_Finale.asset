@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - So the Guardian found you worthy. Well done. You are no longer a novice, but an apprentice.
-  - With the breath of life, recipes that once led nowhere will bear fruit. Refined elements are within your reach now.
-  - Explore, experiment, and when you are ready, descend to the Underground. Your journey has only begun.
+  - So the Guardian judged you worthy. I never doubted it. You are a Novice no longer, but an Apprentice.
+  - That Fragment is real power, not a trinket. Refined elements are within your reach now, and recipes that once died in your hands will bear fruit.
+  - Explore, experiment, and when your hands are sure, descend to the Underground. We are only beginning, you and I.

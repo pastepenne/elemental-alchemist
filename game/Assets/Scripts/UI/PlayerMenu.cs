@@ -1,5 +1,5 @@
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.GameInput;
-using ElementalAlchemist.Progression;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -31,20 +31,21 @@ namespace ElementalAlchemist.UI
         private void OnEnable()
         {
             _toggleAction.performed += OnToggle;
-            _pouchTabButton.onClick.AddListener(ShowPouchTab);
-            _tomeTabButton.onClick.AddListener(ShowTomeTab);
+            _pouchTabButton.onClick.AddListener(OnPouchTabClicked);
+            _tomeTabButton.onClick.AddListener(OnTomeTabClicked);
         }
 
         private void OnDisable()
         {
             _toggleAction.performed -= OnToggle;
-            _pouchTabButton.onClick.RemoveListener(ShowPouchTab);
-            _tomeTabButton.onClick.RemoveListener(ShowTomeTab);
+            _pouchTabButton.onClick.RemoveListener(OnPouchTabClicked);
+            _tomeTabButton.onClick.RemoveListener(OnTomeTabClicked);
         }
 
         private void Open()
         {
             _isOpen = true;
+            AudioManager.PlayerMenuOpen();
             _backdropPanel.SetActive(true);
             _windowPanel.SetActive(true);
             ActionMapController.SetActionMap(ActionMaps.UI);
@@ -54,9 +55,23 @@ namespace ElementalAlchemist.UI
         private void Close()
         {
             _isOpen = false;
+            AudioManager.Click();
             _backdropPanel.SetActive(false);
             _windowPanel.SetActive(false);
             ActionMapController.SetActionMap(ActionMaps.Player);
+        }
+
+        // Tab presses click; ShowPouchTab/ShowTomeTab stay silent so Open()'s programmatic call does not double up.
+        private void OnPouchTabClicked()
+        {
+            AudioManager.Click();
+            ShowPouchTab();
+        }
+
+        private void OnTomeTabClicked()
+        {
+            AudioManager.Click();
+            ShowTomeTab();
         }
 
         private void ShowPouchTab()
@@ -86,11 +101,6 @@ namespace ElementalAlchemist.UI
             if (_isOpen)
             {
                 Close();
-                return;
-            }
-
-            if (!ProgressionManager.Instance.HasMenuUnlocked)
-            {
                 return;
             }
 

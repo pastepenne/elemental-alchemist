@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - So. The Guardian gave up the last Fragment. I felt it the instant the Stone took shape. The whole realm leaned toward you.
-  - You are no longer my student. From this moment you are a Master of alchemy, my equal in every art that matters. I have waited my whole life to say that to someone.
-  - And now, the work we were truly made for. At the Sanctuary, in the heart of these Ruins, stands the old altar where the three Fragments can be made one.
-  - Carry Breath, Flesh, and Soul to the Sanctuary and fuse them. Create Life itself, the ultimate Element, the thing all alchemy has only ever pointed toward.
-  - Go. I will be right behind you. After all these years, we finish it together.
+  - So. The Guardian gave up the last Fragment. I felt it the instant the Stone took shape; the whole realm leaned toward you.
+  - You are my student no longer. From this moment you are a Master, my equal in every art that matters. I have waited my whole life to say that to anyone.
+  - And now the work we were truly made for. At the Sanctuary, in the heart of these Ruins, stands the old altar where the three Fragments can be made one.
+  - Carry Breath, Flesh, and Soul to the altar and fuse them. We will create Life itself, the final Element, the thing all of alchemy has only ever pointed toward.
+  - This is why I raised you. Every realm, every trial, all of it for this. Go. I am right behind you, and after all these years, we finish it together.

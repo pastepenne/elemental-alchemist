@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Grand Master
   _lines:
-  - Now you have access to all four core elements.
-  - I grant you the rank of Novice. You may start using the alchemy table to fuse
-    new elements.
-  - "Don't get ahead of yourself \u2014 at your rank, only a handful of recipes are
-    within reach. The more you advance, the more will reveal themselves."
-  - Try making some mud. See if you can guess which two elements give you mud.
+  - There. All four core elements are yours.
+  - I name you a Novice. You may begin using the alchemy table to fuse new elements.
+  - Don't get ahead of yourself. At your rank only a handful of recipes will answer you. Climb higher, and more will reveal themselves.
+  - Try your hand at mud. See if you can guess which two elements make it.

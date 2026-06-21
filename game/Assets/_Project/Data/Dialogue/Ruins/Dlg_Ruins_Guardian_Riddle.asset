@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Ruins Guardian
   _lines:
-  - You stand among the bones of an age that wanted to live forever. They reached for one thing above all others, and it unmade them.
-  - It is the stone that is not a stone, the hardest and purest form the deep can yield, wedded to the draught that holds death at bay.
-  - Bring me that diamond of perfect crystal, married to the elixir of unending life, and you will hold what every alchemist has died chasing.
-  - Make it, and return to me. The Fragment of Soul waits behind your answer.
+  - You stand among the bones of an age that wanted to live forever. They chased one thing above all else, and it unmade them, every one.
+  - Two things you must wed. First, the unbreakable jewel the deep weeps under unbearable weight, clear and without flaw, the proudest thing the earth can harden.
+  - Second, the golden draught that turns death from the door, the drink the dying have always begged for and never found.
+  - Marry the flawless jewel to the deathless drink, and you will hold the prize that emptied this whole world. Make it, return to me, and the Fragment of Soul is yours.

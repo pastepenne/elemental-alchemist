@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
-  m_Name: Dlg_Ruins_Totem_Elixir
+  m_Name: Dlg_Ruins_Totem_Gold
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Ancient Totem
   _lines:
-  - A totem of bone-white stone hums as you draw near, and words surface unbidden in your mind.
-  - Distill the living spark of essence, then wed it to the metal that never tarnishes. Life made drinkable, the deathless draught.
+  - The last totem is faceless, yet strangely warm beneath your hand.
+  - Press the mountain's raw vein against the meadow's bloom, and the common is reborn as the metal that time can never dull.

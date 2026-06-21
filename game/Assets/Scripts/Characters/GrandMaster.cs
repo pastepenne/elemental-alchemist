@@ -39,7 +39,9 @@ namespace ElementalAlchemist.Characters
                 _player = PlayerManager.Instance.transform;
             }
 
-            if (TryGetWaypoint(_spawnKey, out var spawnPoint))
+            // Don't clobber an opening entrance that already kicked off: SequenceStarted (handled in OnEnable, before
+            // this Start) may have warped him off-screen to walk in, and re-warping to the spawn would cancel that.
+            if (!_waitingForArrival && TryGetWaypoint(_spawnKey, out var spawnPoint))
             {
                 _movement.Warp(spawnPoint.position);
             }
@@ -135,7 +137,7 @@ namespace ElementalAlchemist.Characters
         private void OnSequenceStarted(StorySequence sequence)
         {
             _reportOutroToDirector = false; // The opening is not a step outro.
-            GoTo(sequence.OpeningWaypointKey, sequence.OpeningDialogue);
+            GoTo(sequence.OpeningWaypointKey, sequence.OpeningDialogue, sequence.OpeningWarpWaypointKey);
         }
 
         private void OnStepCompleted(StoryStep step)
@@ -167,34 +169,11 @@ namespace ElementalAlchemist.Characters
             }
 
             _reportOutroToDirector = false;
-            var director = StoryDirector.Instance;
-            if (!director)
-            {
-                return;
-            }
 
-            // Apply the completing sequence's outcome BEFORE telling the director it is done: that call synchronously
-            // fires SequenceCompleted (and the checkpoint autosave), which must see the updated progression.
-            ApplySequenceOutcome(director.CurrentSequence);
-            director.NotifyStepOutroFinished();
-        }
-
-        // Fragments are granted by the Guardians; the master owns only the two beats he himself concludes.
-        private static void ApplySequenceOutcome(StorySequence sequence)
-        {
-            if (!sequence || !ProgressionManager.Instance)
+            // The director no-ops this unless it is the final step's outro; it owns applying the sequence outcome.
+            if (StoryDirector.Instance)
             {
-                return;
-            }
-
-            switch (sequence.OnComplete)
-            {
-                case SequenceOutcome.CompleteTutorial:
-                    ProgressionManager.Instance.OnTutorialCompleted();
-                    break;
-                case SequenceOutcome.ActivateFreeplay:
-                    ProgressionManager.Instance.OnFreeplayActivated();
-                    break;
+                StoryDirector.Instance.NotifyStepOutroFinished();
             }
         }
 

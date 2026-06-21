@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
-  m_Name: Dlg_Ruins_Totem_Aether
+  m_Name: Dlg_Ruins_Totem_Essence
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Ancient Totem
   _lines:
-  - The totem's hollow eyes seem to track you. A dry whisper rises from the stone.
-  - Take the living spark of essence and give it wholly to the open air. What remains is the pure breath of the heavens.
+  - This totem is wound with the carving of a flower long withered, yet the stone smells faintly of bloom.
+  - Steep the meadow's bloom in the sea's bitter tears, and draw out the living spark that hides inside all that grows.

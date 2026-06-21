@@ -32,7 +32,6 @@ namespace ElementalAlchemist.Progression
         public bool HasEarth { get; private set; }
         public bool HasFire { get; private set; }
         public bool HasAllCores => HasWater && HasAir && HasEarth && HasFire;
-        public bool HasMenuUnlocked { get; private set; }
 
         public IEnumerable<ElementData> UnlockedCoreElements
         {
@@ -121,11 +120,6 @@ namespace ElementalAlchemist.Progression
             CoreUnlocked?.Invoke(_fire);
         }
 
-        public void OnMenuUnlocked()
-        {
-            HasMenuUnlocked = true;
-        }
-
         public void OnFreeplayActivated()
         {
             IsFreeplayActive = true;
@@ -141,7 +135,6 @@ namespace ElementalAlchemist.Progression
             hasAir = HasAir,
             hasEarth = HasEarth,
             hasFire = HasFire,
-            hasMenu = HasMenuUnlocked,
             isFreeplay = IsFreeplayActive
         };
 
@@ -160,7 +153,6 @@ namespace ElementalAlchemist.Progression
             HasAir = data.hasAir;
             HasEarth = data.hasEarth;
             HasFire = data.hasFire;
-            HasMenuUnlocked = data.hasMenu;
             IsFreeplayActive = data.isFreeplay;
         }
 
@@ -190,7 +182,6 @@ namespace ElementalAlchemist.Progression
                 OnAirUnlocked();
                 OnEarthUnlocked();
                 OnFireUnlocked();
-                OnMenuUnlocked();
             }
 
             if (_currentStage >= ProgressionStage.Apprentice)

@@ -1,3 +1,4 @@
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.Player;
 using ElementalAlchemist.Progression;
 using ElementalAlchemist.Save;
@@ -56,6 +57,8 @@ namespace ElementalAlchemist.UI
 
         private void OnNewGame()
         {
+            AudioManager.Click();
+
             if (SaveManager.Instance)
             {
                 SaveManager.Instance.DeleteSave();
@@ -66,6 +69,8 @@ namespace ElementalAlchemist.UI
 
         private void OnContinue()
         {
+            AudioManager.Click();
+
             if (SaveManager.Instance)
             {
                 SaveManager.Instance.Load();
@@ -74,6 +79,7 @@ namespace ElementalAlchemist.UI
 
         private void OnQuit()
         {
+            AudioManager.Click();
             Application.Quit();
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;

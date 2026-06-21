@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Forest Guardian
   _lines:
-  - What happens when the forest dances with fire?
+  - This forest is the world's first breath. Every green thing here drinks the light and gives back the air that all living things share. Your whole art began by watching it.
+  - So answer me this. Give the forest's children whole to the hungry flame, and they leave behind only grey rest.
+  - Lift that rest upon the wandering wind, and watch it climb past the treetops until it is gone. Name what rises, bring it to me, and the Fragment of Breath is yours.

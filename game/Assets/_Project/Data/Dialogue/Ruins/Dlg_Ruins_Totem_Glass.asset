@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
-  m_Name: Dlg_Ruins_Totem_Void
+  m_Name: Dlg_Ruins_Totem_Glass
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Ancient Totem
   _lines:
-  - This totem is cut from something darker than any stone, and cold pours off its surface.
-  - Wed the breath of the heavens to the black glass the earth weeps in fire. Where they meet, nothing remains, and that nothing is a door.
+  - The totem's hollow eyes seem to follow you, and a dry whisper rises from the stone.
+  - Give the desert's pale dust whole to the flame. From the burning comes a clear, brittle skin you could almost read your fate through.
