@@ -21,6 +21,26 @@ namespace ElementalAlchemist.Element
 
         public Sprite Fallback => _fallback;
 
+        // The tags this library provides icons for; the single source of truth for valid element tags.
+        public IEnumerable<string> Tags
+        {
+            get
+            {
+                if (_entries == null)
+                {
+                    yield break;
+                }
+
+                foreach (var entry in _entries)
+                {
+                    if (!string.IsNullOrEmpty(entry.tag))
+                    {
+                        yield return entry.tag;
+                    }
+                }
+            }
+        }
+
         private void OnEnable()
         {
             _lookup = new Dictionary<string, Sprite>(StringComparer.Ordinal);

@@ -21,10 +21,90 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: cc30a9e384526a94b83ea4075afdf3a8, type: 3}
   - tag: water
     sprite: {fileID: 21300000, guid: ad7f6142c9620b64f8164eae57038d6f, type: 3}
+  - tag: ash
+    sprite: {fileID: 21300000, guid: 779c8d72d3a0364439481feee73ca47e, type: 3}
+  - tag: bone
+    sprite: {fileID: 21300000, guid: 3a5996d5a8dd0124a8a29f38be277fd5, type: 3}
+  - tag: brine
+    sprite: {fileID: 21300000, guid: 37137971b88d19545930dfde651f99e4, type: 3}
+  - tag: coal
+    sprite: {fileID: 21300000, guid: 73cfc06a1ceb2f349a8d393fcaefbd74, type: 3}
+  - tag: dust
+    sprite: {fileID: 21300000, guid: bc1afbb914bbbae448d6f837de031068, type: 3}
+  - tag: frost
+    sprite: {fileID: 21300000, guid: 6ac14d3eac651cd42a1f9ba8395e98b9, type: 3}
+  - tag: lava
+    sprite: {fileID: 21300000, guid: 67cd0f045b3275340a41dc1fa96c4191, type: 3}
+  - tag: mist
+    sprite: {fileID: 21300000, guid: 42ac5d26f1da0ec469f459ad0c6404ad, type: 3}
   - tag: mud
     sprite: {fileID: 21300000, guid: f54c226081ff38c4aa5c05b5c592ab5e, type: 3}
+  - tag: ore
+    sprite: {fileID: 21300000, guid: ccf43e0a5fdd5414d9fd968bbae27047, type: 3}
+  - tag: petal
+    sprite: {fileID: 21300000, guid: 176439ab7b25600459ee25871a8fea4e, type: 3}
+  - tag: salt
+    sprite: {fileID: 21300000, guid: 957a6690223edf54d89d8782c112ff2b, type: 3}
+  - tag: sand
+    sprite: {fileID: 21300000, guid: d3af10ee5ace5064d84fd020c59b81e8, type: 3}
+  - tag: smoke
+    sprite: {fileID: 21300000, guid: 7dff211409b8af34ead7df20d7750fda, type: 3}
+  - tag: steam
+    sprite: {fileID: 21300000, guid: ad75d5b6c2c289841aa06aac2ef005f8, type: 3}
   - tag: stone
     sprite: {fileID: 21300000, guid: 0ef20406d8e474b49bc20fcd50ddeeba, type: 3}
   - tag: wood
     sprite: {fileID: 21300000, guid: d8020eb6b26d2f3489ce210d3957c45a, type: 3}
+  - tag: ceramic
+    sprite: {fileID: 21300000, guid: 1294dcae1d82f7c43be1289cc794a5b0, type: 3}
+  - tag: essence
+    sprite: {fileID: 21300000, guid: aacece10f436489428182888d839ef24, type: 3}
+  - tag: firesalt
+    sprite: {fileID: 21300000, guid: 622e767aeca470a40a488ae8b4c523d5, type: 3}
+  - tag: fossil
+    sprite: {fileID: 21300000, guid: 2f9d62d0a5b8e2c458523524a0ff52a1, type: 3}
+  - tag: glass
+    sprite: {fileID: 21300000, guid: 1bc41ddef6b750a4eb7094eaa9ada38f, type: 3}
+  - tag: gold
+    sprite: {fileID: 21300000, guid: 8b773bb140c93e54992abefd04c6d780, type: 3}
+  - tag: ice
+    sprite: {fileID: 21300000, guid: bc392f0a34c22e24bb2fc001b7fd19be, type: 3}
+  - tag: iron
+    sprite: {fileID: 21300000, guid: 8a00e232d30363c4c96549bc1f5bcd79, type: 3}
+  - tag: obsidian
+    sprite: {fileID: 21300000, guid: 3880872682da3a14cb53b3bca147b080, type: 3}
+  - tag: quicksilver
+    sprite: {fileID: 21300000, guid: 21b63cfdf6e0e2e4586cb70d10b291ea, type: 3}
+  - tag: rust
+    sprite: {fileID: 21300000, guid: 7fc9dbe5d000eb646bb6c4d9a0e61cfa, type: 3}
+  - tag: steel
+    sprite: {fileID: 21300000, guid: c9e0ff9e4d56e8a47ba2183271ff3cd9, type: 3}
+  - tag: acid
+    sprite: {fileID: 21300000, guid: 46a35ef39a45da841922c69cf1c633fe, type: 3}
+  - tag: aether
+    sprite: {fileID: 21300000, guid: 7860639ed976a224b9f84ce9f23052a2, type: 3}
+  - tag: amber
+    sprite: {fileID: 21300000, guid: d3c8f0e9ebf986a48ac8a5b1dae3f10e, type: 3}
+  - tag: crystal
+    sprite: {fileID: 21300000, guid: d3b7f31e386ec8a4fbe09217a0b3b05a, type: 3}
+  - tag: diamond
+    sprite: {fileID: 21300000, guid: 43a3511f8ae3e2c48b4142e7f5f5b217, type: 3}
+  - tag: elixir
+    sprite: {fileID: 21300000, guid: 1ac523a56cbcaf7479c9992d31e169db, type: 3}
+  - tag: light
+    sprite: {fileID: 21300000, guid: ebd0241c87f5712428d7039b3fb84507, type: 3}
+  - tag: lightning
+    sprite: {fileID: 21300000, guid: 7285bb82eaee2ed499224241554a4d6f, type: 3}
+  - tag: mirror
+    sprite: {fileID: 21300000, guid: 9a9af6214f9cba84e9a7792f8e9cd1bf, type: 3}
+  - tag: pearl
+    sprite: {fileID: 21300000, guid: fc3eea7a5db81784b9ff2c1ca92a1d70, type: 3}
+  - tag: philosopher-stone
+    sprite: {fileID: 21300000, guid: 555c7c0a9df659d4caabf83479b3f495, type: 3}
+  - tag: plasma
+    sprite: {fileID: 21300000, guid: 1acf7004c775c3d4287ae104646bd29b, type: 3}
+  - tag: shadow
+    sprite: {fileID: 21300000, guid: 370d9a92381c08442b52d9e42a1fc672, type: 3}
+  - tag: void
+    sprite: {fileID: 21300000, guid: 0e562f0ecf3819a4eb7a122d9784015e, type: 3}
   _fallback: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}

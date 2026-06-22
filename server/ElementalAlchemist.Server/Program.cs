@@ -13,8 +13,10 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(builder
 
 builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase);
 
+// Exported game content (paths to elements/recipes/tags json)
+builder.Services.Configure<ContentOptions>(builder.Configuration.GetSection("Content"));
+
 // Seeding
-builder.Services.Configure<SeedingOptions>(builder.Configuration.GetSection("Seeding"));
 builder.Services.AddScoped<DatabaseSeeder>();
 
 // Generation
@@ -29,7 +31,10 @@ builder.Services.AddSingleton(_ =>
     return new AnthropicClient();
 });
 
-builder.Services.AddScoped<ElementGenerator>();
+builder.Services.AddScoped<IElementGenerator, ElementGenerator>();
+
+// Element tags (the valid tag whitelist, exported from the game's tag library)
+builder.Services.AddSingleton<ElementTagCatalog>();
 
 // Fusion
 builder.Services.AddScoped<FusionService>();

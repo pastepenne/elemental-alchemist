@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 
 namespace ElementalAlchemist.Server.Seeding;
 
-public class DatabaseSeeder(AppDbContext db, IOptions<SeedingOptions> options)
+public class DatabaseSeeder(AppDbContext db, IOptions<ContentOptions> options)
 {
     private static readonly JsonSerializerOptions JsonOptions = new(JsonSerializerDefaults.Web)
     {
@@ -15,7 +15,7 @@ public class DatabaseSeeder(AppDbContext db, IOptions<SeedingOptions> options)
     };
     
     private readonly AppDbContext _db = db;
-    private readonly SeedingOptions _options = options.Value;
+    private readonly ContentOptions _options = options.Value;
 
     public async Task SeedAsync(CancellationToken ct = default)
     {
