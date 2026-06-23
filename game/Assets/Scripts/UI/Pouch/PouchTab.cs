@@ -51,7 +51,11 @@ namespace ElementalAlchemist.UI.Pouch
 
             _slots.Clear();
 
-            foreach (var stack in PlayerManager.Instance.Inventory.GetStacks())
+            var stacks = PlayerManager.Instance.Inventory.GetStacks();
+
+            UpdateEmptyState(stacks.Count == 0);
+
+            foreach (var stack in stacks)
             {
                 var slotObject = Instantiate(_slotPrefab, _contentGroup.transform);
                 var slotComponent = slotObject.GetComponent<PouchSlot>();
@@ -59,13 +63,10 @@ namespace ElementalAlchemist.UI.Pouch
                 slotComponent.StackSelected += OnStackSelected;
                 _slots.Add(slotObject);
             }
-
-            UpdateEmptyState();
         }
 
-        private void UpdateEmptyState()
+        private void UpdateEmptyState(bool isEmpty)
         {
-            var isEmpty = _slots.Count == 0;
             if (_emptyState)
             {
                 _emptyState.SetActive(isEmpty);

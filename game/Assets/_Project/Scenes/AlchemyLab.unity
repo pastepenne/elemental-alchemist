@@ -281,7 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.World.Furnace
   _triggerId: furnace-started
   _fire: {fileID: 1086154077}
-  _wood: {fileID: 0}
+  _wood: {fileID: 11400000, guid: 56ef0fbcd89706846b1723c0f3bb28f8, type: 2}
   _gateDialogue: {fileID: 11400000, guid: 93960998bdab89c4ebc56e18a1044c4d, type: 2}
 --- !u!1001 &108841807
 PrefabInstance:

@@ -45,6 +45,8 @@ namespace ElementalAlchemist.UI.Tome
                 .ThenBy(e => e.DisplayName)
                 .ToList();
 
+            UpdateEmptyState(discoveredElements.Count == 0);
+
             foreach (var element in discoveredElements)
             {
                 var entryObject = Instantiate(_entryPrefab, _contentGroup.transform);
@@ -53,13 +55,10 @@ namespace ElementalAlchemist.UI.Tome
                 entryComponent.EntrySelected += OnEntrySelected;
                 _entries.Add(entryObject);
             }
-
-            UpdateEmptyState();
         }
 
-        private void UpdateEmptyState()
+        private void UpdateEmptyState(bool isEmpty)
         {
-            var isEmpty = _entries.Count == 0;
             if (_emptyState)
             {
                 _emptyState.SetActive(isEmpty);
@@ -72,7 +71,7 @@ namespace ElementalAlchemist.UI.Tome
 
             if (_details.gameObject)
             {
-                _contentGroup.gameObject.SetActive(!isEmpty);
+                _details.gameObject.SetActive(!isEmpty);
             }
         }
 
