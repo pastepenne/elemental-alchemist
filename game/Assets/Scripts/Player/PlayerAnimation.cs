@@ -1,4 +1,3 @@
-using ElementalAlchemist.Constants;
 using UnityEngine;
 
 namespace ElementalAlchemist.Player
@@ -17,7 +16,7 @@ namespace ElementalAlchemist.Player
             _playerMovement = GetComponent<PlayerMovement>();
         
             // Cache the animator parameter hash for better performance
-            _speedHash = Animator.StringToHash(AnimatorParameters.Speed);
+            _speedHash = Animator.StringToHash("Speed");
         }
     
         private void Update()

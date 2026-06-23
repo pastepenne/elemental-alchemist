@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53fde366ed06924683f3a8198d33cac, type: 3}
+  m_Name: quicksilver=ore+water
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Fusion.RecipeData
+  _inputA: {fileID: 11400000, guid: b6f3e89f6b124f948abb0d0c2428351c, type: 2}
+  _inputB: {fileID: 11400000, guid: e018a698998c17148a53289846dd2cca, type: 2}
+  _output: {fileID: 11400000, guid: 4e5368c98777c484e9e14e595aa11add, type: 2}

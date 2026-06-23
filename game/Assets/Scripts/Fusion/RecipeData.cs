@@ -24,7 +24,16 @@ namespace ElementalAlchemist.Fusion
             recipe._inputA = inputA;
             recipe._inputB = inputB;
             recipe._output = output;
-            recipe.name = $"{output}_{inputA.Id}-{inputB.Id}";
+
+            // Match the authored recipe filename scheme: output=inputA+inputB, inputs ordinal-sorted
+            // so the name is order-independent (mirrors RecipeKey).
+            var a = inputA.Id;
+            var b = inputB.Id;
+            if (string.CompareOrdinal(a, b) > 0)
+            {
+                (a, b) = (b, a);
+            }
+            recipe.name = $"{output.Id}={a}+{b}";
             return recipe;
         }
 

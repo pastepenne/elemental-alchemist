@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53fde366ed06924683f3a8198d33cac, type: 3}
+  m_Name: elixir=essence+gold
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Fusion.RecipeData
+  _inputA: {fileID: 11400000, guid: 31454440e8644394d8643ecd4c46e5e1, type: 2}
+  _inputB: {fileID: 11400000, guid: e5554fa01051aec4a9809f89ab4d1d58, type: 2}
+  _output: {fileID: 11400000, guid: eb728bcaebebf24448fd70e6bdc894e9, type: 2}
