@@ -1,4 +1,5 @@
 using ElementalAlchemist.Audio;
+using ElementalAlchemist.GameInput;
 using ElementalAlchemist.Player;
 using ElementalAlchemist.Progression;
 using ElementalAlchemist.Save;
@@ -30,6 +31,10 @@ namespace ElementalAlchemist.UI
             ClearManager(PlayerManager.Instance);
             ClearManager(ProgressionManager.Instance);
             ClearManager(StoryDirector.Instance);
+
+            // Input is app-lifetime static state. The pause menu leaves it on the UI map when quitting, so reset it
+            // here or gameplay starts with the Player map disabled (no movement, can't even reopen pause).
+            ActionMapController.Reset();
 
             SetOverwritePromptActive(false);
         }
