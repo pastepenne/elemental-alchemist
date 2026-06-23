@@ -35,6 +35,7 @@ namespace ElementalAlchemist.UI.Fusion
         [SerializeField] private FusionIngredientSlot _ingredientSlotA;
         [SerializeField] private FusionIngredientSlot _ingredientSlotB;
         [SerializeField] private Button _fuseButton;
+        [SerializeField] private Button _closeButton;
         
         private readonly List<GameObject> _coreSlots = new();
         private readonly List<GameObject> _pouchEntries = new();
@@ -56,12 +57,14 @@ namespace ElementalAlchemist.UI.Fusion
         {
             FusionStation.Interacted += Open;
             _fuseButton.onClick.AddListener(OnFusePressed);
+            _closeButton.onClick.AddListener(Close);
         }
 
         private void OnDisable()
         {
             FusionStation.Interacted -= Open;
             _fuseButton.onClick.RemoveListener(OnFusePressed);
+            _closeButton.onClick.RemoveListener(Close);
 
             if (_isOpen)
             {

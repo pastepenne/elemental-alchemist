@@ -14,6 +14,7 @@ namespace ElementalAlchemist.UI.Pouch
         [SerializeField] private GameObject _slotPrefab;
         [SerializeField] private ToggleGroup _contentGroup;
         [SerializeField] private PouchDetails _details;
+        [SerializeField] private GameObject _emptyState;
 
         private readonly List<GameObject> _slots = new();
 
@@ -57,6 +58,27 @@ namespace ElementalAlchemist.UI.Pouch
                 slotComponent.Setup(stack, _contentGroup);
                 slotComponent.StackSelected += OnStackSelected;
                 _slots.Add(slotObject);
+            }
+
+            UpdateEmptyState();
+        }
+
+        private void UpdateEmptyState()
+        {
+            var isEmpty = _slots.Count == 0;
+            if (_emptyState)
+            {
+                _emptyState.SetActive(isEmpty);
+            }
+
+            if (_contentGroup.gameObject)
+            {
+                _contentGroup.gameObject.SetActive(!isEmpty);
+            }
+            
+            if (_details.gameObject)
+            {
+                _details.gameObject.SetActive(!isEmpty);
             }
         }
         

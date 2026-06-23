@@ -15,6 +15,7 @@ namespace ElementalAlchemist.UI.Tome
         [SerializeField] private GameObject _entryPrefab;
         [SerializeField] private ToggleGroup _contentGroup;
         [SerializeField] private TomeDetails _details;
+        [SerializeField] private GameObject _emptyState;
 
         private readonly List<GameObject> _entries = new();
 
@@ -51,6 +52,27 @@ namespace ElementalAlchemist.UI.Tome
                 entryComponent.Setup(element, _contentGroup);
                 entryComponent.EntrySelected += OnEntrySelected;
                 _entries.Add(entryObject);
+            }
+
+            UpdateEmptyState();
+        }
+
+        private void UpdateEmptyState()
+        {
+            var isEmpty = _entries.Count == 0;
+            if (_emptyState)
+            {
+                _emptyState.SetActive(isEmpty);
+            }
+
+            if (_contentGroup.gameObject)
+            {
+                _contentGroup.gameObject.SetActive(!isEmpty);
+            }
+
+            if (_details.gameObject)
+            {
+                _contentGroup.gameObject.SetActive(!isEmpty);
             }
         }
 

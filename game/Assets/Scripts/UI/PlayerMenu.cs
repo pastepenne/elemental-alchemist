@@ -17,13 +17,16 @@ namespace ElementalAlchemist.UI
         [SerializeField] private Button _tomeTabButton;
         [SerializeField] private GameObject _pouchView;
         [SerializeField] private GameObject _tomeView;
+        [SerializeField] private Button _closeButton;
 
         private InputAction _toggleAction;
+        private InputAction _cancelAction;
         private bool _isOpen;
 
         private void Awake()
         {
             _toggleAction = InputSystem.actions.FindAction(InputActions.Global.TogglePlayerMenu);
+            _cancelAction = InputSystem.actions.FindAction(InputActions.UI.Cancel);
             _backdropPanel.SetActive(false);
             _windowPanel.SetActive(false);
         }
@@ -33,6 +36,7 @@ namespace ElementalAlchemist.UI
             _toggleAction.performed += OnToggle;
             _pouchTabButton.onClick.AddListener(OnPouchTabClicked);
             _tomeTabButton.onClick.AddListener(OnTomeTabClicked);
+            _closeButton.onClick.AddListener(Close);
         }
 
         private void OnDisable()
@@ -40,6 +44,7 @@ namespace ElementalAlchemist.UI
             _toggleAction.performed -= OnToggle;
             _pouchTabButton.onClick.RemoveListener(OnPouchTabClicked);
             _tomeTabButton.onClick.RemoveListener(OnTomeTabClicked);
+            _closeButton.onClick.RemoveListener(Close);
         }
 
         private void Open()
@@ -49,6 +54,7 @@ namespace ElementalAlchemist.UI
             _backdropPanel.SetActive(true);
             _windowPanel.SetActive(true);
             ActionMapController.SetActionMap(ActionMaps.UI);
+            _cancelAction.performed += OnCancel;
             ShowPouchTab();
         }
 
@@ -59,6 +65,7 @@ namespace ElementalAlchemist.UI
             _backdropPanel.SetActive(false);
             _windowPanel.SetActive(false);
             ActionMapController.SetActionMap(ActionMaps.Player);
+            _cancelAction.performed -= OnCancel;
         }
 
         // Tab presses click; ShowPouchTab/ShowTomeTab stay silent so Open()'s programmatic call does not double up.
@@ -110,6 +117,11 @@ namespace ElementalAlchemist.UI
             }
 
             Open();
+        }
+
+        private void OnCancel(InputAction.CallbackContext context)
+        {
+            Close();
         }
     }
 }

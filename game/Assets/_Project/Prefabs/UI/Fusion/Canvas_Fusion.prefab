@@ -1603,6 +1603,7 @@ MonoBehaviour:
   _ingredientSlotA: {fileID: 4585398217093553854}
   _ingredientSlotB: {fileID: 7854103204516753077}
   _fuseButton: {fileID: 5182813715853621075}
+  _closeButton: {fileID: 6854202481287475397}
 --- !u!1 &8999005261992518337
 GameObject:
   m_ObjectHideFlags: 0
