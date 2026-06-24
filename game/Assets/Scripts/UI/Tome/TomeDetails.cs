@@ -10,7 +10,8 @@ namespace ElementalAlchemist.UI.Tome
 {
     public class TomeDetails : MonoBehaviour
     {
-        [SerializeField] private Image _icon;
+        [SerializeField] private Image[] _icons;
+        [SerializeField] private TagSpriteLibrary _tagSprites;
         [SerializeField] private TMP_Text _name;
         [SerializeField] private TMP_Text _tier;
         [SerializeField] private TMP_Text _description;
@@ -22,7 +23,7 @@ namespace ElementalAlchemist.UI.Tome
         
         public void Display(ElementData element)
         {
-            _icon.sprite =  element.Icon;
+            ElementIcons.Apply(_icons, element, _tagSprites);
             _name.text = element.DisplayName;
             _tier.text = element.Tier.ToString();
             _description.text = element.Description;

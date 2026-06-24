@@ -10,7 +10,8 @@ namespace ElementalAlchemist.UI.Fusion
     [RequireComponent(typeof(Button))]
     public class FusionPouchEntry : MonoBehaviour
     {
-        [SerializeField] private Image _icon;
+        [SerializeField] private Image[] _icons;
+        [SerializeField] private TagSpriteLibrary _tagSprites;
         [SerializeField] private TMP_Text _name;
 
         private Button _button;
@@ -21,7 +22,7 @@ namespace ElementalAlchemist.UI.Fusion
         public void Setup(ElementData element)
         {
             _element = element;
-            _icon.sprite = element.Icon;
+            ElementIcons.Apply(_icons, element, _tagSprites);
             _name.text = element.DisplayName;
         }
 

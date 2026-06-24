@@ -8,7 +8,8 @@ namespace ElementalAlchemist.UI.Fusion
     [RequireComponent(typeof(Button))]
     public class FusionIngredientSlot : MonoBehaviour
     {
-        [SerializeField] private Image _icon;
+        [SerializeField] private Image[] _icons;
+        [SerializeField] private TagSpriteLibrary _tagSprites;
         [SerializeField] private Image _background;
         [SerializeField] private TierColorPalette _tierColors;
         [SerializeField] private Color _emptyColor = new(0.6f, 0.5f, 0.4f, 1f);
@@ -21,15 +22,13 @@ namespace ElementalAlchemist.UI.Fusion
         public void Setup(ElementData element)
         {
             Current = element;
-            _icon.sprite = element.Icon;
-            
-            _icon.gameObject.SetActive(true);
+            ElementIcons.Apply(_icons, element, _tagSprites);
             _background.color = _tierColors.GetColor(element.Tier);
         }
-        
+
         public void Clear()
         {
-            _icon.gameObject.SetActive(false);
+            ElementIcons.Clear(_icons);
             _background.color = _emptyColor;
             Current = null;
         }

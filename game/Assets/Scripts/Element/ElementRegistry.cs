@@ -9,8 +9,7 @@ namespace ElementalAlchemist.Element
     public class ElementRegistry : ScriptableObject
     {
         [SerializeField] private ElementData[] _elements;
-        [SerializeField] private TagSpriteLibrary _tagSprites;
-        
+
         private Dictionary<string, ElementData> _lookup;
 
         public IReadOnlyList<ElementData> Elements => _elements;
@@ -47,40 +46,15 @@ namespace ElementalAlchemist.Element
                 return existing;
             }
 
-            var icon = BuildIcon(definition.Tags);
-            var tier = definition.Tier;
-
             var element = ElementData.CreateRuntime(
                 definition.Id,
                 definition.DisplayName,
                 definition.Description,
-                tier,
-                icon,
+                definition.Tier,
                 definition.Tags);
 
             _lookup[definition.Id] = element;
             return element;
-        }
-        
-        private Sprite BuildIcon(string[] tags)
-        {
-            if (!_tagSprites)
-            {
-                return null;
-            }
-
-            if (tags != null)
-            {
-                foreach (var tag in tags)
-                {
-                    if (!string.IsNullOrEmpty(tag))
-                    {
-                        return _tagSprites.GetSprite(tag);
-                    }
-                }
-            }
-
-            return _tagSprites.Fallback;
         }
     }
 }

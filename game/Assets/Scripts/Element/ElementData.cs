@@ -9,14 +9,12 @@ namespace ElementalAlchemist.Element
         [SerializeField] private string _id;
         [SerializeField] private string _displayName;
         [SerializeField] [TextArea] private string _description;
-        [SerializeField] private Sprite _icon;
         [SerializeField] private ElementTier _tier;
         [SerializeField] private string[] _tags;
 
         public string Id => _id;
         public string DisplayName => _displayName;
         public string Description  => _description;
-        public Sprite Icon => _icon;
         public ElementTier Tier => _tier;
         public string[] Tags => _tags;
         public bool IsCore => Tier == ElementTier.Core;
@@ -39,7 +37,6 @@ namespace ElementalAlchemist.Element
             string displayName,
             string description,
             ElementTier tier,
-            Sprite icon,
             string[] tags)
         {
             var element = CreateInstance<ElementData>();
@@ -48,7 +45,6 @@ namespace ElementalAlchemist.Element
             element._displayName = displayName;
             element._description = description;
             element._tier = tier;
-            element._icon = icon;
             element._tags = tags ?? System.Array.Empty<string>();
             element.name = id;
             return element;

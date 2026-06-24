@@ -13,7 +13,8 @@ namespace ElementalAlchemist.UI.Tome
     [RequireComponent(typeof(Toggle))]
     public class TomeEntry : MonoBehaviour
     {
-        [SerializeField] private Image _icon;
+        [SerializeField] private Image[] _icons;
+        [SerializeField] private TagSpriteLibrary _tagSprites;
         [SerializeField] private TMP_Text _name;
 
         private Toggle _toggle;
@@ -24,7 +25,7 @@ namespace ElementalAlchemist.UI.Tome
         public void Setup(ElementData element, ToggleGroup toggleGroup)
         {
             _element = element;
-            _icon.sprite = element.Icon;
+            ElementIcons.Apply(_icons, element, _tagSprites);
             _name.text = element.DisplayName;
             _toggle.group = toggleGroup;
         }

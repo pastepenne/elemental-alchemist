@@ -13,7 +13,8 @@ namespace ElementalAlchemist.UI.Pouch
     [RequireComponent(typeof(Toggle))]
     public class PouchSlot : MonoBehaviour
     {
-        [SerializeField] private Image _icon;
+        [SerializeField] private Image[] _icons;
+        [SerializeField] private TagSpriteLibrary _tagSprites;
         [SerializeField] private Image _background;
         [SerializeField] private TMP_Text _quantity;
         [SerializeField] private TierColorPalette _tierColors;
@@ -29,7 +30,7 @@ namespace ElementalAlchemist.UI.Pouch
         public void Setup(ElementStack stack, ToggleGroup toggleGroup)
         {
             _stack = stack;
-            _icon.sprite = stack.Element.Icon;
+            ElementIcons.Apply(_icons, stack.Element, _tagSprites);
             _quantity.text = stack.Quantity.ToString();
             _background.color = _tierColors.GetColor(stack.Element.Tier);
             _toggle.group = toggleGroup;

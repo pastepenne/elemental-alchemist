@@ -73,5 +73,35 @@ namespace ElementalAlchemist.Element
 
             return _fallback;
         }
+
+        /// <summary>Resolves up to <paramref name="max"/> sprites from an element's tags. Falls back to a single
+        /// fallback sprite when there are no usable tags, so callers always get at least one entry.</summary>
+        public IReadOnlyList<Sprite> GetSprites(IReadOnlyList<string> tags, int max = 2)
+        {
+            var sprites = new List<Sprite>(max);
+
+            if (tags != null)
+            {
+                foreach (var tag in tags)
+                {
+                    if (sprites.Count >= max)
+                    {
+                        break;
+                    }
+
+                    if (!string.IsNullOrEmpty(tag))
+                    {
+                        sprites.Add(GetSprite(tag));
+                    }
+                }
+            }
+
+            if (sprites.Count == 0)
+            {
+                sprites.Add(_fallback);
+            }
+
+            return sprites;
+        }
     }
 }
