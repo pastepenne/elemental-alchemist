@@ -56,6 +56,7 @@ MonoBehaviour:
   _fusionMenuOpen: {fileID: 8300000, guid: d61a4b42b5fea4b47abc2cc3871906d7, type: 3}
   _sanctuaryMenuOpen: {fileID: 8300000, guid: d61a4b42b5fea4b47abc2cc3871906d7, type: 3}
   _pickup: {fileID: 8300000, guid: 8eaa52d6b4d71f24bb00c92737dde5a7, type: 3}
+  _sceneTransition: {fileID: 8300000, guid: 9074248ab4bb7484ba616017cdf3967f, type: 3}
   _dialogueLine: {fileID: 8300000, guid: d61a4b42b5fea4b47abc2cc3871906d7, type: 3}
   _stepChime: {fileID: 8300000, guid: 06c53211d61f75847b447172b2959b11, type: 3}
   _fusing: {fileID: 8300000, guid: 7ebdde2eb5e27c94aa94cf1e920bbe4d, type: 3}

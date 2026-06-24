@@ -1,3 +1,4 @@
+using ElementalAlchemist.Audio;
 using ElementalAlchemist.Dialogue;
 using ElementalAlchemist.Player;
 using ElementalAlchemist.Progression;
@@ -34,6 +35,7 @@ namespace ElementalAlchemist.World
             }
 
             PlayerSpawner.PendingSpawnId = _arriveAtSpawnId;
+            AudioManager.Transition();
             SceneManager.LoadScene(_sceneName);
         }
     }

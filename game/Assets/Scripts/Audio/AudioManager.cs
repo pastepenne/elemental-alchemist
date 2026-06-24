@@ -29,6 +29,7 @@ namespace ElementalAlchemist.Audio
         [SerializeField] private AudioClip _fusionMenuOpen;
         [SerializeField] private AudioClip _sanctuaryMenuOpen;
         [SerializeField] private AudioClip _pickup;
+        [SerializeField] private AudioClip _sceneTransition;
         [SerializeField] private AudioClip _dialogueLine;
         [SerializeField] private AudioClip _stepChime;
         [SerializeField] private AudioClip _fusing;
@@ -92,6 +93,16 @@ namespace ElementalAlchemist.Audio
             if (Instance)
             {
                 Instance.PlayOneShot(Instance._pickup);
+            }
+        }
+
+        /// <summary>Plays the scene-change swoosh. Fires before the load; carries over because the AudioManager
+        /// persists across scenes.</summary>
+        public static void Transition()
+        {
+            if (Instance)
+            {
+                Instance.PlayOneShot(Instance._sceneTransition);
             }
         }
 
