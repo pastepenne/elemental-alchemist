@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
   _speaker: Your conscience
   _lines:
-  - Not yet!
+  - 'The Master''s voice echoes through your mind: "You''re not ready!".'

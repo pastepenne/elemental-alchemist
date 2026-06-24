@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbaeec8dbe84e069925173ac3a6210b, type: 3}
   m_Name: Dlg_Ruins_Final
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Dialogue.DialogueData
-  _speaker: You
+  _speaker: Your Conscience
   _lines:
-  - I am on my own now...
+  - You're on your own now...
