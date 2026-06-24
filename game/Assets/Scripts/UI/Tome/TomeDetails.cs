@@ -10,32 +10,41 @@ namespace ElementalAlchemist.UI.Tome
 {
     public class TomeDetails : MonoBehaviour
     {
-        [SerializeField] private Image[] _icons;
         [SerializeField] private TagSpriteLibrary _tagSprites;
+        [SerializeField] private TierColorPalette _tierColors;
+        [SerializeField] private RecipeCatalog _recipeCatalog;
+
+        [SerializeField] private Image[] _icons;
         [SerializeField] private TMP_Text _name;
-        [SerializeField] private TMP_Text _tier;
         [SerializeField] private TMP_Text _description;
+        [SerializeField] private TMP_Text _tier;
+        [SerializeField] private Image _tierBackground;
+        
+        [SerializeField] private GameObject _recipeContainer;
         [SerializeField] private GameObject _recipeEntryPrefab;
         [SerializeField] private Transform _recipeContentGroup;
-        [SerializeField] private RecipeCatalog _recipeCatalog;
         
         private readonly List<GameObject> _recipeEntries = new();
-        
+
         public void Display(ElementData element)
         {
             ElementIcons.Apply(_icons, element, _tagSprites);
             _name.text = element.DisplayName;
-            _tier.text = element.Tier.ToString();
             _description.text = element.Description;
-            
+            _tier.text = element.Tier.ToString();
+            _tierBackground.color = _tierColors.GetColor(element.Tier);
+
             foreach (var slot in _recipeEntries)
             {
                 Destroy(slot);
             }
 
             _recipeEntries.Clear();
-            
-            foreach (var recipe in CollectRecipes(element))
+
+            var recipes = CollectRecipes(element);
+            _recipeContainer.SetActive(recipes.Count > 0);
+
+            foreach (var recipe in recipes)
             {
                 var entryObject = Instantiate(_recipeEntryPrefab, _recipeContentGroup);
                 entryObject.GetComponent<TomeRecipeEntry>().Setup(recipe);

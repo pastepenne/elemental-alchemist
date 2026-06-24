@@ -85,7 +85,7 @@ namespace ElementalAlchemist.UI.Fusion
             _ingredientSlotA.Clear();
             _ingredientSlotB.Clear();
             _fuseButton.interactable = true;
-            SetStatus(string.Empty);
+            SetStatus("Select two elements to fuse");
 
             RefreshCoreElements();
             RefreshPouchElements();
@@ -215,7 +215,7 @@ namespace ElementalAlchemist.UI.Fusion
         {
             if (result.Success)
             {
-                SetStatus(result.Output.DisplayName);
+                SetStatus("Created " + result.Output.DisplayName);
             }
             else
             {
