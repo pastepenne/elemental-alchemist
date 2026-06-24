@@ -31,9 +31,13 @@ namespace ElementalAlchemist.Audio
         [SerializeField] private AudioClip _pickup;
         [SerializeField] private AudioClip _dialogueLine;
         [SerializeField] private AudioClip _stepChime;
+        [SerializeField] private AudioClip _fusing;
+        [SerializeField] private AudioClip _fusionSuccess;
+        [SerializeField] private AudioClip _fusionFail;
 
         private AudioSource _musicSource;
         private AudioSource _sfxSource;
+        private AudioSource _loopSource;
         private AudioClip _baseMusic;
         private bool _inCutscene;
 
@@ -91,6 +95,33 @@ namespace ElementalAlchemist.Audio
             }
         }
 
+        /// <summary>Starts the looping "fusing" sound while a server fusion is pending. Idempotent.</summary>
+        public static void FusingStart()
+        {
+            if (Instance)
+            {
+                Instance.StartLoop(Instance._fusing);
+            }
+        }
+
+        /// <summary>Stops the looping "fusing" sound. No-op if nothing is looping.</summary>
+        public static void FusingStop()
+        {
+            if (Instance)
+            {
+                Instance.StopLoop();
+            }
+        }
+
+        /// <summary>Plays the fusion result sting - a different clip for a success vs. a dud.</summary>
+        public static void FusionResult(bool success)
+        {
+            if (Instance)
+            {
+                Instance.PlayOneShot(success ? Instance._fusionSuccess : Instance._fusionFail);
+            }
+        }
+
         private void Awake()
         {
             if (Instance)
@@ -110,6 +141,11 @@ namespace ElementalAlchemist.Audio
             _sfxSource = gameObject.AddComponent<AudioSource>();
             _sfxSource.playOnAwake = false;
             _sfxSource.volume = _sfxVolume;
+
+            _loopSource = gameObject.AddComponent<AudioSource>();
+            _loopSource.loop = true;
+            _loopSource.playOnAwake = false;
+            _loopSource.volume = _sfxVolume;
 
             DialogueManager.LineAdvanced += OnDialogueLine;
             StoryDirector.StepCompleted += OnStepCompleted;
@@ -137,6 +173,11 @@ namespace ElementalAlchemist.Audio
             if (_sfxSource)
             {
                 _sfxSource.volume = _sfxVolume;
+            }
+
+            if (_loopSource)
+            {
+                _loopSource.volume = _sfxVolume;
             }
         }
 
@@ -204,6 +245,25 @@ namespace ElementalAlchemist.Audio
             if (clip && _sfxSource)
             {
                 _sfxSource.PlayOneShot(clip);
+            }
+        }
+
+        private void StartLoop(AudioClip clip)
+        {
+            if (!_loopSource || !clip)
+            {
+                return;
+            }
+
+            _loopSource.clip = clip;
+            _loopSource.Play();
+        }
+
+        private void StopLoop()
+        {
+            if (_loopSource)
+            {
+                _loopSource.Stop();
             }
         }
     }

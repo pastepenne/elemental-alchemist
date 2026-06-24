@@ -96,6 +96,13 @@ namespace ElementalAlchemist.UI.Fusion
         
         private void Close()
         {
+            // Don't let the player leave mid-fusion: a server fusion still resolving would otherwise drop its result
+            // into an inventory they've already walked away from. The close button is disabled too, but ESC lands here.
+            if (_isFusing)
+            {
+                return;
+            }
+
             _isOpen = false;
             AudioManager.Click();
             _backdropPanel.SetActive(false);
@@ -178,14 +185,27 @@ namespace ElementalAlchemist.UI.Fusion
 
             _isFusing = true;
             _fuseButton.interactable = false;
+            _closeButton.interactable = false;
             SetStatus("Fusing...");
             StartCoroutine(FusionService.Fuse(_recipeCatalog, _elementRegistry, _serverConfig.BaseUrl, inputA, inputB, OnFusionComplete));
+
+            // A static recipe resolves synchronously above, so OnFusionComplete has already fired and _isFusing is
+            // false again - its result SFX was the only feedback needed. If we are still fusing, it's a pending server
+            // request: acknowledge the press and start the brewing loop to cover the wait.
+            if (_isFusing)
+            {
+                AudioManager.Click();
+                AudioManager.FusingStart();
+            }
         }
 
         private void OnFusionComplete(FusionResult result)
         {
             _isFusing = false;
             _fuseButton.interactable = true;
+            _closeButton.interactable = true;
+            AudioManager.FusingStop();
+            AudioManager.FusionResult(result.Success);
             ShowResult(result);
             _ingredientSlotA.Clear();
             _ingredientSlotB.Clear();

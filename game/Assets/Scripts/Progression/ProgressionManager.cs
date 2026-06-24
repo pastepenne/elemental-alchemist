@@ -15,6 +15,8 @@ namespace ElementalAlchemist.Progression
         public static event Action<ElementData> CoreUnlocked;
 
         [SerializeField] private ProgressionStage _initialStage = ProgressionStage.Tutorial;
+        [SerializeField] private bool _startInFreeplay;
+
         [SerializeField] private ElementData _water;
         [SerializeField] private ElementData _air;
         [SerializeField] private ElementData _earth;
@@ -165,6 +167,12 @@ namespace ElementalAlchemist.Progression
 
                 _currentStage = _initialStage;
                 ApplyInitialStageUnlocks();
+
+                if (_startInFreeplay)
+                {
+                    OnFreeplayActivated();
+                    Debug.LogWarning("[ProgressionManager] Freeplay forced on at startup via _startInFreeplay (testing flag).", this);
+                }
             }
             else
             {

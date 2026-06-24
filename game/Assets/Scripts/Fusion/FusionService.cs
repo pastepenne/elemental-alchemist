@@ -13,6 +13,8 @@ namespace ElementalAlchemist.Fusion
 {
     public static class FusionService
     {
+        private const int RequestTimeoutSeconds = 15;
+
         public static IEnumerator Fuse(
             RecipeCatalog catalog,
             ElementRegistry registry,
@@ -47,6 +49,7 @@ namespace ElementalAlchemist.Fusion
             request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("Accept", "application/json");
+            request.timeout = RequestTimeoutSeconds; // Bound the wait so a hung server can't trap the player in the menu.
 
             yield return request.SendWebRequest();
 
