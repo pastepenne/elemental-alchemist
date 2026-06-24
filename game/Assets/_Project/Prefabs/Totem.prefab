@@ -99,6 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2393019208353060301}
+  - component: {fileID: 5543047459883504076}
   - component: {fileID: 2379403166670191692}
   m_Layer: 6
   m_Name: Totem
@@ -123,6 +124,19 @@ Transform:
   - {fileID: 8633161715182041503}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5543047459883504076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252665220977784237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4b8a88e6de0a140a26d8e604948474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.World.Totem
+  _riddle: {fileID: 0}
 --- !u!65 &2379403166670191692
 BoxCollider:
   m_ObjectHideFlags: 0
