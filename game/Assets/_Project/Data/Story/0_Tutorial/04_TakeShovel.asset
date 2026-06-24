@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Progression.StoryStep
   _triggerId: shovel-taken
   _objectiveText: Take the shovel
-  _waypointKey: wp-shovel
+  _waypointKey: 
+  _approachPlayer: 1
   _dialogue: {fileID: 11400000, guid: 7d9b006c36e47974fbaf3d6dad8587ec, type: 2}

@@ -1,5 +1,6 @@
 using ElementalAlchemist.Audio;
 using ElementalAlchemist.GameInput;
+using ElementalAlchemist.Progression;
 using ElementalAlchemist.Save;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 
 namespace ElementalAlchemist.UI
 {
-    /// <summary>In-game pause menu: Resume, or Quit to the main menu (which saves). Freezes time while shown.</summary>
+    /// <summary>In-game pause menu: Resume, or Quit to the main menu (saving, or warning first in the tutorial).</summary>
     public class PauseMenu : MonoBehaviour
     {
         [SerializeField] private string _mainMenuScene = "MainMenu";
@@ -16,6 +17,10 @@ namespace ElementalAlchemist.UI
         [SerializeField] private GameObject _menuPanel;
         [SerializeField] private Button _resumeButton;
         [SerializeField] private Button _quitButton;
+
+        [SerializeField] private GameObject _tutorialQuitWindow;
+        [SerializeField] private Button _tutorialQuitConfirmButton;
+        [SerializeField] private Button _tutorialQuitCancelButton;
 
         private InputAction _pauseAction;
         private bool _isOpen;
@@ -25,6 +30,7 @@ namespace ElementalAlchemist.UI
             _pauseAction = InputSystem.actions.FindAction(InputActions.Global.Pause);
             _backdropPanel.SetActive(false);
             _menuPanel.SetActive(false);
+            SetTutorialQuitPromptActive(false);
         }
 
         private void OnEnable()
@@ -32,6 +38,8 @@ namespace ElementalAlchemist.UI
             _pauseAction.performed += OnPause;
             _resumeButton.onClick.AddListener(Close);
             _quitButton.onClick.AddListener(OnQuit);
+            _tutorialQuitConfirmButton.onClick.AddListener(OnTutorialQuitConfirmed);
+            _tutorialQuitCancelButton.onClick.AddListener(OnTutorialQuitCancelled);
         }
 
         private void OnDisable()
@@ -39,6 +47,8 @@ namespace ElementalAlchemist.UI
             _pauseAction.performed -= OnPause;
             _resumeButton.onClick.RemoveListener(Close);
             _quitButton.onClick.RemoveListener(OnQuit);
+            _tutorialQuitConfirmButton.onClick.RemoveListener(OnTutorialQuitConfirmed);
+            _tutorialQuitCancelButton.onClick.RemoveListener(OnTutorialQuitCancelled);
         }
 
         private void OnPause(InputAction.CallbackContext context)
@@ -81,15 +91,49 @@ namespace ElementalAlchemist.UI
         private void OnQuit()
         {
             AudioManager.Click();
+
+            // The tutorial does not save (see SaveManager), so warn before quitting that it must be replayed.
+            var progression = ProgressionManager.Instance;
+            if (progression && progression.CurrentStage == ProgressionStage.Tutorial)
+            {
+                SetTutorialQuitPromptActive(true);
+                return;
+            }
+
+            QuitToMenu();
+        }
+
+        private void OnTutorialQuitConfirmed()
+        {
+            AudioManager.Click();
+            QuitToMenu();
+        }
+
+        private void OnTutorialQuitCancelled()
+        {
+            AudioManager.Click();
+            SetTutorialQuitPromptActive(false);
+        }
+
+        private void QuitToMenu()
+        {
             Time.timeScale = 1f;
 
-            // Save on the way out (the pause menu's only save point).
+            // Save on the way out (the pause menu's only save point). No-op during the tutorial.
             if (SaveManager.Instance)
             {
                 SaveManager.Instance.Save();
             }
 
             SceneManager.LoadScene(_mainMenuScene);
+        }
+
+        private void SetTutorialQuitPromptActive(bool active)
+        {
+            if (_tutorialQuitWindow)
+            {
+                _tutorialQuitWindow.SetActive(active);
+            }
         }
     }
 }

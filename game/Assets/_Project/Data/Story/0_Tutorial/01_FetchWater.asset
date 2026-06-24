@@ -15,4 +15,6 @@ MonoBehaviour:
   _triggerId: water-fetched
   _objectiveText: Fetch water from the river
   _waypointKey: wp-river
+  _warpWaypointKey: 
+  _approachPlayer: 0
   _dialogue: {fileID: 11400000, guid: 62e8e0e7a00babf499abed6f05643f08, type: 2}

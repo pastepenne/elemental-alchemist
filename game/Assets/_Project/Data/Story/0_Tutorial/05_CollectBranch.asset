@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6adc961100372224bb3b63086ba88b07, type: 3}
   m_Name: 05_CollectBranch
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Progression.StoryStep
-  _triggerId: branch-collected-01
+  _triggerId: branch-collected
   _objectiveText: Collect three branches
   _waypointKey: 
-  _dialogue: {fileID: 0}
+  _approachPlayer: 1
+  _dialogue: {fileID: 11400000, guid: 89ba3d5eda3393546b9719c8d9a6c9c5, type: 2}

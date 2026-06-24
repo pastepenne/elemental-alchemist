@@ -77,6 +77,14 @@ namespace ElementalAlchemist.Save
                 return;
             }
 
+            // The tutorial is not a resume point: it spans scenes and half-applies state (cores, recipes) before its
+            // first checkpoint, so a mid-tutorial save would reload into an inconsistent run. The first real save is
+            // the tutorial-completion checkpoint - by then the stage has already advanced to Novice.
+            if (progression.CurrentStage == ProgressionStage.Tutorial)
+            {
+                return;
+            }
+
             var data = new SaveData
             {
                 sceneName = SceneManager.GetActiveScene().name,

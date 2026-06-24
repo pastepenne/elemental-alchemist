@@ -12,6 +12,8 @@ namespace ElementalAlchemist.World
 
         public string Prompt => "Collect";
 
+        protected ElementData Element => _element;
+
         public void Interact()
         {
             PlayerManager.Instance.Inventory.AddElement(_element, _yield);

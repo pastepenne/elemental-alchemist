@@ -15,4 +15,6 @@ MonoBehaviour:
   _triggerId: cauldron-filled
   _objectiveText: Fill the cauldron
   _waypointKey: 
+  _warpWaypointKey: 
+  _approachPlayer: 0
   _dialogue: {fileID: 11400000, guid: 609de60cc6382e34a88c79244b50e64e, type: 2}

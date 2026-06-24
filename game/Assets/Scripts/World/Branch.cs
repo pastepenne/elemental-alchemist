@@ -1,4 +1,3 @@
-﻿using ElementalAlchemist.Dialogue;
 using ElementalAlchemist.Element;
 using ElementalAlchemist.Player;
 using ElementalAlchemist.Progression;
@@ -6,30 +5,39 @@ using UnityEngine;
 
 namespace ElementalAlchemist.World
 {
-    public class Branch : MonoBehaviour, IInteractable
+    public class Branch : ElementSource
     {
-        [SerializeField] private string _triggerId = "branch-collected";
-        [SerializeField] private ElementData _wood;
-        [SerializeField] private DialogueData _gateDialogue;
+        [SerializeField] private int _despawnThreshold = 3;
 
-        public string Prompt => "Collect branch";
-
-        public void Interact()
+        private void OnEnable()
         {
-            if (!StoryGate.TryProceed(_triggerId, _gateDialogue))
+            if (PlayerManager.Instance)
             {
-                return;
+                PlayerManager.Instance.Inventory.ElementAdded += OnElementAdded;
             }
-            
-            PlayerManager.Instance.Inventory.AddElement(_wood, 1);
 
-            StoryTrigger.Fire(_triggerId);
-            Destroy(gameObject);
+            DespawnIfHeld();
         }
 
-        private void Start()
+        private void OnDisable()
         {
-            if (ProgressionManager.Instance.HasFire)
+            if (PlayerManager.Instance)
+            {
+                PlayerManager.Instance.Inventory.ElementAdded -= OnElementAdded;
+            }
+        }
+
+        private void OnElementAdded(ElementData element)
+        {
+            if (element == Element)
+            {
+                DespawnIfHeld();
+            }
+        }
+
+        private void DespawnIfHeld()
+        {
+            if (ProgressionManager.Instance.CurrentStage > ProgressionStage.Tutorial || PlayerManager.Instance && PlayerManager.Instance.Inventory.HasElement(Element, _despawnThreshold))
             {
                 Destroy(gameObject);
             }

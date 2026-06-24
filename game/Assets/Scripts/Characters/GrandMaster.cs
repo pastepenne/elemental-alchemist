@@ -13,6 +13,7 @@ namespace ElementalAlchemist.Characters
     {
         [SerializeField] private float _followCatchUpDistance = 10f;
         [SerializeField] private float _followStopDistance = 5f;
+        [SerializeField] private float _dialogueApproachDistance = 2.5f;
 
         [SerializeField] private string _spawnKey;
         [SerializeField] private List<NamedWaypoint> _waypoints = new();
@@ -147,7 +148,15 @@ namespace ElementalAlchemist.Characters
             _forms.ApplyCurrentForm();
 
             _reportOutroToDirector = !string.IsNullOrEmpty(step.WaypointKey) || step.Dialogue;
-            GoTo(step.WaypointKey, step.Dialogue, step.WarpWaypointKey);
+
+            if (step.ApproachPlayer)
+            {
+                GoToPlayer(step.Dialogue);
+            }
+            else
+            {
+                GoTo(step.WaypointKey, step.Dialogue, step.WarpWaypointKey);
+            }
         }
 
         private void OnSequenceCompleted(string sequenceId)
@@ -175,6 +184,28 @@ namespace ElementalAlchemist.Characters
             {
                 StoryDirector.Instance.NotifyStepOutroFinished();
             }
+        }
+
+        // Outro variant for steps whose completion spot is unpredictable: walk up to the player (if not already
+        // beside him) and speak there, rather than heading to a fixed waypoint.
+        private void GoToPlayer(DialogueData dialogue)
+        {
+            _pendingDialogue = dialogue;
+
+            if (!_player || Vector3.Distance(transform.position, _player.position) <= _dialogueApproachDistance)
+            {
+                if (dialogue)
+                {
+                    DialogueManager.Instance.StartDialogue(dialogue);
+                }
+                _pendingDialogue = null;
+                return;
+            }
+
+            var direction = (_player.position - transform.position).normalized;
+            ActionMapController.SetActionMap(ActionMaps.Cutscene);
+            _movement.MoveTo(_player.position - direction * _dialogueApproachDistance);
+            _waitingForArrival = true;
         }
 
         private void GoTo(string waypointKey, DialogueData dialogue, string approachWaypointKey = null)

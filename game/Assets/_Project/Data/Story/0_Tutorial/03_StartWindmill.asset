@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ElementalAlchemist.Progression.StoryStep
   _triggerId: windmill-started
   _objectiveText: Start the windmill
-  _waypointKey: wp-windmill
+  _waypointKey: 
+  _approachPlayer: 1
   _dialogue: {fileID: 11400000, guid: f8799e075f7f51c439522c70190bfe03, type: 2}
