@@ -12,7 +12,6 @@ namespace ElementalAlchemist.UI.Tome
     {
         [SerializeField] private TagSpriteLibrary _tagSprites;
         [SerializeField] private TierColorPalette _tierColors;
-        [SerializeField] private RecipeCatalog _recipeCatalog;
 
         [SerializeField] private Image[] _icons;
         [SerializeField] private TMP_Text _name;
@@ -52,19 +51,10 @@ namespace ElementalAlchemist.UI.Tome
             }
         }
 
-        /// <summary>Static catalog recipes plus the player's discovered ones (incl. dynamic fusions), deduped by input pair.</summary>
         private List<RecipeData> CollectRecipes(ElementData element)
         {
             var seen = new HashSet<RecipeKey>();
             var recipes = new List<RecipeData>();
-
-            foreach (var recipe in _recipeCatalog.GetRecipesForOutput(element))
-            {
-                if (seen.Add(new RecipeKey(recipe)))
-                {
-                    recipes.Add(recipe);
-                }
-            }
 
             foreach (var recipe in PlayerManager.Instance.Discovery.GetDiscoveredRecipes())
             {
