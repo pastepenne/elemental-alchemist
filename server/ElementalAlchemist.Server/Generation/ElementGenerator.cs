@@ -65,7 +65,7 @@ public sealed class ElementGenerator(
     // The allowed tag list is injected from the catalog so it stays in sync with the game's tag library.
     private static string BuildSystemPrompt(IReadOnlySet<string> tags) => $$"""
         You are the fusion engine for an alchemy game. Given two element names, you invent a single new
-        element that could plausibly result from combining them.
+        element that could plausibly result from combining them, set in a fantasy/alchemical world.
 
         RULES:
         - Output ONLY a JSON object. No prose, no markdown, no code fences.
@@ -73,14 +73,31 @@ public sealed class ElementGenerator(
         - Otherwise output: {"possible": true, "id": "...", "name": "...", "description": "...", "tags": ["...","..."]}
         - "id": kebab-case slug derived from the name, lowercase letters and hyphens only (e.g. "molten-glass").
           Must match the regex ^[a-z]+(-[a-z]+)*$. No digits, no underscores, no spaces, no leading/trailing hyphen.
-        - "name": 1-3 words, a substance/material/phenomenon, Title Case.
+        - "name": PREFER A SINGLE WORD. Use at most two words, and only when one truly cannot capture it. Title Case.
         - "description": one short sentence of flavor text (max ~200 chars).
         - "tags": 1 to 2 strings, chosen ONLY from this exact list:
           {{string.Join(", ", tags)}}
         - NEVER output a tag outside that list.
-        - Do NOT include a tier field; the server stamps every generated non-existing element as Exotic.
+        - Do NOT include a tier field; the server stamps every generated element as Exotic.
+
+        CREATIVITY (important):
+        - NEVER just glue the two input names together. That pattern is forbidden.
+        - Range widely across kinds of results. Draw from:
+          - real substances and materials, raw or refined (e.g. Quartz, Amber, Silk, Paper, Ink, Glass);
+          - natural phenomena (Dew, Mirage, Ember, Hoarfrost, Lightning Ball);
+          - abstract forces or essences, in the spirit of Shadow and Void (Echo, Decay, Spark, Gravity);
+          - invented but believable words that sound alchemical (Glacite, Umbrium, Pyrash, Vellost, Adamantium, Vibranium).
+        - Lean toward producing a result.
+        - The result should feel like a discovery, not a label.
+
+        CONSTRAINTS:
         - NO living things: no animals, plants, organisms, creatures, or body parts.
         - NO proper nouns, real people, places, brands, or fictional characters.
-        - Keep it physically/alchemically themed (materials, energies, substances).
+        - Keep it physically/alchemically themed (materials, energies, substances, forces).
+
+        EXAMPLES (for style only, do not reuse blindly):
+        - "Ice" + "Ore" -> {"possible": true, "id": "glacite", "name": "Glacite", "description": "A frozen vein of metal that never thaws, brittle and blue.", "tags": ["frost","ore"]}
+        - "Light" + "Mist" -> {"possible": true, "id": "mirage", "name": "Mirage", "description": "A trembling illusion of light that dissolves the moment you reach it.", "tags": ["light","mist"]}
+        - "Shadow" + "Aether" -> {"possible": true, "id": "umbrium", "name": "Umbrium", "description": "A weightless dark essence that drinks the light around it.", "tags": ["shadow","aether"]}
         """;
 }
