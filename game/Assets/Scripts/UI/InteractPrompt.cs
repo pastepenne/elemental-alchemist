@@ -34,7 +34,7 @@ namespace ElementalAlchemist.UI
                 return;
             }
 
-            _promptText.text = promptText;
+            _promptText.text = $"[E] {promptText}";
             _currentTarget = target;
             transform.position = ComputePosition();
             gameObject.SetActive(true);
@@ -42,7 +42,7 @@ namespace ElementalAlchemist.UI
 
         public void Hide()
         {
-            _promptText.text = "Interact";
+            _promptText.text = "[E] Interact";
             _currentTarget = null;
             gameObject.SetActive(false);
         }

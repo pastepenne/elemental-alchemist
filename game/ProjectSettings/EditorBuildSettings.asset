@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Project/Scenes/MainMenu.unity
+    guid: e481691ee317f5f4b99aab47e827387b
+  - enabled: 1
     path: Assets/_Project/Scenes/Village.unity
     guid: 340b63a1ddd88e34aa63f98408225928
   - enabled: 1
@@ -20,8 +23,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Ruins.unity
     guid: d19f48cbaf72f904292831cd7471e9f7
-  - enabled: 1
-    path: Assets/_Project/Scenes/MainMenu.unity
-    guid: e481691ee317f5f4b99aab47e827387b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
